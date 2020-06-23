@@ -1,0 +1,44 @@
+---
+title: "Process of Science"
+output:
+  html_document: default
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
+---
+
+## Learning Objectives
+
+1. Understand the nature of science as a way of knowing.
+
+2. Understand what distinguishes science from non-science
+
+## How Science is Made
+
+>If you want to study the effect of bloodletting on a condition, divide the patients into two groups, perform bloodletting only on one group, watch both, and compare the results.
+> `r tufte::quote_footer('Al-Razi (Rhazes) 865 – 925 AD')`
+
+Does this quote, more than 1000 years old, represent the scientific method? You are likely aware of the basic components of the scientific method:
+
++ *Make an observation*
++ *Pose a question*
++ *Develop a testable hypothesis*
++ *Design an experiment*
++ *Collect data*
++ *Analyze data*
++ *Report your findings*. 
+
+That's a lot of steps and this short quote doesn't capture all of them, but it's author implicitly recognizes some crucial pieces. The quote is most directly related to *Designing an experiment*. We can easily envision the basic structure of a medical trial that seeks to understand how bloodletting affects the average condition of the patients. Some of those patients would undergo bloodletting and some would not (*..."divide the patients into two groups, perform bloodletting only on one group..."*). Then, we would collect data from all patients and analyze them (*...watch both, and compare the results."*).
+
+I included this quote because I am always amazed by how relatable it is to the current high-tech world of science. We do the same things in our labs every day, in every discipline. So, yes, this is most certainly a representation of the scientific method. But, by itself, the quote would get an F if proposed by an undergraduate student in a science course. Why? Because it is only an invitation for more detail. For scientists, nearly every word sparks curiosity for more detail. Let's pick out some examples:
+
+"If you want to study the effect of **bloodletting**..." --- *I know nothing about bloodletting. Does it involve a scapel? A tube? How much blood is let? Is it a fixed amount or does it change based on a person's age, weight, size?*
+
+"If you want to study the effect of bloodletting on a **condition**..." --- *What condition will you test? Will you measure how a single condition responds or multiple conditions? Does it matter how long they have had the condition? How do you know they have the condition to begin with? Is it reported from another doctor? Is it self-reported?*
+
+"If you want to study the effect of bloodletting on a condition, divide the patients into two groups, **perform bloodletting only on one group**..." --- *Will the other group have a placebo? Will the bloodletting group know that they're part of a research trial? Will that knowledge affect their response? Who will "perform the bloodletting": the same doctor each time? If different people will perform the procedure, how will they be trained to maintain consistency?*
+
+"If you want to study the effect of bloodletting on a condition, divide the patients into two groups, perform bloodletting only on one group, **watch both**..." --- *How? Will patients be in the hospital the whole time? If they're allowed to go home, how do you monitor recovery?*
+
+"If you want to study the effect of bloodletting on a condition, divide the patients into two groups, perform bloodletting only on one group, watch both, and **compare the results**." --- *What will be compared? Recovery time? Whether they make a full recovery, regardless of time? The groups won't be exactly the same no matter what you do, so how will you decide that bloodletting worked?*
+
+Phew. We managed to get through the whole sentence, but this is exhausting. Imagine that your professor is reponding this way about your own proposed study? You may want to scream out that "OF COURSE THE CONTROL WILL GET A PLACEBO!!" or "BLOODLETTING IS 3,000 YEARS OLD, JUST LOOK IT UP ALREADY!".  

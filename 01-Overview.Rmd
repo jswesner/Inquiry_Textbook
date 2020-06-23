@@ -1,0 +1,41 @@
+---
+title: "Overview"
+output:
+  html_document: default
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
+---
+
+## Learning Objectives
+
+1. Understand the nature of science as a way of knowing.
+
+2. Learn how to read scientific literature, evaluate and synthesize information, and to write clearly in scientific formats (e.g. lab reports, scientific papers, review papers).
+
+3. Learn how to interpret graphical information with statistical analyses, how to present data clearly in graphs and tables, and how to perform simple statistical analyses in R.
+
+## Who This Book is For
+
+This book is written for freshman and sophomore undergraduate science students.
+
+## About This Book
+
+Future biologists, doctors, and researchers need familiarity with how science proceeds and how it is communicated. Not having that knowledge is like getting a degree in music without learning how to read sheet music or knowing what a C major chord is. This book teaches you how to perform nearly all tasks that any researcher does: observe something, identify a question, gather data to test it, reach conclusions, share your conclusions, identify new questions. This process has been repeated millions of times over the last several centuries by all types of scientists. Often the results are interesting, but not groundbreaking. In rare cases, the results are groundbreaking – earth revolves around the sun, evolution by natural selection, genetic inheritance, biodiversity and ecosystem functioning. These findings make the news, the textbooks, social media, and other outlets. But first they are communicated among scientists.
+
+In universities, nearly all students learn the fundamentals of writing through introdctutory composition classes. These classes emphasize important components of rhetoric, grammar and writing structure. However, as students begin to write papers for their science professors, there is a frustrating realization that the traditions of creative writing that were learned in composition classes are not the same as the traditions of scientific writing that their science professors expect. 
+  
+  Common challenges for students in learning scientific writing: 
+  
+*1) Using direct quotes*
+
+*2) Failing to cite the literature* 
+
+*3) Unable to find relevant literature in the first place*
+
+*4) Difficulty describing quantitative results*
+
+*5) Difficulty placing results into a broader context*
+    
+  These challenges do not arise from lack of intelligence and they do not mean that students are "bad" writers. They arise from a difficulty in understanding the culture shifts between writing for the Humanities and writing for the Sciences. To use another musical analogy, the difference between writing for the humanities and writing for the sciences is similar to the difference in playing improvisational jazz versus orchestral music. Both types of music have a common grammar, but they have vastly different approaches to how that grammar is expressed in song. In the same way, transitioning between writing for an English class and writing for a Biology class is not an easy task. Both writing styles are "correct", yet each has its own traditions and expectations. This book will help you learn those traditions and expectations for scientific writing.
+  
+  Whether you do research at all in your career, you will be affected by those that do. Scientific research influences everything from flight delays, immunizations, cancer treatments, courtroom lighting, oil drilling, climate change, and how many commas to use in a sentence. All of it is guided by the same simple process that you will learn about in this book. We hope you enjoy the process.
