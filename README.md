@@ -1,8 +1,6 @@
-Wesner, Jeff S. (2020). Inquiry and Analysis in Biology. 
+Wesner, Jeff S., and Joseph W. Raiche. (2020). Inquiry and Analysis in Biology. 
 
 This page contains materials for Inquiry and Analysis in Biology, a textbook for teaching introductory scientific writing, data analysis, and R code for undergraduates.  
-
-Feel free to contribute to this tutorial by submitting pull requests to this repository.
 
 **License CC BY-NC 4.0 license**
 
