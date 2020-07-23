@@ -2,6 +2,7 @@
 title: "Process of Science"
 output:
   html_document: default
+  word_document: default
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
 ---
@@ -41,4 +42,8 @@ I included this quote because I am always amazed by how relatable it is to the c
 
 "If you want to study the effect of bloodletting on a condition, divide the patients into two groups, perform bloodletting only on one group, watch both, and **compare the results**." --- *What will be compared? Recovery time? Whether they make a full recovery, regardless of time? The groups won't be exactly the same no matter what you do, so how will you decide that bloodletting worked?*
 
-Phew. We managed to get through the whole sentence, but this is exhausting. Imagine that your professor is reponding this way about your own proposed study? You may want to scream out that "OF COURSE THE CONTROL WILL GET A PLACEBO!!" or "BLOODLETTING IS 3,000 YEARS OLD, JUST LOOK IT UP ALREADY!".  
+Phew. We managed to get through the whole sentence, but this is exhausting. Imagine that your professor is reponding this way about your own proposed study? You may want to scream "OF COURSE THE CONTROL WILL GET A PLACEBO!!" or "BLOODLETTING IS 3,000 YEARS OLD, JUST LOOK IT UP ALREADY!". But science is written precisely to address potential weak points. It can be frustrating, because you feel like some things are *just obvious*, so they can be implied, or they're *just common knowledge*, so you don't need to cite anything to support them. This is where science writing differs from other more casual forms of writing. Most of science writing can feel like you're spending a large amount of cognitive effort explaining things that are obvious. 
+
+Because science writing requires lots of details, it can often feel bland and formulaic. But there is also a benefit to having to constantly explain and justify your decisions as a scientist. First, it helps *you* to understand what you've actually done. As a scientist, I (Wesner) am a poor note taker. I always think that I'll remember the temperature that I just recorded in tank 5. No need to get my notes wet now just to write down 23.5 degrees C. But I also know that a) I will most certainly have forgotten that number five minutes from now, and b) I will then have to try and explain why that number is missing from my data sheet in the paper that I'll write 5 months from now. How can someone trust that I collected the data rigorously if I have to write: *Data from tank 5 are missing becuase I was too busy to write them down.*. 
+
+The other benefit to the details is that science writing has an egalitarian appeal to it. No matter how famous the scientist is, she cannot simply claim something as true without explaining the details. And on the flipside, no one is too junior to ask for proof. This requirement to document the details helps to prevent science from becoming overwhelmingly dictated by a few gatekeepers. That is not to say that science represents a perfect world of utopia. Far, far from it. But requirement to document details is one way to prevent it from becoming just another place where prestige and power matter more than truth.
