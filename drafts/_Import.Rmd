@@ -1,0 +1,43 @@
+---
+title: "1) Import data to RStudio"
+author: "Jeff Wesner"
+date: "Feb 8, 2020"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+![](data_workflow_import.png)
+*Figure source: Garret Grolemund. See more details on this workflow here: https://github.com/rstudio-education/remaster-the-tidyverse/tree/master*
+
+Nearly every study that includes data has a workflow similar to that above. We gather data, get it into a program (Import), get it in the right format (Tidy), and then analyze it with plots (Visualization), models, transformations, etc. When we've finished, we communicate the results to our peers. You'll learn how to complete these steps in R because its designed specifically for each of these steps. But the workflow applies regardless of the software you use.
+
+##1) Get data from Gapminder
+For this example, we'll work with a data set of fertility rates. Go to https://www.gapminder.org/data/. Search for "babies per woman". Download the csv and save it to a folder on your computer that you will remember. **Note: the file you download might be called "children_per_woman.csv". It is the same as babies per woman.*
+
+##2) Create a project
+Open R Studio and create a project in the same folder as your data set:
+
+*File -> New Project... -> Existing Directory -> Browse ->* [NAME OF YOUR FOLDER]
+
+You only have to do this once. Everything you compute will be saved in this project, and you can always start where you left off.
+
+##3) Import the data to RStudio
+Look in the lower right panel of R Studio. Click on "Files". Do you see the Gapminder data you saved? Left-click on your data set and choose *Import Dataset* like this:
+
+![](import_example.png)
+
+
+After you click *Import Dataset*, you'll see a preview of your data set like this:
+
+![](import_button.png) 
+
+Click *Import* in the lower right.
+
+Do you see the name of the data set in the upper right panel? If so, success! If not, re-try the steps above or ask your instructor.
+
+Now explore your data. How many columns does it have? How many rows? What are the variables?
+
+Can you import a different data set?
+
+<base target="_blank"/>

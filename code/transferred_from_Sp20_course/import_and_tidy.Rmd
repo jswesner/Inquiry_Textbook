@@ -1,0 +1,28 @@
+---
+title: "gapminder and tidyverse"
+author: "Jeff Wesner"
+date: "September 19, 2019"
+output: html_document
+---
+![](data_workflow.png)
+Nearly every study that includes data has a workflow similar to that above. We gather data, get it into a program (Import), get it in the right format (Tidy), and then analyze it with plots (Visualiation), Models, Transformations, etc. When we've finished, we communicate the results to our peers. You'll learn how to complete these steps in R because its designed specifically for each of these steps. But the workflow applies regardless of the software you use.
+
+##1) Create a project
+*File -> New Project... -> Existing Directory -> Browse ->* [NAME OF YOUR FOLDER]
+Always use this Project in this class. Everything you do will be saved in it.
+
+##2) Get data from Gapminder
+Choose a dataset that you want to explore in Gapminder. Save it to the same folder as your project.
+
+##3) Import the data to RStudio
+Look in the lower right panel of RStudio. Click on "Files". Do you see the Gapminder data you saved? Click on your dataset and choose *Import Dataset*. 
+
+Like this:
+![](import_example.png)
+
+After you click *Import Dataset*, you'll see a preview of your dataset like this:
+![](import_button.png) 
+
+Click *Import* in the lower right. (hint: you might want to give your data a shorter name before you import. Do that in the lower left of the pop-up window.)
+Do you see the name of your dataset in the upper right panel? If so, success! If not, re-try the steps above or ask your instructor.
+

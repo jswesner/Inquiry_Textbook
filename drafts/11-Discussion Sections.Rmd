@@ -1,0 +1,29 @@
+---
+title: "Discussion Sections"
+output:
+  html_document: default
+  word_document: default
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
+---
+
+## Learning Objectives
+
+1) Learn how to write a compelling discussion section.
+
+2) Learn how to link your results to the broader literature.
+
+[Lecture Link](https://docs.google.com/presentation/d/1C2-ts5urdL1U4jPx50AnsKoRi0maP3ccYQp4PaHDdUA/edit?usp=sharing)
+
+
+# Common Mistakes
+
+*Just repeating the details of the results section*
+
+*Forgetting to weave the results of the current work to past work*
+
+*Weaving results to past work, but only in a tangential manner*
+
+*Apologizing too much (just a student project, need more data*
+
+*Concluding with "This topic needs more research"*

@@ -1,0 +1,14 @@
+---
+title: "Revising and Editing"
+output:
+  html_document: default
+  word_document: default
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
+---
+
+## Learning Objectives
+
+1) I don't know.
+
+CHAPTER IS A WRAP-UP CHAPTER IF NEEDED. WHERE DO WE GO FROM HERE?

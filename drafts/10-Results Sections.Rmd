@@ -1,0 +1,16 @@
+---
+title: "Results Sections"
+output:
+  html_document: default
+  word_document: default
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
+---
+
+## Learning Objectives
+
+1) Learn how to summarize results.
+
+2) Learn how to link text to tables and figures.
+
+[Lecture Link](https://docs.google.com/presentation/d/1INvwfkAPjMyGRS2X6cWWTrFeTtaHj6GCgVOYmWQZNW0/edit?usp=sharing)

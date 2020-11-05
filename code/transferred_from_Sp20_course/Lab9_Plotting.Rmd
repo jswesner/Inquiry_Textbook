@@ -1,0 +1,93 @@
+---
+title: "Lab9_Plotting"
+author: "ACK"
+date: "4/17/2020"
+output: html_document
+---
+
+2 Cuckoo Egg Size
+
+Import data
+```{r}
+cuckoo <- read.csv("CuckooEggs.csv", header=T)
+head(cuckoo)
+```
+
+
+```{r}
+library(tidyverse)
+
+#creating dataframe with summary statistics
+df.summary <- cuckoo %>% 
+  group_by(Host.Species) %>% 
+  summarise(
+    egg_sd = sd(Egg.Length),
+    egg_mean = mean(Egg.Length)
+  )
+```
+
+
+Make a fixed effects ANOVA table
+```{r}
+cuckooAnova <- lm(Egg.Length~Host.Species, data=cuckoo)
+anova(cuckooAnova)
+```
+
+
+
+Unplanned Comparisons - Tukey-Kramer Tests
+```{r}
+cuckoo.aov = aov(cuckoo$Egg.Length~cuckoo$Host.Species)
+TukeyHSD(cuckoo.aov)
+TUKEY <- TukeyHSD(cuckoo.aov)
+View(TUKEY)
+```
+
+
+
+```{r}
+#install one more package
+#install.packages(ggpubr)
+library(ggpubr)
+
+#plotting code
+ggplot(cuckoo, aes(Host.Species, Egg.Length, col=Host.Species)) + 
+  geom_jitter()+
+  labs(title="Stripchart of Cuckoo Bird Egg Lengths \n Based on Host Species", x="Host Bird Species", y="Egg Length (mm)")+
+  theme(axis.text.x = element_text(angle = 45, hjust=1)) + 
+  geom_errorbar(data=df.summary, mapping=aes(x=Host.Species, y= egg_mean, ymin= egg_mean-egg_sd, ymax=egg_mean+egg_sd), color="black") +
+  geom_point(data=df.summary, mapping=aes(x=Host.Species, y=egg_mean), color="black")+
+  stat_compare_means(inherit.aes=TRUE, label="p.signif", method="anova", ref.group=".all", paired=FALSE, hide.ns=FALSE)
+```
+
+
+
+Tutorial Code I was trying to use but may not be necessary if the stat_compare_means() code actually works?
+
+```{r}
+generate_label_df <- function(TUKEY, Host.Species){
+  #Extract labels and factor levels from Tukey post-hoc
+  Tukey.levels <- TUKEY[[Host.Species]][,60]
+  Tukey.labels <- data.frame(multcompLetters(Tukey.levels)['Letters'])
+  #Put the labels in the same order as in teh plot
+  Tukey.labels$Host.Species=rownames(Tukey.labels)
+  Tukey.levels = Tukey.labels[order(Tukey.labels$treatment),]
+  return(Tukey.labels)
+}
+
+#Tukey test to study each pair of host species
+TUKEY <- TukeyHSD(cuckoo.aov)
+
+#Generate labels using funciton
+TUKEY$`cuckoo$Host.Species` <- as.character(TUKEY$`cuckoo$Host.Species`)
+labels <- generate_label_df(TUKEY, "cuckoo$Host.Species")
+
+#Rename columns for merging
+names(labels) <- c('Letters', 'Host.Species')
+
+#obtain letter position for y axis using means
+yvalue <- aggregate(.~Host.Species, data=cuckoo, mean)
+
+#merge dataframes
+final <- merge(labels,yvalue)
+```

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Thinking Quantitatively | Inquiry and Analysis in Biology</title>
+  <meta name="description" content="5 Thinking Quantitatively | Inquiry and Analysis in Biology" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Thinking Quantitatively | Inquiry and Analysis in Biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Thinking Quantitatively | Inquiry and Analysis in Biology" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="putting-it-all-together.html"/>
+<link rel="next" href="introduction-to-r.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="overview.html"><a href="overview.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.2</b> Who This Book is For</a></li>
+<li class="chapter" data-level="1.3" data-path="overview.html"><a href="overview.html#about-this-book"><i class="fa fa-check"></i><b>1.3</b> About This Book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-process-of-science.html"><a href="the-process-of-science.html"><i class="fa fa-check"></i><b>2</b> The Process of Science</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="the-process-of-science.html"><a href="the-process-of-science.html#how-science-is-made"><i class="fa fa-check"></i><b>2.2</b> How Science is Made</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html"><i class="fa fa-check"></i><b>3</b> The Structure of Scientific Writing</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="the-process-of-science.html"><a href="the-process-of-science.html#how-science-is-made"><i class="fa fa-check"></i><b>3.2</b> How Science is Made</a></li>
+<li class="chapter" data-level="3.3" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#title"><i class="fa fa-check"></i><b>3.3</b> Title</a></li>
+<li class="chapter" data-level="3.4" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#abstract"><i class="fa fa-check"></i><b>3.4</b> Abstract</a></li>
+<li class="chapter" data-level="3.5" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#introduction"><i class="fa fa-check"></i><b>3.5</b> Introduction</a></li>
+<li class="chapter" data-level="3.6" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#methods"><i class="fa fa-check"></i><b>3.6</b> Methods</a></li>
+<li class="chapter" data-level="3.7" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#results"><i class="fa fa-check"></i><b>3.7</b> Results</a></li>
+<li class="chapter" data-level="3.8" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#discussion"><i class="fa fa-check"></i><b>3.8</b> Discussion</a></li>
+<li class="chapter" data-level="3.9" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#references"><i class="fa fa-check"></i><b>3.9</b> References</a></li>
+<li class="chapter" data-level="3.10" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#tables"><i class="fa fa-check"></i><b>3.10</b> Tables</a></li>
+<li class="chapter" data-level="3.11" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#figures"><i class="fa fa-check"></i><b>3.11</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="putting-it-all-together.html"><a href="putting-it-all-together.html"><i class="fa fa-check"></i><b>4</b> Putting it all together</a></li>
+<li class="chapter" data-level="5" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html"><i class="fa fa-check"></i><b>5</b> Thinking Quantitatively</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#why-statistics"><i class="fa fa-check"></i><b>5.2</b> Why Statistics</a></li>
+<li class="chapter" data-level="5.3" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#summary-statistics"><i class="fa fa-check"></i><b>5.3</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.4" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#dont-forget-that-quantitative-thinking-includes-thinking"><i class="fa fa-check"></i><b>5.4</b> Don’t forget that Quantitative Thinking includes “thinking”</a></li>
+<li class="chapter" data-level="5.5" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#common-pitfalls-in-statistical-inference"><i class="fa fa-check"></i><b>5.5</b> Common Pitfalls in Statistical Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>6</b> Introduction to R</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#r-and-rstudio"><i class="fa fa-check"></i><b>6.2</b> R and RStudio</a></li>
+<li class="chapter" data-level="6.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#how-to-use-this-chapter"><i class="fa fa-check"></i><b>6.3</b> How to Use This Chapter</a></li>
+<li class="chapter" data-level="6.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#data-analysis-workflow"><i class="fa fa-check"></i><b>6.4</b> Data Analysis Workflow</a></li>
+<li class="chapter" data-level="6.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#getting-started-in-rstudio"><i class="fa fa-check"></i><b>6.5</b> Getting Started in RStudio</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#create-a-folder-on-your-computer-for-your-analyses"><i class="fa fa-check"></i><b>6.5.1</b> Create a folder on your computer for your analyses</a></li>
+<li class="chapter" data-level="6.5.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#open-rstudio"><i class="fa fa-check"></i><b>6.5.2</b> Open RStudio</a></li>
+<li class="chapter" data-level="6.5.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#create-a-project"><i class="fa fa-check"></i><b>6.5.3</b> Create a project</a></li>
+<li class="chapter" data-level="6.5.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#open-a-script"><i class="fa fa-check"></i><b>6.5.4</b> Open a script</a></li>
+<li class="chapter" data-level="6.5.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#install-a-package"><i class="fa fa-check"></i><b>6.5.5</b> Install a package</a></li>
+<li class="chapter" data-level="6.5.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#your-first-script"><i class="fa fa-check"></i><b>6.5.6</b> Your first script</a></li>
+<li class="chapter" data-level="6.5.7" data-path="introduction-to-r.html"><a href="introduction-to-r.html#importing-your-own-data-to-rstudio"><i class="fa fa-check"></i><b>6.5.7</b> Importing your own data to RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#why-to-code-instead-of-click"><i class="fa fa-check"></i><b>6.6</b> Why to Code Instead of Click</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>7</b> Data Visualization</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="data-visualization.html"><a href="data-visualization.html#basic-components-of-a-graph"><i class="fa fa-check"></i><b>7.1.1</b> Basic Components of a Graph</a></li>
+<li class="chapter" data-level="7.1.2" data-path="data-visualization.html"><a href="data-visualization.html#best-practices"><i class="fa fa-check"></i><b>7.1.2</b> Best Practices</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Inquiry and Analysis in Biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="thinking-quantitatively" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Thinking Quantitatively</h1>
+<div id="learning-objectives" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Learning Objectives</h2>
+<ol style="list-style-type: decimal">
+<li><p>Understand why we use statistics</p></li>
+<li><p>Understand basic summary statistics</p></li>
+<li><p>Understand common pitfalls in statistical inference</p></li>
+</ol>
+<p><a href="https://docs.google.com/presentation/d/1CKoyF90yze6sUtrmM4AUgc9aNC1NE3iftuwFU6SQ-J0/edit?usp=sharing">Lecture Link 1 - Basic Statistics</a></p>
+<p><a href="https://docs.google.com/presentation/d/11UmBqtQeIYfPgR3SUs7F5PRljePmQsXb5UIhriQXFu0/edit?usp=sharing">Lecture Link 2 - Pitfalls</a></p>
+</div>
+<div id="why-statistics" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Why Statistics</h2>
+<p>Statistics is the process of making inferences from data. That’s it. We find that statistics can be daunting for undergraduate students. It was daunting for us as well. The goal of this book is not to teach you how to be a statistician. It is to teach you how to begin working with and understanding data as it pertains to scientific inquiry. The skills you learn here should allow you to read a scientific paper and not have to look up what a standard error is or what a confidence interval is or what the difference is between a median and a mean.</p>
+<p>A poorly kept secret in science is that you need a working understanding of statistics whether you use it formally or not. Consider a doctor who needs to prescribe a drug for disease X. There are three drugs on the market for this disease. The drugmakers have provided you with the following graphs showing how good their drugs are at treating this disease.</p>
+<pre><code>## Warning: `...` is not empty.
+## 
+## We detected these problematic arguments:
+## * `needs_dots`
+## 
+## These dots only exist to allow future extensions and should be empty.
+## Did you misspecify an argument?</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   trial drug   prop_recover
+##   &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;
+## 1     1 drug_a         1   
+## 2     1 drug_b         1   
+## 3     1 drug_c         0.7 
+## 4     2 drug_a         0.89
+## 5     2 drug_b         0.98
+## 6     2 drug_c         0.12</code></pre>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="_main_files/figure-html/unnamed-chunk-1-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\label{fig1:plot}" width="672" />
+<p class="caption">
+Figure 5.1: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
+</p>
+</div>
+<p>Figure  above shows the result of twenty trials of each drug. For each trial, the drug makers calculated the percentage of patients that recovered from the disease after taking the drug.</p>
+<p>Which one should the doctor prescribe?</p>
+<p>For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn’t seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drugmakers only report recoveries of people who <em>took</em> the drug. What about people who had the same disease but didn’t take a drug? In other words, what about the <em>controls</em>? The doctor asks for this information. Let’s look at the same graph, but now with the data for controls added.</p>
+<pre><code>## Warning: `...` is not empty.
+## 
+## We detected these problematic arguments:
+## * `needs_dots`
+## 
+## These dots only exist to allow future extensions and should be empty.
+## Did you misspecify an argument?</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   trial drug   treatment prop_recover
+##   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt;
+## 1     1 drug_a treatment         1   
+## 2     1 drug_b treatment         1   
+## 3     1 drug_c treatment         0.7 
+## 4     1 drug_a control           0.41
+## 5     1 drug_b control           1   
+## 6     1 drug_c control           0</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>In the figure above, the black dots are the same as before. The gray dots show the percent of people who recovered without taking the drug. Does this information change your perception of the benefits of taking either drug? In the first graph, it seemed obvious that drugs A and B were better than drug C, because most people recovered with those drugs.</p>
+<p>Adding the control data tells a different story. While it is true that most people recovered when taking drugs A and B, they also recovered without taking those drugs. For drug C, only ~25 to 75 percent of people recovered when taking it, but that percentage appears much higher than the percentage of people that recovered without taking the drug. In some trials, almost no one recovered without the drug. This complicates the decision of which drug to choose.</p>
+<p>Because our doctor took Inquiry and Analysis in Biology <em>and</em> later took biostatistics, they ask for further information. Instead of just looking at the data for each group, they want something more informative. For each trial, they subtract the percent that recovered when taking the drug from the percent that recovered when not taking the drug. Then they plot it. It looks like this.</p>
+<pre><code>## Warning: `...` is not empty.
+## 
+## We detected these problematic arguments:
+## * `needs_dots`
+## 
+## These dots only exist to allow future extensions and should be empty.
+## Did you misspecify an argument?</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   trial drug   treatment control difference
+##   &lt;int&gt; &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;
+## 1     1 drug_a      1       0.41       0.59
+## 2     2 drug_a      0.89    0.81       0.08
+## 3     3 drug_a      0.96    0.56       0.4 
+## 4     4 drug_a      0.62    0.99      -0.37
+## 5     5 drug_a      1       0.99       0.01
+## 6     6 drug_a      0.99    0.27       0.72</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Now we see a different story than the figure we started with. By displaying the differences in recover, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn’t.</p>
+<p>So far, we have only plotted the data. We haven’t quantified anything yet, but by plotting the data and being self-critical of the ways in which we might be fooling ourselves, we have practiced <em>quantitative reasoning</em>.</p>
+<p>Plotting data as among the most important steps in any project. Plotting (aka <em>making graphs</em>, <em>data visualization</em>) does several things. 1) It reveals any obvious problems in data entry. 2) It shows obvious trends in the data. 3) It crystalizes the experimental design. This last step is crucial. Deciding what to put on the x-axis versus the y-axis, how to label those axes, what range to put on the y-axis, what groups to label in the figure legend…these are just some of the choices you’ll make when plotting data. Students often do this step last, hoping to add a graph at the end to complete an assignment. Don’t do that. Plot early and often, even before you have data. If you know what the axes should be, and which groups will go side-by-side (like the gray and black dots in Figure X), then you have already crystalized nearly everything that you will later write about in the rest of your paper. We call this process <em>Figures First</em>, and give examples in later chapters.</p>
+</div>
+<div id="summary-statistics" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Summary Statistics</h2>
+<p>Now that we’ve plotted our results, the next step is to describe them using summary statistics. Summary statistics are numbers that describe some aspect of the data. They include things like the mean, median, standard deviation, quantiles, minimum, and maximum. In combination with plotting, summary statistics are critical for communicating science. Summary statistics also provide a guide for how to verbally describe your results to your professor, colleague, friend, or whoever is trying to understand your science.</p>
+<p>You should aim to provide at least the following summary statistics for every important result. They are defined below along with the R function that calculates them in italics.</p>
+<p><strong>Mean</strong> The central tendency of your data. calculated as the sum of the value of all data in a group divided by the number of data points in that group. <em>mean()</em></p>
+<p><strong>Standard Deviation</strong> The spread of your data. Let’s say you have 10 data points with a mean of 2 and a standard deviation of 0.5. Even though the mean is 2, very few individual data points will be exactly 2. In fact, none of them may be exactly 2. Instead, the data points will “deviate” from the mean. A standard deviation of 0.5 means that the average deviation from the mean is 0.5 absolute units from 2. We usually write this with +/- symbols (2 +/- 0.5), meaning that a typical data point might be anywhere from 2 + 0.5 to 2 - 0.5, that is 2.5 to 1.5. <em>sd()</em></p>
+<p><strong>Minimum</strong> The smallest value. <em>min()</em></p>
+<p><strong>Maximum</strong> The largest value. <em>max()</em></p>
+<p>The code below will generate the data set used in Figure 3 above called <em>drug_data</em> - just copy it and run it. Don’t worry about interpreting it for now.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="thinking-quantitatively.html#cb7-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="thinking-quantitatively.html#cb7-2"></a><span class="kw">set.seed</span>(<span class="dv">222</span>)</span>
+<span id="cb7-3"><a href="thinking-quantitatively.html#cb7-3"></a>drug_data &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">drug_a_treatment =</span> <span class="kw">rbeta</span>(<span class="dv">20</span>, <span class="dv">2</span>,.<span class="dv">25</span>),</span>
+<span id="cb7-4"><a href="thinking-quantitatively.html#cb7-4"></a>       <span class="dt">drug_b_treatment =</span> <span class="kw">rbeta</span>(<span class="dv">20</span>, <span class="dv">2</span>, <span class="fl">0.3</span>),</span>
+<span id="cb7-5"><a href="thinking-quantitatively.html#cb7-5"></a>       <span class="dt">drug_c_treatment =</span> <span class="kw">rbeta</span>(<span class="dv">20</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
+<span id="cb7-6"><a href="thinking-quantitatively.html#cb7-6"></a>       <span class="dt">drug_a_control =</span> <span class="kw">rbeta</span>(<span class="dv">20</span>, <span class="fl">1.8</span>, <span class="fl">0.25</span>),</span>
+<span id="cb7-7"><a href="thinking-quantitatively.html#cb7-7"></a>       <span class="dt">drug_b_control =</span> <span class="kw">rbeta</span>(<span class="dv">20</span>, <span class="fl">1.8</span>, <span class="fl">0.25</span>),</span>
+<span id="cb7-8"><a href="thinking-quantitatively.html#cb7-8"></a>       <span class="dt">drug_c_control =</span> <span class="kw">rbeta</span>(<span class="dv">20</span>, <span class="fl">0.2</span>, <span class="dv">1</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-9"><a href="thinking-quantitatively.html#cb7-9"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">trial =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(.)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-10"><a href="thinking-quantitatively.html#cb7-10"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols =</span> <span class="op">-</span>trial, <span class="dt">names_to =</span> <span class="st">&quot;drug&quot;</span>, <span class="dt">values_to =</span> <span class="st">&quot;y&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-11"><a href="thinking-quantitatively.html#cb7-11"></a><span class="st">  </span><span class="kw">separate</span>(drug, <span class="kw">c</span>(<span class="st">&quot;temp&quot;</span>, <span class="st">&quot;drug&quot;</span>, <span class="st">&quot;treatment&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-12"><a href="thinking-quantitatively.html#cb7-12"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">drug =</span> <span class="kw">paste0</span>(temp, <span class="st">&quot;_&quot;</span>, drug)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-13"><a href="thinking-quantitatively.html#cb7-13"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>temp) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-14"><a href="thinking-quantitatively.html#cb7-14"></a><span class="st">  </span><span class="kw">pivot_wider</span>(<span class="dt">names_from =</span> treatment, <span class="dt">values_from =</span> y) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-15"><a href="thinking-quantitatively.html#cb7-15"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">difference =</span> treatment <span class="op">-</span><span class="st"> </span>control,</span>
+<span id="cb7-16"><a href="thinking-quantitatively.html#cb7-16"></a>         <span class="dt">difference =</span> <span class="kw">round</span>(difference, <span class="dv">2</span>),</span>
+<span id="cb7-17"><a href="thinking-quantitatively.html#cb7-17"></a>         <span class="dt">treatment =</span> <span class="kw">round</span>(treatment, <span class="dv">2</span>),</span>
+<span id="cb7-18"><a href="thinking-quantitatively.html#cb7-18"></a>         <span class="dt">control =</span> <span class="kw">round</span>(control, <span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-19"><a href="thinking-quantitatively.html#cb7-19"></a><span class="st">  </span><span class="kw">arrange</span>(drug)</span></code></pre></div>
+<p>Once we have a data set, we use the <em>group_by()</em> and <em>summarize()</em> functions to generate the summary statistics.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="thinking-quantitatively.html#cb8-1"></a>drug_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-2"><a href="thinking-quantitatively.html#cb8-2"></a><span class="st">  </span><span class="kw">group_by</span>(drug) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-3"><a href="thinking-quantitatively.html#cb8-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(difference),</span>
+<span id="cb8-4"><a href="thinking-quantitatively.html#cb8-4"></a>            <span class="dt">sd =</span> <span class="kw">sd</span>(difference),</span>
+<span id="cb8-5"><a href="thinking-quantitatively.html#cb8-5"></a>            <span class="dt">min =</span> <span class="kw">min</span>(difference),</span>
+<span id="cb8-6"><a href="thinking-quantitatively.html#cb8-6"></a>            <span class="dt">max =</span> <span class="kw">max</span>(difference))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## Warning: `...` is not empty.
+## 
+## We detected these problematic arguments:
+## * `needs_dots`
+## 
+## These dots only exist to allow future extensions and should be empty.
+## Did you misspecify an argument?</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   drug       mean    sd    min   max
+##   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 drug_a  0.0315  0.303 -0.61   0.72
+## 2 drug_b -0.00950 0.150 -0.290  0.38
+## 3 drug_c  0.428   0.306 -0.18   0.9</code></pre>
+<p>That’s a lot of decimal places! Let’s clean it up a bit before moving on. Compare the code below to the code above. Can you see how we shortened the decimal places? Why did we keep two decimal places for the mean, but only 1 decimal place for everything else?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="thinking-quantitatively.html#cb12-1"></a>summary_stats &lt;-<span class="st"> </span>drug_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-2"><a href="thinking-quantitatively.html#cb12-2"></a><span class="st">  </span><span class="kw">group_by</span>(drug) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-3"><a href="thinking-quantitatively.html#cb12-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">round</span>(<span class="kw">mean</span>(difference),<span class="dv">2</span>),</span>
+<span id="cb12-4"><a href="thinking-quantitatively.html#cb12-4"></a>            <span class="dt">sd =</span> <span class="kw">round</span>(<span class="kw">sd</span>(difference),<span class="dv">1</span>),</span>
+<span id="cb12-5"><a href="thinking-quantitatively.html#cb12-5"></a>            <span class="dt">min =</span> <span class="kw">round</span>(<span class="kw">min</span>(difference),<span class="dv">1</span>),</span>
+<span id="cb12-6"><a href="thinking-quantitatively.html#cb12-6"></a>            <span class="dt">max =</span> <span class="kw">round</span>(<span class="kw">max</span>(difference),<span class="dv">1</span>)) </span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="thinking-quantitatively.html#cb14-1"></a>summary_stats</span></code></pre></div>
+<pre><code>## Warning: `...` is not empty.
+## 
+## We detected these problematic arguments:
+## * `needs_dots`
+## 
+## These dots only exist to allow future extensions and should be empty.
+## Did you misspecify an argument?</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   drug    mean    sd   min   max
+##   &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 drug_a  0.03   0.3  -0.6   0.7
+## 2 drug_b -0.01   0.1  -0.3   0.4
+## 3 drug_c  0.43   0.3  -0.2   0.9</code></pre>
+<p>Now we’ll add the mean and sd to the plot. Can you see how it is added in the code below?</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="thinking-quantitatively.html#cb17-1"></a><span class="kw">ggplot</span>(drug_data, <span class="kw">aes</span>(<span class="dt">x =</span> drug, <span class="dt">y =</span> difference)) <span class="op">+</span></span>
+<span id="cb17-2"><a href="thinking-quantitatively.html#cb17-2"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">0.065</span>)) <span class="op">+</span></span>
+<span id="cb17-3"><a href="thinking-quantitatively.html#cb17-3"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Percent of patients that recovered&quot;</span>,</span>
+<span id="cb17-4"><a href="thinking-quantitatively.html#cb17-4"></a>       <span class="dt">x =</span> <span class="st">&quot;Drug&quot;</span>) <span class="op">+</span></span>
+<span id="cb17-5"><a href="thinking-quantitatively.html#cb17-5"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb17-6"><a href="thinking-quantitatively.html#cb17-6"></a><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="dv">0</span>) <span class="op">+</span></span>
+<span id="cb17-7"><a href="thinking-quantitatively.html#cb17-7"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="dt">data =</span> summary_stats, <span class="kw">aes</span>(<span class="dt">x =</span> drug, <span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean <span class="op">-</span><span class="st"> </span>sd, <span class="dt">ymax =</span> mean <span class="op">+</span><span class="st"> </span>sd), <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;orange&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>This looks pretty close to a finished product now. It has lots of information in the plot, including the raw data, the mean, and the standard deviation. By combining the summary statistics and the plot, we are ready to write a paragraph about this result.</p>
+<p><em>Across 20 trials, recovery rates were 0.43 +/- 0.3 points higher for groups that took drug C versus that took a placebo. Recovery ranged from -0.2 to 0.9. In comparison, recovery rates for drug A were only 0.03 +/- 0.3 points higher than placebo controls, and recovery rates for drug B were 0.01 +/- 0.1 points worse than placebo controls. However, direct comparison of these drugs is complicated by the fact that raw rates of recovery were highest for drugs A and B, in which nearly all patients recovered in both treatment and control groups. In contrast, recovery rates for drug C were ~50% in the treatment group, but only ~10% in the control. This suggest the potential that the trials were conducted on groups with different underlying probabilities of recovery.</em></p>
+</div>
+<div id="dont-forget-that-quantitative-thinking-includes-thinking" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Don’t forget that Quantitative Thinking includes “thinking”</h2>
+<p>A statistical model alone will not answer your scientific question. The work flow presented above is not a formula for success in every case. Each problem you attempt to solve as a scientist is unique and will require you to make judgment calls. Statistics can help us to justify those judgments, making our decisions less susceptible to personal bias, but they cannot eliminate subjectivity. The point of <em>Quantitative Thinking</em> is not to replace critical thought with computer generated outputs. It is to use the tools of statistics and experimental design to prevent us from fooling ourselves. As Richard Feynman said: “The first principal [of science] is to not fool yourself, and you are the easiest person to fool.”</p>
+</div>
+<div id="common-pitfalls-in-statistical-inference" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Common Pitfalls in Statistical Inference</h2>
+<p>Here are some easy ways to fool yourself in science and quantitative thinking.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Spurious correlations</strong></li>
+</ol>
+<p><em>Assuming that correlations reflect causation. Forgetting about hidden variables</em></p>
+<p>The plot below is from real data. How do you interpret this result?</p>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 36 rows containing missing values (geom_text).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>The figure shows a clear positive correlation between the divorce rate and the number of Waffle Houses (McElreath 2015). In this case, it is obvious (hopefully) that Waffle Houses are probably not causing divorces. What’s going on? The states that are labeled are all in the South, where Waffle Houses are common. People also happen to get married earlier in the South, which helps to explain the higher than average divorce rates there.</p>
+<p>Here’s another less obvious example.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="thinking-quantitatively.html#cb20-1"></a><span class="kw">library</span>(gapminder)</span>
+<span id="cb20-2"><a href="thinking-quantitatively.html#cb20-2"></a><span class="kw">data</span>(gapminder)</span>
+<span id="cb20-3"><a href="thinking-quantitatively.html#cb20-3"></a></span>
+<span id="cb20-4"><a href="thinking-quantitatively.html#cb20-4"></a>gapminder <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb20-5"><a href="thinking-quantitatively.html#cb20-5"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2007</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb20-6"><a href="thinking-quantitatively.html#cb20-6"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> gdpPercap, <span class="dt">y =</span> lifeExp)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb20-7"><a href="thinking-quantitatively.html#cb20-7"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb20-8"><a href="thinking-quantitatively.html#cb20-8"></a><span class="st">  </span><span class="kw">scale_x_log10</span>() <span class="op">+</span></span>
+<span id="cb20-9"><a href="thinking-quantitatively.html#cb20-9"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>) <span class="op">+</span></span>
+<span id="cb20-10"><a href="thinking-quantitatively.html#cb20-10"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;GDP ($ Per Capita)&quot;</span>,</span>
+<span id="cb20-11"><a href="thinking-quantitatively.html#cb20-11"></a>       <span class="dt">y =</span> <span class="st">&quot;Life Expectancy (years)&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>The figure shows a positive relationship between a country’s gross domestic product (GDP) and its life expectancy in 2007. Each dot is a country. In our experience, this correlation is a common one for students to study. They often interpret the result as confirming a benefit of economic activity with how long people live, and conclude that countries can improve life-expectancy simply by improving economic activity.</p>
+<p>But this represents a similar fallacy as the Waffle House-Divorce example. An easy way to see this is to check death certificates. If we did that (we didn’t, but we think we’re safe here), we would probably not find a cause of death that says “Died due to low GDP”. Just like Waffle Houses are associated with “Southerness” and “Southerness” is associated with early age at marriage and early age at marriage leads to higher divorce rates, GDP is associated with its own confounding variable of health care infrastructure. That is itself a large and difficult-to-define metric, but it is closer to explaining the positive correlation between GDP and life expectancy.</p>
+<p>It is certainly true that countries with higher GDP’s tend to also have better health outcomes because they have better health infrastructure. The trick is to think about the actual steps that have to happen for GDP to translate to longer life-expectancy. Each country will make individual choices along those steps, and each choice has the potential to sever the link between GDP and efficient health spending. There is nothing wrong with studying the <em>statistical</em> relationship between GDP and life expectancy. Just be careful in assuming that simply improving GDP will automatically improve life-expectancy.</p>
+<div id="preventing-mistakes-with-spurious-correlations" class="section level4" number="5.5.0.1">
+<h4><span class="header-section-number">5.5.0.1</span> Preventing mistakes with spurious correlations</h4>
+<p>Use similar quantitative reasoning as the doctor did with the drug company results. In essence, ask how an initial result might be missing something crucial (like a control or a confounder). This is especially important if the initial result is something you were expecting to see. If you were expecting to see a positive correlation between x and y and you found it, that’s great. But don’t let that result prevent you from thinking critically about other ways that your result could arise.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Negative Results as Failures</strong></li>
+</ol>
+<p><em>Assuming that your study “failed” because it did not support your hypothesis</em></p>
+<p>You form a hypothesis, expect an outcome, collect data, and find…nothing. No relationship. Nada.</p>
+<p>What do you conclude from this?</p>
+<p>A common mistake is to declare a “failed” experiment. Some students try to start a new project from scratch, just so they can report a “positive” outcome. Don’t do that!</p>
+<p>An unwritten rule of science is that our failures often lead to the most interesting research. After all, you probably did a study thinking you knew the answer. When it fails, it means that something that most scientists might predict is not quite right. Consider geocentrism. When scientists in the 1600’s found that their calculations of the planets and stars were wrong, that was not a failure (well, it was a failure of the mathematical models themselves, but not of the scientific endeavor writ large). Instead, those bad predictions eventually revealed that something that most humans believed (earth at the center of the universe) was wrong. Being wrong did not mean that those scientists were bad scientists. It was perfectly reasonable to expect that the earth was stationary and everything else moved around it.</p>
+<p>In my own research (Wesner’s), a failure lead to a new area of study. We wanted to know how metal contamination from streams would affect insects that lived in those streams. We knew that young insects had high metal concentrations and assumed that the adults would too. We even wrote several grants that made that assumption, asking for money to study how those metals in adult insects would impact birds that fed on them.</p>
+<p>So we collected some adults from contaminated streams and measured the concentration of metals in them. We were shocked. Even though they came from contaminated streams and the larvae in those streams had high metal concentrations, the adults did not. They looked fine. We were wrong. There did not seem to be any risk of metal contamination to birds.</p>
+<p>This was embarrassing, but it also lead to a different line of research. We read the literature and conducted experiments. We determined that lots of contaminants are lost during metamorphosis. But during that loss, many insects also die. It’s too stressful. So the main risk of metals that we studied was not that metals would get into birds and prevent their reproduction. The main risk was that metals would prevent insects from emerging altogether, thereby leading to less food for birds.</p>
+<p>Without this initial “failure”, we never would have discovered the actual links between metal contamination in streams and risks to riparian birds.</p>
+</div>
+<div id="preventing-mistakes-with-negative-results" class="section level4" number="5.5.0.2">
+<h4><span class="header-section-number">5.5.0.2</span> Preventing mistakes with negative results</h4>
+<p>Treat them as an opportunity to learn more. If your hypothesis was not supported, explore the reasons why. Do you predictor and response variables actually measure the quantities of your hypothesis or are they a proxy? If they’re a proxy, maybe they don’t measure what you think they do. Maybe the negative results is robust and it challenges conventional wisdom. That’s exciting! What are the implications of a hypothesis that didn’t pan out? Explore those and suggest how future scientists should proceed now that we know that a given hypothesis isn’t always supported.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Ecological Fallacy</strong></li>
+</ol>
+<p><em>Using aggregate data to infer something about individuals</em></p>
+<p>Extreme obesity is a global public health concern that is defined as a body mass index of 40 kg/m<sup>2</sup> or more. Individuals in this category have increased rates of mortality, often due to increased rates of heart disease, cancer, stroke and other ailments <span class="citation">(<span class="citeproc-not-found" data-reference-id="kitahara2014association"><strong>???</strong></span>)</span>.</p>
+<p>Let’s visualize the relationship between obesity and life-expectancy across countries. In the plot below, each dot is a different country. The line represents a linear regression between the two variables.</p>
+<pre><code>## Parsed with column specification:
+## cols(
+##   country = col_character(),
+##   obesity_rate_perc_pop = col_double()
+## )</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   country = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Joining, by = &quot;country&quot;</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 22 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 22 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Warning: Removed 191 rows containing missing values (geom_label_repel).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Is this what you expected? This seems like a paradox. Decades of studies clearly show that extreme obesity is linked with poor health outcomes and increased mortality. The plot above appears to contradict this. Countries with a higher percentage of obese people also tend to have <em>higher</em> life expectancy.</p>
+<p>This is an example of the <em>ecological fallacy</em>, which states that we cannot use aggregate data to infer something about individuals. For example, Kuwait has a high obesity rate of ~38% and a high life-expectancy of ~79 years. But those numbers represent averages of about 4 million individuals. If we were to assess a sample of individuals <em>within</em> Kuwait, then we would expect the pattern that we initially hypothesized - <em>at the individual level, extreme obesity is negatively associated with life-expectancy, but at the country-level the pattern is reversed.</em></p>
+<p>As you might expect by now, there are also other reasons to explain these associations, such as hidden variables. For example, look at the plot again, but now with information on GDP per capita.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="thinking-quantitatively.html#cb30-1"></a>obesity_CIA &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/obesity_CIA.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Parsed with column specification:
+## cols(
+##   country = col_character(),
+##   obesity_rate_perc_pop = col_double()
+## )</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="thinking-quantitatively.html#cb32-1"></a>life_exp &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/life_expectancy_years.csv&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb32-2"><a href="thinking-quantitatively.html#cb32-2"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols =</span> <span class="op">-</span>country, <span class="dt">names_to =</span> <span class="st">&quot;year&quot;</span>, <span class="dt">values_to =</span> <span class="st">&quot;life_exp&quot;</span>)</span></code></pre></div>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   country = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="thinking-quantitatively.html#cb35-1"></a>obesity_life_exp &lt;-<span class="st"> </span>obesity_CIA <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(life_exp <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2016</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb35-2"><a href="thinking-quantitatively.html#cb35-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">label =</span> <span class="kw">case_when</span>(country <span class="op">==</span><span class="st"> &quot;Kuwait&quot;</span> <span class="op">~</span><span class="st"> &quot;Kuwait&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb35-3"><a href="thinking-quantitatively.html#cb35-3"></a><span class="st">  </span><span class="kw">left_join</span>(gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(year)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(country, gdpPercap))</span></code></pre></div>
+<pre><code>## Joining, by = &quot;country&quot;</code></pre>
+<pre><code>## Joining, by = &quot;country&quot;</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="thinking-quantitatively.html#cb38-1"></a>obesity_life_exp <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb38-2"><a href="thinking-quantitatively.html#cb38-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> obesity_rate_perc_pop, <span class="dt">y =</span> life_exp)) <span class="op">+</span></span>
+<span id="cb38-3"><a href="thinking-quantitatively.html#cb38-3"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">size =</span> gdpPercap)) <span class="op">+</span></span>
+<span id="cb38-4"><a href="thinking-quantitatively.html#cb38-4"></a><span class="st">  </span><span class="kw">geom_label_repel</span>(<span class="kw">aes</span>(<span class="dt">label =</span> label), <span class="dt">nudge_x =</span> <span class="dv">3</span>, <span class="dt">nudge_y =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb38-5"><a href="thinking-quantitatively.html#cb38-5"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> F) <span class="op">+</span></span>
+<span id="cb38-6"><a href="thinking-quantitatively.html#cb38-6"></a><span class="st">  </span><span class="kw">theme_classic</span>() <span class="op">+</span></span>
+<span id="cb38-7"><a href="thinking-quantitatively.html#cb38-7"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Obesity Rate (% of population)&quot;</span>,</span>
+<span id="cb38-8"><a href="thinking-quantitatively.html#cb38-8"></a>       <span class="dt">y =</span> <span class="st">&quot;Life Expectancy (years)&quot;</span>,</span>
+<span id="cb38-9"><a href="thinking-quantitatively.html#cb38-9"></a>       <span class="dt">caption =</span> <span class="st">&quot;Data Sources: Obesity - CIA World Factbook, Life Expectancy - Gapminder</span></span>
+<span id="cb38-10"><a href="thinking-quantitatively.html#cb38-10"></a><span class="st">       Data Idea: Cairo, A. 2019. Graphics That Seem Clear Can Easily Be Misread. Scientific American&quot;</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 22 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 64 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Warning: Removed 191 rows containing missing values (geom_label_repel).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>This is the same data, but now a third variable is presented, showing GDP per capita (in US 2007 Dollars). The scatter of the dots is non-random in the sense that countries with large GDP tend to be clustered in areas of both high life-expectancy and higher obesity rates.</p>
+</div>
+<div id="preventing-the-ecological-fallacy-mistake" class="section level4" number="5.5.0.3">
+<h4><span class="header-section-number">5.5.0.3</span> Preventing the ecological fallacy mistake</h4>
+<p>Relate your hypotheses and explanations to the level of your data. For example:</p>
+<p><strong>What We Initially Wanted to Study</strong> How does obesity affect survival?</p>
+<p><strong>What We Actually Studied</strong> What is the correlation between obesity rates and life expectancy among countries?</p>
+<p><strong>Data Level</strong> Countries</p>
+<p><strong>Faulty Description</strong> Individuals with extreme obesity live longer</p>
+<p><strong>Correct Description</strong> At the country level, there is a positive correlation between obesity rates and life expectancy.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="putting-it-all-together.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction-to-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+---
+title: "2) Tidy the data to the correct format"
+author: "Jeff Wesner"
+date: "Feb 8, 2020"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+![](data_workflow_tidy.png)
+*Figure source: Garret Grolemund. See more details on this workflow here: https://github.com/rstudio-education/remaster-the-tidyverse/tree/master*
+
+#4) Tidy the data
+
+Most data sets are formatted for humans to read, but computers want a different format. The next steps will turn your data set into a format that your computer can read. We refer to it as "tidy data". You can read more about it [here](http://www.cs.umd.edu/class/fall2018/cmsc641/files/tidy_data.pdf) (but you don't have to). First we need to install some packages that will make this process easy.
+
+###Open a script
+*File -> New File -> R Script*
+
+You should see a blank file with a flashing prompt. Script's are your friend. It's where you tell the computer what to do. For example, you might want to give your data set a shorter name, since you'll have to type it over and over again. Paste the code below in your script and click *Run*.
+```{r eval = FALSE}
+total_fertility <- children_per_woman_total_fertility
+```
+
+In words, this says "create a new data set called total_fertility from the other data set called children_per_woman_total_fertility". The arrow is made with two symbols, a *lesser than* < and a *minus* -, which gives <-.
+
+If it worked, you should see two files in the upper right panel like this:
+![](first_code.png)
+
+###Install some packages
+"Packages" are simply shortcuts for coding that other people have developed and released to the world. R has a [huge library of external pakckages](https://cran.r-project.org/web/packages/available_packages_by_name.html of external packages). We're going to use two of them - *tidyverse* and *janitor*. Getting these packages involves two steps:
+  
+  1) Install the packages to your computer. You only have to do this once. Paste the code below in your script and run it. 
+```{r eval = FALSE}
+install.packages("tidyverse")
+install.packages("janitor")
+```
+  2) Tell R that you want to use the package in this session by typing *library(INSERT PACKAGE NAME)* (replace with the actual package name). Try typing the code below and clicking Run. 
+```{r }
+library(tidyverse)
+library(janitor)
+```
+  
+###Tidy the data
+Your data set has a column for country and a bunch of other columns for years. The numbers in each cell represent the number of children born per woman for a given combination of country and year. You can do a lot with this. For example, the code below will calculate the mean, median, and standard deviation of fertility in the year 1801. The dollar sign just indicates that you want to perform an operation on a certain column within a data set:
+```{r eval=FALSE}
+mean(total_fertility$'1801') #find the column called 1801 in the dataset called "total_fertility" and caculate the mean
+median(total_fertility$'1801') #find the column called 1801 in the dataset called "total_fertility" and caculate the mean)
+sd(total_fertility$'1801') #find the column called 1801 in the dataset called "total_fertility" and caculate the mean
+```
+
+You can also plot the data like this:
+
+```{r eval=FALSE}
+plot(total_fertility$'1801')
+```
+
+How would you interpret this plot?
+
+
+The functions above are extremely useful for quick checks of your data. But they quickly become tedious with larger data sets. For example, you have 200 years worth of fertility data. We need a better way to organize it and automate some processes. You don't want to compute a mean 200 times by hand!
+
+The code below will make the data set "long" instead of "wide" so that we have only three columns (country, year, children_per_woman), instead of 184 columns.
+```{r eval=FALSE}
+total_fertility_long <- total_fertility %>% 
+  gather(key = year, value = "children_per_woman", -country)
+```
+
+In words, this says "create a new file called total_fertility_long. In that file take the data from total_fertility *and then* gather all the columns and stack them, but ignore the country column in this operation". More generally, this procedure does this: 
+
+![](gather.png)
+
+*gather()* is one function that the *tidyverse* packages does. *Tidyverse* provides a lot of useful shortcuts for arranging your data. For example, you could also filter the data set so that it only contains data from 1800, 1900, and 2000:
+
+```{r eval=FALSE}
+total_fertility %>% 
+  gather(key = year, value = "children_per_woman", -country) %>% 
+  filter(year == 1800|year == 1900| year == 2000)
+```
+
+We will primarily use just two functions - *gather()* and *filter()*. But there are lots of extras to explore if you're interested here - https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+
+<base target="_blank"/>
+
+
+
+
+
+
+
+

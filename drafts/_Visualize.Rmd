@@ -1,0 +1,122 @@
+---
+title: "3) Visualize"
+author: "Jeff Wesner"
+date: "Feb 8, 2020"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+---
+![](data_workflow_visualize.png)
+
+#5) Visualize the data
+Once your data are in the right format, then it is helpful to visualize them with graphs.
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(tidyverse)
+total_fertility_long <- read_csv("children_per_woman_total_fertility.csv") %>% 
+  gather(year, children_per_woman, -country)
+
+```
+To do that, we'll use *ggplot()*, which is included in the *tidyverse* package. Let's try that by plotting children_per_woman on the y-axis and year on the x-axis. 
+```{r}
+library(tidyverse)
+ggplot(total_fertility_long, aes(x=year, y=children_per_woman))+
+  geom_point()
+```
+
+Can you interpret this graph? Sure, it's pretty ugly, but it's a nice first step. To understand what you just did, let's break the code down into it's three components:
+
+1) code - ggplot(total_fertility_long)
+   interpretation - *use the ggplot function to find the dataset called "total_fertility_long"*
+```{r}
+ggplot(total_fertility_long)
+```
+
+2) code - ggplot(total_fertility_long, aes(x = year, y = children_per_woman))
+   interpretation - *aes() stands for aesthetics. It's where you tell ggplot which columns to use for the x-axis or y-axis. If you had a column for color or size you'd also put it here. **The names you enter in the aesthetics must exactly match the names of a column from your dataset. If you're working with a different dataset, the names below will have to change. Well, maybe not year, but probably everything else.***
+```{r}
+ggplot(total_fertility_long, aes(x = year, y = children_per_woman))
+```
+
+3) code - ggplot(total_fertility_long, aes(x = year, y = children_per_woman)) +
+      geom_point()
+   interpretation - *now we use the + symbol to add a final piece. geom_point() tells ggplot plot the data as individual circles (or points) on the graph. There are a bunch of geom_'s in ggplot, such as geom_line() or geom_bar() or geom_boxplot(). Play around with some and see how the graph changes.*
+```{r}
+ggplot(total_fertility_long, aes(x = year, y = children_per_woman)) +
+  geom_point()
+```
+ 
+All graphs with ggplot contain the three elements above: name of the data set, aesthetics, and geoms. Once you get comfortable with these three basic elements, you can make an astonishing number of cool graphs. Everything after these first three elements is just make a graph more interpretable, like adding better labels, colors, backgrounds, etc. There are a bunch of ways to do this. Here's a cheatsheet of all the things you can do with *ggplot()*. https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
+
+In the steps below, we'll do a few steps to improve the graph above. First, notice that the trends are really hard to see. Black dots overlap and just create a blob. What if we made the dots more transparent? Let's do that by specifying *alpha* in the geom_point() function.
+
+```{r}
+ggplot(total_fertility_long, aes(x = year, y = children_per_woman)) +
+  geom_point(alpha = 0.1)
+```
+
+That's a little better. Now let's make the dots smaller by specifying *size* in geom_point().
+```{r}
+ggplot(total_fertility_long, aes(x = year, y = children_per_woman)) +
+  geom_point(alpha = 0.1, size = 0.8)
+```
+
+That's a little better still. Notice that it's impossible to know what year is on the x-axis. That's because we didn't tell R that *year* is supposed to be a number, rather than a character vector. Which part of the code below fixes that problem?
+
+```{r}
+ggplot(total_fertility_long, aes(x = as.numeric(year), y = children_per_woman)) +
+  geom_point(alpha = 0.1, size = 0.8)
+```
+
+The next code uses two new functions - *xlab()* and *ylab()* - to add custom x and y labels.
+```{r}
+ggplot(total_fertility_long, aes(x = as.numeric(year), y = children_per_woman)) +
+  geom_point(alpha = 0.1, size = 0.8) +
+  xlab("Year")+
+  ylab("Number of children per woman")
+```
+
+Maybe you still think it's too messy? Let's clean it up by only plotting only data after 1950. How would you describe the code below?
+```{r}
+tot_fert_last50 <- total_fertility_long %>% 
+  filter(year >= 1950)
+```
+
+Then use the same plotting code as before with *ggplot()*, but now with the new data set.
+```{r}
+ggplot(tot_fert_last50, aes(x=as.numeric(year), y=children_per_woman))+
+  geom_point(alpha = 0.1, size = 0.8) +
+  xlab("Year")+
+  ylab("Number of children per woman")
+```
+
+Let's add a boxplot to each of the years. This will let us see how the central tendency (i.e. the median) changed over time. Can you see which part of the code below includes the boxplot?
+
+
+```{r}
+ggplot(tot_fert_last50, aes(x=as.numeric(year), y=children_per_woman, group = year))+
+  geom_point(alpha = 0.1) +
+  xlab("Year")+
+  ylab("Number of children per woman")+
+  geom_boxplot()
+```
+
+You can see some odd black dots on the upper right. Those are outliers according to the boxplot, so it adds dots on top of the raw data. We can get rid of them like this:
+```{r}
+ggplot(tot_fert_last50, aes(x=as.numeric(year), y=children_per_woman, group = year))+
+  geom_point(alpha = 0.1) +
+  xlab("Year")+
+  ylab("Number of children per woman")+
+  geom_boxplot(outlier.shape = NA)
+```
+
+Finally, we could add some color to *fill* in the boxplots. Can you see which part of the code added color? Did the color help or hurt the visualization?
+```{r}
+ggplot(tot_fert_last50, aes(x=as.numeric(year), y=children_per_woman, group = year))+
+  geom_point(alpha = 0.1) +
+  xlab("Year")+
+  ylab("Number of children per woman")+
+  geom_boxplot(outlier.shape = NA, fill = "blue")
+```
+<base target="_blank"/>

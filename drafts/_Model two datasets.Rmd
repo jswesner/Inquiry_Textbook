@@ -1,0 +1,78 @@
+---
+title: "5) Model with merged data"
+author: "Jeff Wesner"
+date: "Feb 8, 2020"
+output: html_document
+---
+![](data_workflow_model.png)
+
+#What is the statistical relationship between a country's birth rate and it's population size? 
+
+In this final example, we'll use the tools you've learned to model the relationship between a country's birth rate and it's population size. Perhaps we have a hypothesis that birth rates are positively correlated to population size (after we've read the pertinent literature on this topic, of course).
+
+You already have a data set of birth rates.
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(tidyverse)
+total_fertility_long <- read_csv("children_per_woman_total_fertility.csv") %>% 
+  gather(year, children_per_woman, -country)
+```
+
+
+```{r}
+total_fertility_long
+```
+
+Now we need a data set of population sizes. For this exercise, we'll use the *gapminder* package in R to get population data. 
+```{r eval=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+install.packages("gapminder")
+```
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+library(gapminder)
+```
+```{r}
+data(gapminder_unfiltered)
+```
+
+You should see the gapminder_unfiltered data set in your Environment (upper right window). Take a look at it.
+```{r}
+head(gapminder_unfiltered) #head() shows the first six rows of a data set.
+```
+
+We're interested in testing the relationship between population size and birth rate, so we need to combine those two variables in a single data set. The code below will do that using *merge()*.
+```{r}
+pop_br <- gapminder_unfiltered %>% merge(total_fertility_long)
+```
+
+Let's check the result.
+```{r}
+head(pop_br)
+```
+
+Do you see the new column with *children_per_woman*? Also note that this data set is quite a bit smaller than the *total_fertility_long* data set. Why do you think that is?
+
+There are also some other variables in our data set. They're not a problem and we can simply ignore them for this analysis.
+
+Let's plot the relationship with *children_per_woman* on the x-axis and *population* on the y-axis. First we need to pick a year to analyze. The data set goes from 1950 to 2007. Let's start with 1950. 
+
+```{r}
+pop_br1950 <- pop_br %>% filter(year == 1950) #filter the data set to only include 1950
+
+ggplot(pop_br1950, aes(x = children_per_woman, y = pop)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+What would you conclude from this? Our hypothesis was that birth rates are positively correlated to population size. What do you think? 
+
+We can stare at the plot all day long, but we really need some numbers to assess our hypothesis. Let's use a linear regression, like you learned before.
+
+```{r}
+pop_br_model <- lm(pop ~ children_per_woman, data = pop_br1950)
+
+summary(pop_br_model)
+```
+
+How would you interpret this? It shows a slope of -4047020. Here's what that means: "*On average, every unit increase in the number of birth's was associated with a decline in population size of ~4 million people*". The standard error is huge though (3.4 million), nearly as large as the average. We would interpret that like this: "*There is large uncertainty in this estimate, however. The standard error is 3.4 million, indicating that a decline of anywhere between ~0 to 7.4 million people is a reasonable guess based on this model. These numbers indicate little support for the hypothesis that birth rate is positively correlated with population size.*" 
+
+Can you repeat this analysis, but with 2007 data? Does anything change?
+

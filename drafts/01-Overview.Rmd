@@ -1,5 +1,3 @@
-![](images/book_cover.jpg){width=30%} 
-
 # Overview
 
 ## Learning Objectives
@@ -12,9 +10,7 @@
 
 ## Who This Book is For
 
-This book is intended for undergraduate students who are writing their first scientific papers. The book was developed using materials from a course taught by Wesner to sophomores (mostly) at the University of South Dakota - BIOL 280 Inquiry and Analysis in Biology.
-
-We thank the 100's of students that have taken this course previously. Many of the chapters of this book were written from drafts of course handouts. Feedback from the students was essential for improving the materials. This book was written with support from an Online Textbook Fellowship from the University of South Dakota. 
+This book is written for freshman and sophomore undergraduate science students.
 
 ## About This Book
 
@@ -34,6 +30,6 @@ In universities, nearly all students learn the fundamentals of writing through i
 
 *5) Difficulty placing results into a broader context*
     
-These challenges do not arise from lack of intelligence and they do not mean that students are "bad" writers. They arise from a difficulty in understanding the culture shifts between writing for the Humanities and writing for the Sciences. To use another musical analogy, the difference between writing for the humanities and writing for the sciences is similar to the difference in playing improvisational jazz versus orchestral music. Both types of music have a common grammar, but they have vastly different approaches to how that grammar is expressed in song. In the same way, transitioning between writing for an English class and writing for a Biology class is not an easy task. Both writing styles are "correct", yet each has its own traditions and expectations. This book will help you learn those traditions and expectations for scientific writing.
+  These challenges do not arise from lack of intelligence and they do not mean that students are "bad" writers. They arise from a difficulty in understanding the culture shifts between writing for the Humanities and writing for the Sciences. To use another musical analogy, the difference between writing for the humanities and writing for the sciences is similar to the difference in playing improvisational jazz versus orchestral music. Both types of music have a common grammar, but they have vastly different approaches to how that grammar is expressed in song. In the same way, transitioning between writing for an English class and writing for a Biology class is not an easy task. Both writing styles are "correct", yet each has its own traditions and expectations. This book will help you learn those traditions and expectations for scientific writing.
   
-Whether you do research at all in your career, you will be affected by those that do. Scientific research influences everything from flight delays, immunizations, cancer treatments, courtroom lighting, oil drilling, climate change, and how many commas to use in a sentence. All of it is guided by the same simple process that you will learn about in this book. We hope you enjoy the process.
+  Whether you do research at all in your career, you will be affected by those that do. Scientific research influences everything from flight delays, immunizations, cancer treatments, courtroom lighting, oil drilling, climate change, and how many commas to use in a sentence. All of it is guided by the same simple process that you will learn about in this book. We hope you enjoy the process.

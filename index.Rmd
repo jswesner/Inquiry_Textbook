@@ -1,0 +1,11 @@
+---
+title: "Inquiry and Analysis in Biology"
+bibliography: "./bib/inquiry_textbook_all.bib"
+delete_merged_file: true
+output:
+  html_document: default
+  word_document: default
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
+---
+

@@ -1,0 +1,67 @@
+---
+title: "Model"
+author: "Jeff Wesner"
+date: "September 21, 2019"
+output: html_document
+---
+![](/figures/data_workflow_model.png)
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(tidyverse)
+tot_fert_last50 <- read_csv("children_per_woman_total_fertility.csv") %>% 
+  gather(year, children_per_woman, -country) %>% 
+  filter(year >=1950)
+
+```
+#6) Model and describe the data
+```{r}
+library(tidyverse)
+
+ggplot(tot_fert_last50, aes(x=as.numeric(year), y=children_per_woman, group = year))+
+  geom_point(alpha = 0.1) +
+  xlab("Year")+
+  ylab("Number of children per woman")+
+  geom_boxplot(outlier.shape = NA)
+```
+
+The graph above shows a clear decline in the median global birth rate since 1950. But just how big of a decline was it? To answer that, we need to use descriptive statistics and some modeling. 
+
+What is the median birth rate in each year? The code below will calculate that using the *pipes* we saw earlier. It says *in the dataset "tot_fert_last50" group the data by year and calculate the median number of children per woman within each year. Then show all of the results using print(n = Inf). Inf is short for infinity*
+
+```{r}
+tot_fert_last50 %>% 
+  group_by(year) %>% 
+  summarize(median_br = median(children_per_woman)) %>% 
+  print(n = Inf)
+```
+
+We can use these numbers to desribe the graph. In our paper, we might write "In 1950, women gave birth to a global median of 5.9 children. By 2000, that number dropped to a median of 2.8 children per woman, and by 2018 it was 2.3 children per woman. Overall, the global fertility rate declined by more than 50% since 1950."
+
+The text above shows how useful descriptive statistics can be. They put concrete numbers to visual trends. If we just said "The birth rate declinde since 1950 (Figure 1)", we wouldn't be wrong, but we also wouldn't be very compelling. A reader would say "Duh. I can see that on the graph. Just how much did it decline?". Descriptive statistics answered the second question.
+
+But we can go a bit further. Instead of desribing each year by itself, we might want to know how birth rates declined in a typical year. In other words, *what is the trend of the decline*? For that, we need a model
+
+##Models
+
+This is not a biostatistics course, so we're only going to scratch the surface here. Let's just get into it. Here's a statistical model that tests the hypothesis "What is the average decline in birth rate per year?"
+
+```{r}
+my_model <- lm(children_per_woman ~ as.numeric(year), data = tot_fert_last50)
+```
+*lm()* stands for linear model, otherwise known as a linear regression. This is one of the simplest models out there. The only new symbol here is the tilde (~). You can interpret it as saying ~ = *is related to* or *as a function of...*. In this case, the code above says *What is the linear relationship between children per woman and year in the dataset tot_fert_last50*?
+
+The code below shows the summary of the statistical model
+```{r}
+summary(my_model)
+```
+This is a lot to unpack, but you're almost done! The most important part of the model above is the term called "as.numeric(year)". It is the *slope* of this model. The estimate of the slope is -0.048 with a standard error of -0.008. That means this: *Every unit increase in year generates an average decrease in children per woman of -0.048 with a standard error of 0.008.* That doesn't sound like alot, but it adds up. Multiply -0.048 by 68 years and it adds up to a drop of 3.2 children per woman between 1950 and 2018! 
+
+Let's plot the linear relationship here. Can you see the code that adds the linear regression? What's different about this code compared to the boxpot you created earlier?
+```{r}
+ggplot(tot_fert_last50, aes(x=as.numeric(year), y=children_per_woman))+
+  geom_point(alpha = 0.1, size = 0.1) +
+  xlab("Year")+
+  ylab("Number of children per woman")+
+  geom_smooth(method = "lm")
+```
+

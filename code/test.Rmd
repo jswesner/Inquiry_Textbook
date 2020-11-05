@@ -1,0 +1,40 @@
+---
+title: "Untitled"
+author: "Jeff Wesner"
+date: "9/19/2020"
+header-includes:
+   - \usepackage{subfig}
+output: html_document
+---
+```{r, fig.cap = 'twoplots', fig.subcap = c("A figure", "A table"),out.width = '.49\\linewidth', echo = F, fig.align = 'center'}
+library(gridExtra)
+library(grid)
+
+plot(mpg ~ hp, data = mtcars)
+
+grid.newpage()
+grid.table(head(mtcars[,1:6]), theme = ttheme_minimal())
+
+```
+
+```{r, figures = "side", fig.show = "hold", out.width = "50%"}
+library(tidyverse)
+set.seed(222)
+drug_data <- tibble(drug_a = rbeta(20, 2,.25),
+       drug_b = rbeta(20, 2, 0.3),
+       drug_c = rbeta(20, 2, 2)) %>% 
+  mutate(trial = 1:nrow(.))  %>% 
+  pivot_longer(-trial, names_to = "drug", values_to = "y")
+
+drug_data %>% rename(prop_recover = y) %>% 
+  mutate(prop_recover = round(prop_recover, 2)) %>% 
+  head()
+
+ggplot(drug_data, aes(x = drug, y = y)) +
+  geom_point(position = position_jitter(width = 0.065)) +
+  labs(y = "Percent of patients that recovered",
+       x = "Drug") +
+  ylim(0,1)
+
+```
+
