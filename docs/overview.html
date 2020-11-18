@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 Data Visualization | Inquiry and Analysis in Biology</title>
-  <meta name="description" content="7 Data Visualization | Inquiry and Analysis in Biology" />
+  <title>Inquiry and Analysis in Biology</title>
+  <meta name="description" content="Inquiry and Analysis in Biology" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 Data Visualization | Inquiry and Analysis in Biology" />
+  <meta property="og:title" content="Inquiry and Analysis in Biology" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 Data Visualization | Inquiry and Analysis in Biology" />
+  <meta name="twitter:title" content="Inquiry and Analysis in Biology" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction-to-r.html"/>
 
+<link rel="next" href="the-process-of-science.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -205,135 +205,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-visualization" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Data Visualization</h1>
-<div id="learning-objectives" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Learning Objectives</h2>
+<div id="header">
+<h1 class="title">Inquiry and Analysis in Biology</h1>
+</div>
+<div id="overview" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Overview</h1>
+<div id="learning-objectives" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Learning Objectives</h2>
 <ol style="list-style-type: decimal">
-<li><p>Understand the components of a graph</p></li>
-<li><p>Understand best practices in graph designs</p></li>
+<li><p>Understand the nature of science as a way of knowing.</p></li>
+<li><p>Learn how to read scientific literature, evaluate and synthesize information, and to write clearly in scientific formats (e.g. lab reports, scientific papers, review papers).</p></li>
+<li><p>Learn how to interpret graphical information with statistical analyses, how to present data clearly in graphs and tables, and how to perform simple statistical analyses in R.</p></li>
 </ol>
-<p><a href="https://docs.google.com/presentation/d/14i29O2C2Me9a-HM864ehLd43bP--d1LryDPUPJZ3Xvc/edit?usp=sharing">Lecture Link</a></p>
-<p>What makes a good graph? According to Edward Tufte <span class="citation">(Tufte and Graves-Morris 1983)</span>, it is this:</p>
-<blockquote>
-<p>…that which gives the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</p>
-</blockquote>
-<blockquote>
-…graphical excellence requires telling the truth about the data
-<footer>
-Edward Tufte - The Visual Display of Quantitative Information
-</footer>
-</blockquote>
-<p>We might consider these “high-level” guideposts to data visualization. It is tempting to think of this advice as applying only to modern scientific approaches, since anyone can create a graph on a computer. But Tufte’s book is almost 40 years old. It is a masterpiece of data visualization that is as relevant today as it was in 1983. Moreover, Tufte includes examples that extend back centuries. The principles that we try to apply in this book are not new. They are simply extensions of a long history of the study of how to best display data.</p>
-<p>On a more fundamental level, we want to first focus on the basic components of common graphs.</p>
-<p>A <strong>graph</strong> is a like a map whose coordinates are defined by cells in a table. It typically contains a vertical <strong>y-axis</strong> and a horizontal <strong>x-axis</strong>. The data are added to the graph by reading reading from columns in a table. In the example below, the data table has two columns corresponding to location data (lat = latitude, long = longitude). It is easy to see how this information would “map” to coordinates on a graph. The x-coordinates would be longitude and the y-coordinates would be latitude. Each pair of x-y coordinates would be a dot. Like this:</p>
-<div class="figure"><span id="fig:unnamed-chunk-26"></span>
-<img src="_main_files/figure-html/unnamed-chunk-26-1.png" alt="a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context." width="1536" />
-<p class="caption">
-Figure 7.1: a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context.
-</p>
 </div>
-<p>The table contains paired latitude and longitude coordinates, but unless you’re a savant at geography, it might not be clear how the coordinates are related. By plotting the data, we are able to see patterns that would be difficult or impossible to see in the table. For example, the dots on the left side of (b) are more evenly spaced than the dots on the right side of (b). There are also some visual outliers, like the dot in the lower right, upper left, and lower left. There’s nothing wrong with visual outliers. You’ll see them in every graph you plot. But we would want to explore a little to see what they are. For example, by adding a polygon of US states, it becomes immediately clear what we’re looking at. The lower right “outlier” isn’t an outlier at all (We’ll leave the jokes about Florida unsaid). There are still two dots that don’t have states surrounding them - Alaska and Hawaii. These are still like outliers, but we intuitively know what they are by plotting. None of that information is in the table by itself.</p>
-<div id="basic-components-of-a-graph" class="section level3" number="7.1.1">
-<h3><span class="header-section-number">7.1.1</span> Basic Components of a Graph</h3>
-<p>Nearly all graphs share some basic features.</p>
-<p><strong>y-axis</strong> - Vertical axis. Often used to represent the <em>response</em> variable.</p>
-<p><strong>x-axis</strong> - Horizontal axis. Often used to represent the <em>predictor</em> variable.</p>
-<p><strong>coordinates</strong> - The x and y axis together form the coordinates of the plot.</p>
-<p><strong>data</strong> - The values of y for each value of x. Commonly shown as points.</p>
-<p><strong>colors</strong> - Used to distinguish different groups of data. Can be used to represent a separate response variable.</p>
-<p><strong>shapes</strong> - Used to distinguish different groups of data. Can be used to represent a separate response variable.</p>
-<p><strong>lines</strong> - Often used to show trends in the data.</p>
-<p>These basic components form an enormous array of visualizations. Here’s an example using the <em>iris</em> data set, which gives measures of flowers for three different species. It is included with R.</p>
-<div class="figure"><span id="fig:unnamed-chunk-27"></span>
-<img src="_main_files/figure-html/unnamed-chunk-27-1.png" alt="a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species." width="1152" />
-<p class="caption">
-Figure 7.2: a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species.
-</p>
+<div id="who-this-book-is-for" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Who This Book is For</h2>
+<p>This book is intended for undergraduate students who are writing their first scientific papers. The book was developed using materials from a course taught by Wesner to sophomores (mostly) at the University of South Dakota - BIOL 280 Inquiry and Analysis in Biology.</p>
+<p>We thank the 100’s of students that have taken this course previously. Many of the chapters of this book were written from drafts of course handouts. Feedback from the students was essential for improving the materials. This book was written with support from an Online Textbook Fellowship from the University of South Dakota.</p>
 </div>
-<p>The table and figures above follow the same sequence as the map before. We start with a table of data, where each row is an individual observation with information on petal length, petal width, and flower species. We then make an initial scatter plot, showing patterns that are hard or impossible to see just by looking at the table. Finally, we add a regression line and some colors for context.</p>
-<p>Even though these graphs are for flowers and the previous graphs were for states, they share the same simple components, derived from data. We tell the graphing software where to find the data (<em>iris</em>), where to find the column for the <strong>y-axis</strong> (<em>Petal.Length</em>), the <strong>x-axis</strong> (<em>Petal.Width</em>), and where to find the column for <strong>color</strong> (<em>Species</em>). If we wanted to add another layer, like size of the individual, we would need to collect that data and simply add it as a fourth column in the data set.</p>
-</div>
-<div id="best-practices" class="section level3" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> Best Practices</h3>
-<p>We see bad graphs all the time, from scientists at all levels (undergrad to Professor). Here are some common ways to make a <em>bad</em> graph.</p>
-<p><strong>Recipe for a bad graph</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>Make sure the font is really small</p></li>
-<li><p>Give really vague names to the axes</p></li>
-<li><p>Use lots of colors, particularly those that are impossible for color-blind people to distinguish</p></li>
-<li><p>Don’t save the graph itself, just take a screenshot of it</p></li>
-<li><p>Paste it into your paper and pull the corners so the text is stretched</p></li>
-</ol>
-<p><strong>Recipe for a better graph</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>Make the font readable in its final destination. Just because the font size is fine in R or Excel doesn’t mean it will be fine when you import it to your paper</p></li>
-<li><p>Give informative names to the axes (e.g., “Income per capita (US$)” instead of “Wealth”)</p></li>
-<li><p>Choose color-blind friendly colors or try grayscale first <a href="https://www.tableau.com/about/blog/2016/4/examining-data-viz-rules-dont-use-red-green-together-53463" class="uri">https://www.tableau.com/about/blog/2016/4/examining-data-viz-rules-dont-use-red-green-together-53463</a></p></li>
-<li><p>Save the graph in a standard format, like .jpg, .png, or .svg</p></li>
-<li><p>If you’re writing in Word, use the Import button to import your graph. Don’t paste.</p></li>
-</ol>
-<p>These simple steps will not ensure that your graph is a good graph <em>per se</em>, but they will ensure that your graph is readable in its final form. Here’s a comparison:</p>
-<p><strong>Bad Graph</strong></p>
-<p><img src="images/bad_plot.jpg" /></p>
-<p><strong>Better Graph</strong></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
-<p>These are the same data sets in two different graphs. The first one violates most of the rules for a bad graph (or follows most of the rules, I guess). The second one is better. It isn’t pixelated and the text isn’t stretched. The colors are visible even to a colorblind person (using <em>scale_color_colorblind()</em> from the <em>ggthemes</em> package). The axis labels are a bit more informative, giving the units for the sepal widths and lengths.</p>
-<p>While this may seem like a trivial and obvious comparison, the first version is one we see all the time in student papers, and even in manuscripts submitted by PhDs. The easiest way to avoid this problem is to take the following steps:</p>
-<ol style="list-style-type: decimal">
-<li><p>Create the graph in your software</p></li>
-<li><p>Save it as a high-resolution figure in a common format, like .jpg, .png, or .svg.</p></li>
-<li><p>Import it to your text document using the import button</p></li>
-<li><p>If it doesn’t look right, delete it from the text document</p></li>
-<li><p>Return to step 1 and edit as needed</p></li>
-</ol>
-<p>Using <em>ggplot</em> in R, we can save a high resolution version of our graph with the <em>ggsave()</em> function.</p>
-<p><strong>Saving a high resolution graph</strong></p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="data-visualization.html#cb77-1"></a><span class="co">#make a plot with the built-in R dataset mtcars</span></span>
-<span id="cb77-2"><a href="data-visualization.html#cb77-2"></a>my_graph &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> mtcars, <span class="kw">aes</span>(<span class="dt">x =</span> mpg, <span class="dt">y =</span> wt)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span>
-<span id="cb77-3"><a href="data-visualization.html#cb77-3"></a></span>
-<span id="cb77-4"><a href="data-visualization.html#cb77-4"></a><span class="co">#View the plot in R</span></span>
-<span id="cb77-5"><a href="data-visualization.html#cb77-5"></a>my_graph</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="data-visualization.html#cb78-1"></a><span class="co">#Save the plot as a .jpg to our working directory</span></span>
-<span id="cb78-2"><a href="data-visualization.html#cb78-2"></a><span class="kw">ggsave</span>(my_graph, <span class="dt">file =</span> <span class="st">&quot;my_graph.jpg&quot;</span>, <span class="dt">dpi =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">6</span>, <span class="dt">height =</span> <span class="dv">6</span>, <span class="dt">units =</span> <span class="st">&quot;in&quot;</span>)</span></code></pre></div>
-<p>The code above makes a graph called “my_graph”, calls the graph in R to view it, and then saves it as a .jpg with the <em>ggsave()</em> function. The <em>ggsave()</em> function has several options</p>
-<p><em>image type</em> - By adding “.jpg” to the end of our graph name in the “file = …” statement, we are creating a .jpg. To create a .png, just add “.png” instead. <em>ggsave()</em> can create 10 different file types - .png, .eps, .ps, .tex, .pdf, .jpg, .tiff, .bmp, .svg, or .wmf. Choose the one that works best for you.</p>
-<p><em>dpi</em> - dots per inch. The higher then number, the higher the resolution. However, increasing dpi also increases the file-size of your plot, which can make things really slow depending on your computer. A dpi of 500 or 600 is good for nearly all uses.</p>
-<p><em>width</em> - This sets the width of your graph.</p>
-<p><em>height</em> - This sets the height of your graph.</p>
-<p><em>units</em> - This sets the units for width and height. We put in “in” above, which means that we’re saving this graph to an expected size of 6x6 inches. If we set units to “cm”, then it would be 6x6 cm and so on. Pick whatever measurement unit you are most comfortable with. We like inches because it is easy to imagine what a 6x6 inch graph would look like on a standard piece of 8x11.5 in paper. And becuase we grew up in the US, so the metric system is not as intuitive for us.</p>
+<div id="about-this-book" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> About This Book</h2>
+<p>Future biologists, doctors, and researchers need familiarity with how science proceeds and how it is communicated. Not having that knowledge is like getting a degree in music without learning how to read sheet music or knowing what a C major chord is. This book teaches you how to perform nearly all tasks that any researcher does: observe something, identify a question, gather data to test it, reach conclusions, share your conclusions, identify new questions. This process has been repeated millions of times over the last several centuries by all types of scientists. Often the results are interesting, but not groundbreaking. In rare cases, the results are groundbreaking – earth revolves around the sun, evolution by natural selection, genetic inheritance, biodiversity and ecosystem functioning. These findings make the news, the textbooks, social media, and other outlets. But first they are communicated among scientists.</p>
+<p>In universities, nearly all students learn the fundamentals of writing through introdctutory composition classes. These classes emphasize important components of rhetoric, grammar and writing structure. However, as students begin to write papers for their science professors, there is a frustrating realization that the traditions of creative writing that were learned in composition classes are not the same as the traditions of scientific writing that their science professors expect.</p>
+<p>Common challenges for students in learning scientific writing:</p>
+<p><em>1) Using direct quotes</em></p>
+<p><em>2) Failing to cite the literature</em></p>
+<p><em>3) Unable to find relevant literature in the first place</em></p>
+<p><em>4) Difficulty describing quantitative results</em></p>
+<p><em>5) Difficulty placing results into a broader context</em></p>
+<p>These challenges do not arise from lack of intelligence and they do not mean that students are “bad” writers. They arise from a difficulty in understanding the culture shifts between writing for the Humanities and writing for the Sciences. To use another musical analogy, the difference between writing for the humanities and writing for the sciences is similar to the difference in playing improvisational jazz versus orchestral music. Both types of music have a common grammar, but they have vastly different approaches to how that grammar is expressed in song. In the same way, transitioning between writing for an English class and writing for a Biology class is not an easy task. Both writing styles are “correct”, yet each has its own traditions and expectations. This book will help you learn those traditions and expectations for scientific writing.</p>
+<p>Whether you do research at all in your career, you will be affected by those that do. Scientific research influences everything from flight delays, immunizations, cancer treatments, courtroom lighting, oil drilling, climate change, and how many commas to use in a sentence. All of it is guided by the same simple process that you will learn about in this book. We hope you enjoy the process.</p>
 
-<div id="refs" class="references hanging-indent">
-<div>
-<p>Nash, John C. 2008. “Teaching Statistics with Excel 2007 and Other Spreadsheets.” <em>Computational Statistics &amp; Data Analysis</em> 52 (10): 4602–6. <a href="https://doi.org/10.1016/j.csda.2008.03.008">https://doi.org/10.1016/j.csda.2008.03.008</a>.</p>
-</div>
-<div>
-<p>Tufte, Edward R, and Peter R Graves-Morris. 1983. <em>The Visual Display of Quantitative Information</em>. Vol. 2. 9. Graphics press Cheshire, CT.</p>
-</div>
-<div>
-<p>Wesner, Jeff S, Dan Van Peursem, Jose Flores, Yuhlong Lio, and Chelsea Wesner. 2020. “Forecasting Hospitalizations Due to COVID-19 in South Dakota, USA.” <em>medRxiv</em>.</p>
-</div>
-<div>
-<p>Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the Tidyverse.” <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.</p>
 </div>
 </div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="introduction-to-r.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
+<a href="the-process-of-science.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
