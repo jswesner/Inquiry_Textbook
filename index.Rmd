@@ -9,3 +9,8 @@ knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
 ---
 
+# Preface {.unnumbered}
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('images/book_cover.jpg', dpi = NA)
+```
