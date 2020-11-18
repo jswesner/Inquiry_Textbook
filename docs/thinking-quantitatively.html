@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
@@ -237,8 +238,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4     2 drug_a         0.89
 ## 5     2 drug_b         0.98
 ## 6     2 drug_c         0.12</code></pre>
-<div class="figure"><span id="fig:unnamed-chunk-1"></span>
-<img src="_main_files/figure-html/unnamed-chunk-1-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\label{fig1:plot}" width="672" />
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="_main_files/figure-html/unnamed-chunk-2-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\label{fig1:plot}" width="672" />
 <p class="caption">
 Figure 5.1: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
 </p>
@@ -262,7 +263,7 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 ## 4     1 drug_a control           0.41
 ## 5     1 drug_b control           1   
 ## 6     1 drug_c control           0</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>In the figure above, the black dots are the same as before. The gray dots show the percent of people who recovered without taking the drug. Does this information change your perception of the benefits of taking either drug? In the first graph, it seemed obvious that drugs A and B were better than drug C, because most people recovered with those drugs.</p>
 <p>Adding the control data tells a different story. While it is true that most people recovered when taking drugs A and B, they also recovered without taking those drugs. For drug C, only ~25 to 75 percent of people recovered when taking it, but that percentage appears much higher than the percentage of people that recovered without taking the drug. In some trials, almost no one recovered without the drug. This complicates the decision of which drug to choose.</p>
 <p>Because our doctor took Inquiry and Analysis in Biology <em>and</em> later took biostatistics, they ask for further information. Instead of just looking at the data for each group, they want something more informative. For each trial, they subtract the percent that recovered when taking the drug from the percent that recovered when not taking the drug. Then they plot it. It looks like this.</p>
@@ -282,7 +283,7 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 ## 4     4 drug_a      0.62    0.99      -0.37
 ## 5     5 drug_a      1       0.99       0.01
 ## 6     6 drug_a      0.99    0.27       0.72</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>Now we see a different story than the figure we started with. By displaying the differences in recover, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn’t.</p>
 <p>So far, we have only plotted the data. We haven’t quantified anything yet, but by plotting the data and being self-critical of the ways in which we might be fooling ourselves, we have practiced <em>quantitative reasoning</em>.</p>
 <p>Plotting data as among the most important steps in any project. Plotting (aka <em>making graphs</em>, <em>data visualization</em>) does several things. 1) It reveals any obvious problems in data entry. 2) It shows obvious trends in the data. 3) It crystalizes the experimental design. This last step is crucial. Deciding what to put on the x-axis versus the y-axis, how to label those axes, what range to put on the y-axis, what groups to label in the figure legend…these are just some of the choices you’ll make when plotting data. Students often do this step last, hoping to add a graph at the end to complete an assignment. Don’t do that. Plot early and often, even before you have data. If you know what the axes should be, and which groups will go side-by-side (like the gray and black dots in Figure X), then you have already crystalized nearly everything that you will later write about in the rest of your paper. We call this process <em>Figures First</em>, and give examples in later chapters.</p>
@@ -366,7 +367,7 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 <span id="cb17-5"><a href="thinking-quantitatively.html#cb17-5"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>) <span class="op">+</span></span>
 <span id="cb17-6"><a href="thinking-quantitatively.html#cb17-6"></a><span class="st">  </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="dv">0</span>) <span class="op">+</span></span>
 <span id="cb17-7"><a href="thinking-quantitatively.html#cb17-7"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="dt">data =</span> summary_stats, <span class="kw">aes</span>(<span class="dt">x =</span> drug, <span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean <span class="op">-</span><span class="st"> </span>sd, <span class="dt">ymax =</span> mean <span class="op">+</span><span class="st"> </span>sd), <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;orange&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>This looks pretty close to a finished product now. It has lots of information in the plot, including the raw data, the mean, and the standard deviation. By combining the summary statistics and the plot, we are ready to write a paragraph about this result.</p>
 <p><em>Across 20 trials, recovery rates were 0.43 +/- 0.3 points higher for groups that took drug C versus that took a placebo. Recovery ranged from -0.2 to 0.9. In comparison, recovery rates for drug A were only 0.03 +/- 0.3 points higher than placebo controls, and recovery rates for drug B were 0.01 +/- 0.1 points worse than placebo controls. However, direct comparison of these drugs is complicated by the fact that raw rates of recovery were highest for drugs A and B, in which nearly all patients recovered in both treatment and control groups. In contrast, recovery rates for drug C were ~50% in the treatment group, but only ~10% in the control. This suggest the potential that the trials were conducted on groups with different underlying probabilities of recovery.</em></p>
 </div>
@@ -407,8 +408,9 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 ## 
 ##     rstudent</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<pre><code>## Warning: Removed 36 rows containing missing values (geom_text).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre><code>## Warning: Removed 36 rows containing missing values
+## (geom_text).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>The figure shows a clear positive correlation between the divorce rate and the number of Waffle Houses (McElreath 2015). In this case, it is obvious (hopefully) that Waffle Houses are probably not causing divorces. What’s going on? The states that are labeled are all in the South, where Waffle Houses are common. People also happen to get married earlier in the South, which helps to explain the higher than average divorce rates there.</p>
 <p>Here’s another less obvious example.</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="thinking-quantitatively.html#cb33-1"></a><span class="kw">library</span>(gapminder)</span>
@@ -423,7 +425,7 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 <span id="cb33-10"><a href="thinking-quantitatively.html#cb33-10"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;GDP ($ Per Capita)&quot;</span>,</span>
 <span id="cb33-11"><a href="thinking-quantitatively.html#cb33-11"></a>       <span class="dt">y =</span> <span class="st">&quot;Life Expectancy (years)&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>The figure shows a positive relationship between a country’s gross domestic product (GDP) and its life expectancy in 2007. Each dot is a country. In our experience, this correlation is a common one for students to study. They often interpret the result as confirming a benefit of economic activity with how long people live, and conclude that countries can improve life-expectancy simply by improving economic activity.</p>
 <p>But this represents a similar fallacy as the Waffle House-Divorce example. An easy way to see this is to check death certificates. If we did that (we didn’t, but we think we’re safe here), we would probably not find a cause of death that says “Died due to low GDP”. Just like Waffle Houses are associated with “Southerness” and “Southerness” is associated with early age at marriage and early age at marriage leads to higher divorce rates, GDP is associated with its own confounding variable of health care infrastructure. That is itself a large and difficult-to-define metric, but it is closer to explaining the positive correlation between GDP and life expectancy.</p>
 <p>It is certainly true that countries with higher GDP’s tend to also have better health outcomes because they have better health infrastructure. The trick is to think about the actual steps that have to happen for GDP to translate to longer life-expectancy. Each country will make individual choices along those steps, and each choice has the potential to sever the link between GDP and efficient health spending. There is nothing wrong with studying the <em>statistical</em> relationship between GDP and life expectancy. Just be careful in assuming that simply improving GDP will automatically improve life-expectancy.</p>
@@ -465,10 +467,13 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <pre><code>## Joining, by = &quot;country&quot;</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<pre><code>## Warning: Removed 22 rows containing non-finite values (stat_smooth).</code></pre>
-<pre><code>## Warning: Removed 22 rows containing missing values (geom_point).</code></pre>
-<pre><code>## Warning: Removed 191 rows containing missing values (geom_label_repel).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre><code>## Warning: Removed 22 rows containing non-finite values
+## (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 22 rows containing missing values
+## (geom_point).</code></pre>
+<pre><code>## Warning: Removed 191 rows containing missing values
+## (geom_label_repel).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>Is this what you expected? This seems like a paradox. Decades of studies clearly show that extreme obesity is linked with poor health outcomes and increased mortality. The plot above appears to contradict this. Countries with a higher percentage of obese people also tend to have <em>higher</em> life expectancy.</p>
 <p>This is an example of the <em>ecological fallacy</em>, which states that we cannot use aggregate data to infer something about individuals. For example, Kuwait has a high obesity rate of ~38% and a high life-expectancy of ~79 years. But those numbers represent averages of about 4 million individuals. If we were to assess a sample of individuals <em>within</em> Kuwait, then we would expect the pattern that we initially hypothesized - <em>at the individual level, extreme obesity is negatively associated with life-expectancy, but at the country-level the pattern is reversed.</em></p>
 <p>As you might expect by now, there are also other reasons to explain these associations, such as hidden variables. For example, look at the plot again, but now with information on GDP per capita.</p>
@@ -502,10 +507,13 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 <span id="cb51-9"><a href="thinking-quantitatively.html#cb51-9"></a>       <span class="dt">caption =</span> <span class="st">&quot;Data Sources: Obesity - CIA World Factbook, Life Expectancy - Gapminder</span></span>
 <span id="cb51-10"><a href="thinking-quantitatively.html#cb51-10"></a><span class="st">       Data Idea: Cairo, A. 2019. Graphics That Seem Clear Can Easily Be Misread. Scientific American&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<pre><code>## Warning: Removed 22 rows containing non-finite values (stat_smooth).</code></pre>
-<pre><code>## Warning: Removed 64 rows containing missing values (geom_point).</code></pre>
-<pre><code>## Warning: Removed 191 rows containing missing values (geom_label_repel).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre><code>## Warning: Removed 22 rows containing non-finite values
+## (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 64 rows containing missing values
+## (geom_point).</code></pre>
+<pre><code>## Warning: Removed 191 rows containing missing values
+## (geom_label_repel).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <p>This is the same data, but now a third variable is presented, showing GDP per capita (in US 2007 Dollars). The scatter of the dots is non-random in the sense that countries with large GDP tend to be clustered in areas of both high life-expectancy and higher obesity rates.</p>
 </div>
 <div id="preventing-the-ecological-fallacy-mistake" class="section level4" number="5.5.0.3">

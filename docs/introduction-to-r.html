@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
@@ -298,7 +299,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb57-13"><a href="introduction-to-r.html#cb57-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd)) <span class="op">+</span></span>
 <span id="cb57-14"><a href="introduction-to-r.html#cb57-14"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Miles Per Gallon&quot;</span>,</span>
 <span id="cb57-15"><a href="introduction-to-r.html#cb57-15"></a>       <span class="dt">x =</span> <span class="st">&quot;Cylinders&quot;</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Here is what you just did:</p>
 <ol style="list-style-type: decimal">
 <li><p>Loaded the <em>tidyverse</em> package.</p></li>
@@ -334,13 +335,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Did it work?</strong> Do you see an object named <em>d</em> in the Environment window (upper right) that has “32 obs. of 11 variables”? If not, it didn’t work.</p>
 <p>Visually, the <em>d</em> in the Environment window is the only thing that will automatically show up if it worked. Another way to check is simply to view the data frame, like this:</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introduction-to-r.html#cb60-1"></a><span class="kw">head</span>(d)</span></code></pre></div>
-<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
-## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
-## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
-## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0
+##                   gear carb
+## Mazda RX4            4    4
+## Mazda RX4 Wag        4    4
+## Datsun 710           4    1
+## Hornet 4 Drive       3    1
+## Hornet Sportabout    3    2
+## Valiant              3    1</code></pre>
 <p>This shows a snapshot of the first few rows of the data frame that exists in the object <em>d</em>. It is essentially the same as any other spreadsheet you might make in another program, like Excel. Each row contains information on mpg, cylinders (cyl), horsepower(hp), etc. for each type of car.</p>
 <p>You can isolate individual columns like this:</p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="introduction-to-r.html#cb62-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(mpg, cyl) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
@@ -447,7 +455,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb69-10"><a href="introduction-to-r.html#cb69-10"></a><span class="co">#plot the data</span></span>
 <span id="cb69-11"><a href="introduction-to-r.html#cb69-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
 <span id="cb69-12"><a href="introduction-to-r.html#cb69-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <p><strong>What it does</strong> This code uses the powerful plotting package called ggplot2 <span class="citation">(<span class="citeproc-not-found" data-reference-id="ggplot2"><strong>???</strong></span>)</span>, which was included when you installed the tidyverse. The “gg” stands for “The Grammar of Graphics” <span class="citation">(<span class="citeproc-not-found" data-reference-id="wilkinson2012grammar"><strong>???</strong></span>)</span>, a fundamental set of principles for producing just about any plot you can think of (and rules for why some types of plots are better than others).</p>
 <p>Making anything with ggplot2 usually requires at least two things: 1) a call to <em>ggplot()</em> where we specify the data along with the x and y axes or other aesthetics, and 2) a call to the <em>geom_…</em>, where we tell ggplot2 how to plot the data. There are lots of geoms, as you can see in this cheatsheet (<a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf</a>). For most practices in this book, we will use <em>geom_point()</em>, which simply adds a dot for each x-y coordinate that we specified in the <em>aes()</em> function.</p>
 <p>Once we have our base plot, everything else is added with +. This can be a point of confusion. The + has a similar meaning as the %&gt;%, but ggplot2 only uses +. Accidentally typing %&gt;% instead of + is a common mistake even for experienced coders (like authors of texbooks about data analysis).</p>
@@ -463,24 +471,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb70-9"><a href="introduction-to-r.html#cb70-9"></a></span>
 <span id="cb70-10"><a href="introduction-to-r.html#cb70-10"></a><span class="co">#Create a placeholder for a plot</span></span>
 <span id="cb70-11"><a href="introduction-to-r.html#cb70-11"></a><span class="kw">ggplot</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="introduction-to-r.html#cb71-1"></a><span class="co">#Assign the data frame d to the plot</span></span>
 <span id="cb71-2"><a href="introduction-to-r.html#cb71-2"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-2.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="introduction-to-r.html#cb72-1"></a><span class="co">#Assign the aesthetics</span></span>
 <span id="cb72-2"><a href="introduction-to-r.html#cb72-2"></a><span class="co">#Put numbers from the column cyl on the x</span></span>
 <span id="cb72-3"><a href="introduction-to-r.html#cb72-3"></a><span class="co">#For each value of cyl on the x, add the corresponding value from the mpg column</span></span>
 <span id="cb72-4"><a href="introduction-to-r.html#cb72-4"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-3.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-3.png" width="672" /></p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="introduction-to-r.html#cb73-1"></a><span class="co">#Tell ggplot how to plot the x-y values with a geom.</span></span>
 <span id="cb73-2"><a href="introduction-to-r.html#cb73-2"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
 <span id="cb73-3"><a href="introduction-to-r.html#cb73-3"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-4.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-4.png" width="672" /></p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="introduction-to-r.html#cb74-1"></a><span class="co">#Change the default shape of the dots</span></span>
 <span id="cb74-2"><a href="introduction-to-r.html#cb74-2"></a><span class="co">#Any number from 1-25 will produce a different shape. (http://www.cookbook-r.com/Graphs/Shapes_and_line_types/)</span></span>
 <span id="cb74-3"><a href="introduction-to-r.html#cb74-3"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
 <span id="cb74-4"><a href="introduction-to-r.html#cb74-4"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-5.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-5.png" width="672" /></p>
 <p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
 <p><strong>Things to check if it doesn’t work</strong></p>
 <ul>
@@ -516,7 +524,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb75-11"><a href="introduction-to-r.html#cb75-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
 <span id="cb75-12"><a href="introduction-to-r.html#cb75-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) <span class="op">+</span></span>
 <span id="cb75-13"><a href="introduction-to-r.html#cb75-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 <p><strong>What it does</strong> The new geom <em>geom_pointrange()</em> adds the mean and standard deviation to the plot. If we only typed <em>geom_pointrange()</em>, it wouldn’t work. That’s because the geom requires three values that we haven’t assigned yet: y, ymin, and ymax. In this case, we want y to be the mean of each group. We want the error bar to range from ymin to ymax. ymin is the mean minus the standard deviation for each group <em>mean-sd</em>. ymax is the mean plus the standard deviation <em>mean+sd</em>. With those values, ggplot draws a line from ymin to ymax.</p>
 <p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
 <p><strong>Things to check if it doesn’t work</strong></p>
@@ -549,7 +557,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb76-13"><a href="introduction-to-r.html#cb76-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd)) <span class="op">+</span></span>
 <span id="cb76-14"><a href="introduction-to-r.html#cb76-14"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Miles Per Gallon&quot;</span>,</span>
 <span id="cb76-15"><a href="introduction-to-r.html#cb76-15"></a>       <span class="dt">x =</span> <span class="st">&quot;Cylinders&quot;</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <p><strong>What it does</strong> The function <em>labs()</em> replaces the title of the x and y axis with whatever we put in quotes.</p>
 <p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
 <p><strong>Things to check if it doesn’t work</strong></p>

@@ -1,13 +1,5 @@
 # Overview
 
-## Inquiry and Analysis in Biology
-
-Jeff Wesner, Ph.D, University of South Dakota, Department of Biology
-
-Joseph Raiche, Ph.D, University of South Dakota, Department of English.
-
-![](images/book_cover.jpg){width="30%"}
-
 ## Learning Objectives
 
 1.  Understand the nature of science as a way of knowing.
