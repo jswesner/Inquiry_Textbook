@@ -28,6 +28,7 @@ library(readxl)
 library(png)
 library(gridExtra)
 library(grid)
+library(knitr)
 ```
 
 ## Why Statistics
@@ -48,7 +49,7 @@ drug_data <- tibble(drug_a = rbeta(20, 2,.25),
 #   mutate(prop_recover = round(prop_recover, 2)) %>% 
 #   head()
 
-ggplot(drug_data, aes(x = drug, y = y)) +
+p1 <- ggplot(drug_data, aes(x = drug, y = y)) +
   geom_point(position = position_jitter(width = 0.065)) +
   labs(y = "Percent of patients that recovered",
        x = "Type of Drug") +
