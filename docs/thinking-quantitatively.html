@@ -230,28 +230,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">5.2</span> Why Statistics</h2>
 <p><strong>Statistics</strong> is a process of analyzing data to learn about a question of interest. We find that statistics can be daunting for undergraduate students. It was daunting for us as well. The goal of this book is not to teach you how to be a statistician. It is to teach you how to begin working with and understanding data as it pertains to scientific inquiry. The skills you learn here should allow you to read a scientific paper and not have to look up what a standard error is or what a confidence interval is or what the difference is between a median and a mean.</p>
 <p>A poorly kept secret in science is that you need a working understanding of statistics whether you use it formally or not. Consider a doctor who needs to prescribe a drug for disease X. There are three drugs on the market for this disease. The drugmakers have provided you with the following graphs showing how good their drugs are at treating this disease.</p>
-<div class="figure"><span id="fig:unnamed-chunk-31"></span>
-<img src="_main_files/figure-html/unnamed-chunk-31-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\label{fig1:plot}" width="672" />
-<p class="caption">
-Figure 5.1: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
-</p>
-</div>
 <p>Figure  above shows the result of twenty trials of each drug. For each trial, the drug makers calculated the percentage of patients that recovered from the disease after taking the drug.</p>
 <p>Which one should the doctor prescribe?</p>
 <p>For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn’t seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drug makers only report recoveries of people who <em>took</em> the drug. What about people who had the same disease but didn’t take a drug? In other words, what about the <em>controls</em>? The doctor asks for this information. Let’s look at the same graph, but now with the data for controls added.</p>
-<div class="figure"><span id="fig:unnamed-chunk-32"></span>
-<img src="_main_files/figure-html/unnamed-chunk-32-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial)." width="672" />
+<div class="figure"><span id="fig:unnamed-chunk-21"></span>
+<img src="_main_files/figure-html/unnamed-chunk-21-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial)." width="672" />
 <p class="caption">
-Figure 5.2: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
+Figure 5.1: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
 </p>
 </div>
 <p>In the figure above, the black dots are the same as before. The gray dots show the percent of people who recovered without taking the drug. Does this information change your perception of the benefits of taking either drug? In the first graph, it seemed obvious that drugs A and B were better than drug C, because most people recovered with those drugs.</p>
 <p>Adding the control data tells a different story. While it is true that most people recovered when taking drugs A and B, they also recovered without taking those drugs. For drug C, only ~25 to 75 percent of people recovered when taking it, but that percentage appears much higher than the percentage of people that recovered without taking the drug. In some trials, almost no one recovered without the drug. This complicates the decision of which drug to choose.</p>
 <p>Because our doctor took Inquiry and Analysis in Biology <em>and</em> later took biostatistics, they ask for further information. Instead of just looking at the data for each group, they want something more informative. For each trial, they subtract the percent that recovered when taking the drug from the percent that recovered when not taking the drug. Then they plot it. It looks like this.</p>
-<div class="figure"><span id="fig:unnamed-chunk-33"></span>
-<img src="_main_files/figure-html/unnamed-chunk-33-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial)." width="672" />
+<div class="figure"><span id="fig:unnamed-chunk-22"></span>
+<img src="_main_files/figure-html/unnamed-chunk-22-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial)." width="672" />
 <p class="caption">
-Figure 5.3: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
+Figure 5.2: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
 </p>
 </div>
 <p>Now we see a different story than the figure we started with. By displaying the differences in recovery, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn’t.</p>
@@ -284,7 +278,7 @@ Figure 5.3: Proportion of patients that recovered from a disease after taking on
 ## 2 drug_b -0.01   0.1  -0.3   0.4
 ## 3 drug_c  0.43   0.3  -0.2   0.9</code></pre>
 <p>Now we’ll add the mean and sd to the plot. Can you see how it is added in the code below?</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <p>This looks pretty close to a finished product now. It has lots of information in the plot, including the raw data, the mean, and the standard deviation. By combining the summary statistics and the plot, we are ready to write a paragraph about this result.</p>
 <p><em>Across 20 trials, recovery rates were 0.43 +/- 0.3 points higher for groups that took drug C versus that took a placebo. Recovery ranged from -0.2 to 0.9. In comparison, recovery rates for drug A were only 0.03 +/- 0.3 points higher than placebo controls, and recovery rates for drug B were 0.01 +/- 0.1 points worse than placebo controls. However, direct comparison of these drugs is complicated by the fact that raw rates of recovery were highest for drugs A and B, in which nearly all patients recovered in both treatment and control groups. In contrast, recovery rates for drug C were ~50% in the treatment group, but only ~10% in the control. This suggest the potential that the trials were conducted on groups with different underlying probabilities of recovery.</em></p>
 </div>
@@ -300,36 +294,12 @@ Figure 5.3: Proportion of patients that recovered from a disease after taking on
 </ol>
 <p><em>Assuming that correlations reflect causation. Forgetting about hidden variables</em></p>
 <p>The plot below is from real data. How do you interpret this result?</p>
-<pre><code>## Loading required package: rstan</code></pre>
-<pre><code>## Loading required package: StanHeaders</code></pre>
-<pre><code>## rstan (Version 2.21.2, GitRev: 2e1f913d3ca3)</code></pre>
-<pre><code>## For execution on a local, multicore CPU with excess RAM we recommend calling
-## options(mc.cores = parallel::detectCores()).
-## To avoid recompilation of unchanged Stan programs, we recommend calling
-## rstan_options(auto_write = TRUE)</code></pre>
-<pre><code>## Do not specify &#39;-march=native&#39; in &#39;LOCAL_CPPFLAGS&#39; or a Makevars file</code></pre>
-<pre><code>## 
-## Attaching package: &#39;rstan&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
-## 
-##     extract</code></pre>
-<pre><code>## Loading required package: parallel</code></pre>
-<pre><code>## Loading required package: dagitty</code></pre>
-<pre><code>## rethinking (Version 2.01)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;rethinking&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:purrr&#39;:
-## 
-##     map</code></pre>
-<pre><code>## The following object is masked from &#39;package:stats&#39;:
-## 
-##     rstudent</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
 <p>The figure shows a clear positive correlation between the divorce rate and the number of Waffle Houses (McElreath 2015). In this case, it is obvious (hopefully) that Waffle Houses are probably not causing divorces. What’s going on? The states that are labeled are all in the South, where Waffle Houses are common. People also happen to get married earlier in the South, which helps to explain the higher than average divorce rates there.</p>
 <p>Here’s another less obvious example.</p>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 <p>The figure shows a positive relationship between a country’s gross domestic product (GDP) and its life expectancy in 2007. Each dot is a country. In our experience, this correlation is a common one for students to study. They often interpret the result as confirming a benefit of economic activity with how long people live, and conclude that countries can improve life-expectancy simply by improving economic activity.</p>
 <p>But this represents a similar fallacy as the Waffle House-Divorce example. An easy way to see this is to check death certificates. If we did that (we didn’t, but we think we’re safe here), we would probably not find a cause of death that says “Died due to low GDP”. Just like Waffle Houses are associated with “Southerness” and “Southerness” is associated with early age at marriage and early age at marriage leads to higher divorce rates, GDP is associated with its own confounding variable of health care infrastructure. That is itself a large and difficult-to-define metric, but it is closer to explaining the positive correlation between GDP and life expectancy.</p>
 <p>It is certainly true that countries with higher GDP’s tend to also have better health outcomes because they have better health infrastructure. The trick is to think about the actual steps that have to happen for GDP to translate to longer life-expectancy. Each country will make individual choices along those steps, and each choice has the potential to sever the link between GDP and efficient health spending. There is nothing wrong with studying the <em>statistical</em> relationship between GDP and life expectancy. Just be careful in assuming that simply improving GDP will automatically improve life-expectancy.</p>
@@ -371,7 +341,7 @@ Figure 5.3: Proportion of patients that recovered from a disease after taking on
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <pre><code>## Joining, by = &quot;country&quot;</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p>Is this what you expected? This seems like a paradox. Decades of studies clearly show that extreme obesity is linked with poor health outcomes and increased mortality. The plot above appears to contradict this. Countries with a higher percentage of obese people also tend to have <em>higher</em> life expectancy.</p>
 <p>This is an example of the <em>ecological fallacy</em>, which states that we cannot use aggregate data to infer something about individuals. For example, Kuwait has a high obesity rate of ~38% and a high life-expectancy of ~79 years. But those numbers represent averages of about 4 million individuals. If we were to assess a sample of individuals <em>within</em> Kuwait, then we would expect the pattern that we initially hypothesized - <em>at the individual level, extreme obesity is negatively associated with life-expectancy, but at the country-level the pattern is reversed.</em></p>
 <p>As you might expect by now, there are also other reasons to explain these associations, such as hidden variables. For example, look at the plot again, but now with information on GDP per capita.</p>
@@ -389,7 +359,7 @@ Figure 5.3: Proportion of patients that recovered from a disease after taking on
 <pre><code>## Joining, by = &quot;country&quot;
 ## Joining, by = &quot;country&quot;</code></pre>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>This is the same data, but now a third variable is presented, showing GDP per capita (in US 2007 Dollars). The scatter of the dots is non-random in the sense that countries with large GDP tend to be clustered in areas of both high life-expectancy and higher obesity rates.</p>
 </div>
 <div id="preventing-the-ecological-fallacy-mistake" class="section level4" number="5.5.0.3">
