@@ -1,7 +1,7 @@
 ---
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 # Thinking Quantitatively
@@ -91,10 +91,14 @@ drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
 
 # head()
 
-ggplot(drug_data, aes(x = drug, y = y, color = treatment)) + 
+p2 <- ggplot(drug_data, aes(x = drug, y = y, color = treatment)) + 
   geom_point(position = position_jitterdodge(jitter.width = 0.065, dodge.width = 0.2)) + 
   labs(y = "Percent of patients that recovered", x = "Type of Drug") + 
   scale_color_grey(start = .6, end = 0) + ylim(0,1)
+
+ggsave(p2, file = here("figures/p2.png"), dpi = 500)
+
+knitr::include_graphics(here("figures/p2.png"))
 
 ```
 
