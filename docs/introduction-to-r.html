@@ -306,7 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-13"><a href="introduction-to-r.html#cb1-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd)) <span class="op">+</span></span>
 <span id="cb1-14"><a href="introduction-to-r.html#cb1-14"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Miles Per Gallon&quot;</span>,</span>
 <span id="cb1-15"><a href="introduction-to-r.html#cb1-15"></a>       <span class="dt">x =</span> <span class="st">&quot;Cylinders&quot;</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>Here is what you just did:</p>
 <ol style="list-style-type: decimal">
 <li><p>Loaded the <strong>tidyverse</strong> package.</p></li>
@@ -452,12 +452,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-10"><a href="introduction-to-r.html#cb10-10"></a><span class="co">#plot the data</span></span>
 <span id="cb10-11"><a href="introduction-to-r.html#cb10-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
 <span id="cb10-12"><a href="introduction-to-r.html#cb10-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <p><strong>What it does</strong> This code uses the powerful plotting package called <strong>ggplot2</strong> <span class="citation">(<span class="citeproc-not-found" data-reference-id="ggplot2"><strong>???</strong></span>)</span>. It included when you installed the tidyverse. The “gg” stands for “The Grammar of Graphics” <span class="citation">(<span class="citeproc-not-found" data-reference-id="wilkinson2012grammar"><strong>???</strong></span>)</span>, a fundamental set of principles for producing just about any plot you can think of (and rules for why some types of plots are better than others).</p>
 <p>Making anything with ggplot2 usually requires at least two things: 1) a call to <code>ggplot(...)</code> where we specify the data along with the x and y axes or other aesthetics, and 2) a call to <code>geom_…</code>, where we tell ggplot2 how to plot the data. There are lots of geoms, as you can see in this cheatsheet (<a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf</a>). For most practices in this book, we will use <code>geom_point()</code>, which simply adds a dot for each x-y coordinate that we specified in the <code>aes()</code> function.</p>
 <p>Once we have our base plot, everything else is added with <code>+</code>. This can be a point of confusion. The <code>+</code> has a similar meaning as the pipe <code>%&gt;%</code>, but ggplot2 only uses <code>+</code>. Accidentally typing <code>%&gt;%</code> instead of <code>+</code> is a common mistake even for experienced coders (like authors of textbooks about data analysis).</p>
 <p>You can see the iterative nature of ggplot by breaking it down further, adding one thing at a time.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-17-2.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-17-3.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-17-4.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-17-5.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-22-2.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-22-3.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-22-4.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-22-5.png" width="672" /></p>
 <p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
 <p><strong>Things to check if it doesn’t work</strong></p>
 <ul>
@@ -493,7 +493,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-11"><a href="introduction-to-r.html#cb11-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
 <span id="cb11-12"><a href="introduction-to-r.html#cb11-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) <span class="op">+</span></span>
 <span id="cb11-13"><a href="introduction-to-r.html#cb11-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <p><strong>What it does</strong> The new geom <code>geom_pointrange()</code> adds the mean and standard deviation to the plot. If we only typed <code>geom_pointrange()</code>, it wouldn’t work. That’s because the geom requires three values that we haven’t assigned yet: y, ymin, and ymax. In this case, we want y to be the mean of each group. We want the error bar to range from ymin to ymax. ymin is the mean minus the standard deviation for each group mean-sd. ymax is the mean plus the standard deviation mean+sd. With those values, ggplot draws a line from ymin to ymax.</p>
 <p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
 <p><strong>Things to check if it doesn’t work</strong></p>
@@ -526,7 +526,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb12-13"><a href="introduction-to-r.html#cb12-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd)) <span class="op">+</span></span>
 <span id="cb12-14"><a href="introduction-to-r.html#cb12-14"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Miles Per Gallon&quot;</span>,</span>
 <span id="cb12-15"><a href="introduction-to-r.html#cb12-15"></a>       <span class="dt">x =</span> <span class="st">&quot;Cylinders&quot;</span>) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <p><strong>What it does</strong> The function <code>labs()</code> replaces the title of the x and y axis with whatever we put in quotes.</p>
 <p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
 <p><strong>Things to check if it doesn’t work</strong></p>
