@@ -38,6 +38,7 @@ library(knitr)
 A poorly kept secret in science is that you need a working understanding of statistics whether you use it formally or not. Consider a doctor who needs to prescribe a drug for disease X. There are three drugs on the market for this disease. The drugmakers have provided you with the following graphs showing how good their drugs are at treating this disease.
 
 ```{r echo=F, fig.cap='Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\\label{fig1:plot}', message=FALSE, warning=FALSE, align=, out.width="60%", paged.print=FALSE}
+
 set.seed(222)
 drug_data <- tibble(drug_a = rbeta(20, 2,.25),
        drug_b = rbeta(20, 2, 0.3),
@@ -55,10 +56,9 @@ p1 <- ggplot(drug_data, aes(x = drug, y = y)) +
        x = "Type of Drug") +
   ylim(0,1)
 
-ggsave(p1, file = here("figures/p1.jpg"))
+ggsave(p1, file = here("figures/p1.svg"))
 
-knitr::include_graphics(here("figures/p1.jpg"))
-
+knitr::include_graphics(here("figures/p1.svg"))
 
 ```
 
