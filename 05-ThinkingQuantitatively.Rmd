@@ -30,10 +30,6 @@ library(gridExtra)
 library(grid)
 ```
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = F)
-```
-
 ## Why Statistics
 
 **Statistics** is a process of analyzing data to learn about a question of interest. We find that statistics can be daunting for undergraduate students. It was daunting for us as well. The goal of this book is not to teach you how to be a statistician. It is to teach you how to begin working with and understanding data as it pertains to scientific inquiry. The skills you learn here should allow you to read a scientific paper and not have to look up what a standard error is or what a confidence interval is or what the difference is between a median and a mean.
@@ -48,14 +44,14 @@ drug_data <- tibble(drug_a = rbeta(20, 2,.25),
   mutate(trial = 1:nrow(.))  %>% 
   pivot_longer(-trial, names_to = "drug", values_to = "y")
 
-drug_data %>% rename(prop_recover = y) %>% 
-  mutate(prop_recover = round(prop_recover, 2)) %>% 
-  head()
+# drug_data %>% rename(prop_recover = y) %>% 
+#   mutate(prop_recover = round(prop_recover, 2)) %>% 
+#   head()
 
 ggplot(drug_data, aes(x = drug, y = y)) +
   geom_point(position = position_jitter(width = 0.065)) +
   labs(y = "Percent of patients that recovered",
-       x = "Drug") +
+       x = "Type of Drug") +
   ylim(0,1)
 ```
 
@@ -65,7 +61,7 @@ Which one should the doctor prescribe?
 
 For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn't seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drug makers only report recoveries of people who *took* the drug. What about people who had the same disease but didn't take a drug? In other words, what about the *controls*? The doctor asks for this information. Let's look at the same graph, but now with the data for controls added.
 
-```{r echo=FALSE}
+```{{r, fig.show = "hold", fig.cap = 'Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).', echo = F, align = 'center'}
 set.seed(222)
 drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
        drug_b_treatment = rbeta(20, 2, 0.3),
@@ -79,15 +75,15 @@ drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
   mutate(drug = paste0(temp, "_", drug)) %>% 
   select(-temp)
 
-drug_data %>%
-  rename(prop_recover = y) %>% 
-  mutate(prop_recover = round(prop_recover, 2)) %>% 
-  head()
+# drug_data %>%
+#   rename(prop_recover = y) %>% 
+#   mutate(prop_recover = round(prop_recover, 2)) %>% 
+#   head()
 
 ggplot(drug_data, aes(x = drug, y = y, color = treatment)) +
   geom_point(position = position_jitterdodge(jitter.width = 0.065, dodge.width = 0.2)) +
   labs(y = "Percent of patients that recovered",
-       x = "Drug") +
+       x = "Type of Drug") +
   scale_color_grey(start = .6, end = 0) +
   ylim(0,1)
 ```
@@ -148,7 +144,7 @@ You should aim to provide at least the following summary statistics for every im
 
 **Maximum** The largest value.
 
-The code below will generate the data set used in Figure 3 above called *drug\_data* - just copy it and run it. Don't worry about interpreting it for now.
+The code below will generate the data set used in Figure 3 above called *drug_data* - just copy it and run it. Don't worry about interpreting it for now.
 
 ```{r}
 library(tidyverse)
@@ -172,7 +168,7 @@ drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
   arrange(drug)
 ```
 
-Once we have a data set, we use the *group\_by()* and *summarize()* functions to generate the summary statistics.
+Once we have a data set, we use the *group_by()* and *summarize()* functions to generate the summary statistics.
 
 ```{r}
 drug_data %>% 

@@ -17,8 +17,3 @@ header-includes: #allows you to add in your own Latex packages
 ```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('images/book_cover.jpg')
 ```
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
