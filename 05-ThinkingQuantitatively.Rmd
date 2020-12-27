@@ -1,7 +1,7 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Thinking Quantitatively
@@ -61,14 +61,15 @@ Which one should the doctor prescribe?
 
 For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn't seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drug makers only report recoveries of people who *took* the drug. What about people who had the same disease but didn't take a drug? In other words, what about the *controls*? The doctor asks for this information. Let's look at the same graph, but now with the data for controls added.
 
-```{{r, fig.show = "hold", fig.cap = 'Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).', echo = F, align = 'center'}
-set.seed(222)
-drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
-       drug_b_treatment = rbeta(20, 2, 0.3),
-       drug_c_treatment = rbeta(20, 2, 2),
-       drug_a_control = rbeta(20, 1.8, 0.25),
-       drug_b_control = rbeta(20, 1.8, 0.25),
-       drug_c_control = rbeta(20, 0.2, 1)) %>% 
+```{r, fig.show = "hold", fig.cap = 'Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).', echo = F, align = 'center'} 
+
+set.seed(222) 
+drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25), 
+                    drug_b_treatment = rbeta(20, 2, 0.3), 
+                    drug_c_treatment = rbeta(20, 2, 2), 
+                    drug_a_control = rbeta(20, 1.8, 0.25), 
+                    drug_b_control = rbeta(20, 1.8, 0.25), 
+                    drug_c_control = rbeta(20, 0.2, 1)) %>% 
   mutate(trial = 1:nrow(.)) %>% 
   pivot_longer(-trial, names_to = "drug", values_to = "y") %>% 
   separate(drug, c("temp", "drug", "treatment")) %>% 
@@ -76,53 +77,26 @@ drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
   select(-temp)
 
 # drug_data %>%
-#   rename(prop_recover = y) %>% 
-#   mutate(prop_recover = round(prop_recover, 2)) %>% 
-#   head()
 
-ggplot(drug_data, aes(x = drug, y = y, color = treatment)) +
-  geom_point(position = position_jitterdodge(jitter.width = 0.065, dodge.width = 0.2)) +
-  labs(y = "Percent of patients that recovered",
-       x = "Type of Drug") +
-  scale_color_grey(start = .6, end = 0) +
-  ylim(0,1)
+# rename(prop_recover = y) %>%
+
+# mutate(prop_recover = round(prop_recover, 2)) %>%
+
+# head()
+
+ggplot(drug_data, aes(x = drug, y = y, color = treatment)) + 
+  geom_point(position = position_jitterdodge(jitter.width = 0.065, dodge.width = 0.2)) + 
+  labs(y = "Percent of patients that recovered", x = "Type of Drug") + 
+  scale_color_grey(start = .6, end = 0) + ylim(0,1)
+
 ```
+
 
 In the figure above, the black dots are the same as before. The gray dots show the percent of people who recovered without taking the drug. Does this information change your perception of the benefits of taking either drug? In the first graph, it seemed obvious that drugs A and B were better than drug C, because most people recovered with those drugs.
 
 Adding the control data tells a different story. While it is true that most people recovered when taking drugs A and B, they also recovered without taking those drugs. For drug C, only \~25 to 75 percent of people recovered when taking it, but that percentage appears much higher than the percentage of people that recovered without taking the drug. In some trials, almost no one recovered without the drug. This complicates the decision of which drug to choose.
 
 Because our doctor took Inquiry and Analysis in Biology *and* later took biostatistics, they ask for further information. Instead of just looking at the data for each group, they want something more informative. For each trial, they subtract the percent that recovered when taking the drug from the percent that recovered when not taking the drug. Then they plot it. It looks like this.
-
-```{r echo=FALSE, paged.print=TRUE}
-set.seed(222)
-drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
-       drug_b_treatment = rbeta(20, 2, 0.3),
-       drug_c_treatment = rbeta(20, 2, 2),
-       drug_a_control = rbeta(20, 1.8, 0.25),
-       drug_b_control = rbeta(20, 1.8, 0.25),
-       drug_c_control = rbeta(20, 0.2, 1)) %>% 
-  mutate(trial = 1:nrow(.)) %>% 
-  pivot_longer(cols = -trial, names_to = "drug", values_to = "y") %>% 
-  separate(drug, c("temp", "drug", "treatment")) %>% 
-  mutate(drug = paste0(temp, "_", drug)) %>% 
-  select(-temp) %>% 
-  pivot_wider(names_from = treatment, values_from = y) %>% 
-  mutate(difference = treatment - control,
-         difference = round(difference, 2),
-         treatment = round(treatment, 2),
-         control = round(control, 2)) %>% 
-  arrange(drug)
-
-drug_data %>% head()
-
-ggplot(drug_data, aes(x = drug, y = difference)) +
-  geom_point(position = position_jitter(width = 0.065)) +
-  labs(y = "Percent of patients that recovered",
-       x = "Drug") +
-  ylim(-1,1) +
-  geom_hline(yintercept = 0)
-```
 
 Now we see a different story than the figure we started with. By displaying the differences in recover, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn't.
 
@@ -144,7 +118,7 @@ You should aim to provide at least the following summary statistics for every im
 
 **Maximum** The largest value.
 
-The code below will generate the data set used in Figure 3 above called *drug_data* - just copy it and run it. Don't worry about interpreting it for now.
+The code below will generate the data set used in Figure 3 above called *drug\_data* - just copy it and run it. Don't worry about interpreting it for now.
 
 ```{r}
 library(tidyverse)
@@ -168,7 +142,7 @@ drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
   arrange(drug)
 ```
 
-Once we have a data set, we use the *group_by()* and *summarize()* functions to generate the summary statistics.
+Once we have a data set, we use the *group\_by()* and *summarize()* functions to generate the summary statistics.
 
 ```{r}
 drug_data %>% 
