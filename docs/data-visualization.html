@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>10 Data Visualization | Inquiry and Analysis in Biology</title>
-  <meta name="description" content="10 Data Visualization | Inquiry and Analysis in Biology" />
+  <title>6 Data Visualization | Inquiry and Analysis in Biology</title>
+  <meta name="description" content="6 Data Visualization | Inquiry and Analysis in Biology" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="10 Data Visualization | Inquiry and Analysis in Biology" />
+  <meta property="og:title" content="6 Data Visualization | Inquiry and Analysis in Biology" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="10 Data Visualization | Inquiry and Analysis in Biology" />
+  <meta name="twitter:title" content="6 Data Visualization | Inquiry and Analysis in Biology" />
   
   
   
@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="head.html"/>
+<link rel="prev" href="thinking-quantitatively.html"/>
 
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -185,95 +185,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="5.2" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#why-statistics"><i class="fa fa-check"></i><b>5.2</b> Why Statistics</a></li>
+<li class="chapter" data-level="5.3" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#summary-statistics"><i class="fa fa-check"></i><b>5.3</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.4" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#dont-forget-that-quantitative-thinking-includes-thinking"><i class="fa fa-check"></i><b>5.4</b> Don’t forget that Quantitative Thinking includes “thinking”</a></li>
+<li class="chapter" data-level="5.5" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#common-pitfalls-in-statistical-inference"><i class="fa fa-check"></i><b>5.5</b> Common Pitfalls in Statistical Inference</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="drug-data.html"><a href="drug-data.html"><i class="fa fa-check"></i><b>6</b> drug_data %&gt;%</a></li>
-<li class="chapter" data-level="7" data-path="renameprop-recover-y.html"><a href="renameprop-recover-y.html"><i class="fa fa-check"></i><b>7</b> rename(prop_recover = y) %&gt;%</a></li>
-<li class="chapter" data-level="8" data-path="mutateprop-recover-roundprop-recover-2.html"><a href="mutateprop-recover-roundprop-recover-2.html"><i class="fa fa-check"></i><b>8</b> mutate(prop_recover = round(prop_recover, 2)) %&gt;%</a></li>
-<li class="chapter" data-level="9" data-path="head.html"><a href="head.html"><i class="fa fa-check"></i><b>9</b> head()</a>
+<li class="chapter" data-level="6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>6</b> Data Visualization</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="head.html"><a href="head.html#a-tibble-6-x-5"><i class="fa fa-check"></i><b>9.1</b> # A tibble: 6 x 5</a></li>
-<li class="chapter" data-level="9.2" data-path="head.html"><a href="head.html#trial-drug-treatment-control-difference"><i class="fa fa-check"></i><b>9.2</b> trial drug treatment control difference</a></li>
-<li class="chapter" data-level="9.3" data-path="head.html"><a href="head.html#section"><i class="fa fa-check"></i><b>9.3</b> <int> <chr> <dbl> <dbl> <dbl></a></li>
-<li class="chapter" data-level="9.4" data-path="head.html"><a href="head.html#drug_a-1-0.41-0.59"><i class="fa fa-check"></i><b>9.4</b> 1 1 drug_a 1 0.41 0.59</a></li>
-<li class="chapter" data-level="9.5" data-path="head.html"><a href="head.html#drug_a-0.89-0.81-0.08"><i class="fa fa-check"></i><b>9.5</b> 2 2 drug_a 0.89 0.81 0.08</a></li>
-<li class="chapter" data-level="9.6" data-path="head.html"><a href="head.html#drug_a-0.96-0.56-0.4"><i class="fa fa-check"></i><b>9.6</b> 3 3 drug_a 0.96 0.56 0.4</a></li>
-<li class="chapter" data-level="9.7" data-path="head.html"><a href="head.html#drug_a-0.62-0.99--0.37"><i class="fa fa-check"></i><b>9.7</b> 4 4 drug_a 0.62 0.99 -0.37</a></li>
-<li class="chapter" data-level="9.8" data-path="head.html"><a href="head.html#drug_a-1-0.99-0.01"><i class="fa fa-check"></i><b>9.8</b> 5 5 drug_a 1 0.99 0.01</a></li>
-<li class="chapter" data-level="9.9" data-path="head.html"><a href="head.html#drug_a-0.99-0.27-0.72"><i class="fa fa-check"></i><b>9.9</b> 6 6 drug_a 0.99 0.27 0.72</a></li>
-<li class="chapter" data-level="9.10" data-path="head.html"><a href="head.html#summarise-ungrouping-output-override-with-.groups-argument"><i class="fa fa-check"></i><b>9.10</b> <code>summarise()</code> ungrouping output (override with <code>.groups</code> argument)</a></li>
-<li class="chapter" data-level="9.11" data-path="head.html"><a href="head.html#a-tibble-3-x-5"><i class="fa fa-check"></i><b>9.11</b> # A tibble: 3 x 5</a></li>
-<li class="chapter" data-level="9.12" data-path="head.html"><a href="head.html#drug-mean-sd-min-max"><i class="fa fa-check"></i><b>9.12</b> drug mean sd min max</a></li>
-<li class="chapter" data-level="9.13" data-path="head.html"><a href="head.html#section-1"><i class="fa fa-check"></i><b>9.13</b> <chr> <dbl> <dbl> <dbl> <dbl></a></li>
-<li class="chapter" data-level="9.14" data-path="head.html"><a href="head.html#drug_a-0.0315-0.303--0.61-0.72"><i class="fa fa-check"></i><b>9.14</b> 1 drug_a 0.0315 0.303 -0.61 0.72</a></li>
-<li class="chapter" data-level="9.15" data-path="head.html"><a href="head.html#drug_b--0.00950-0.150--0.290-0.38"><i class="fa fa-check"></i><b>9.15</b> 2 drug_b -0.00950 0.150 -0.290 0.38</a></li>
-<li class="chapter" data-level="9.16" data-path="head.html"><a href="head.html#drug_c-0.428-0.306--0.18-0.9"><i class="fa fa-check"></i><b>9.16</b> 3 drug_c 0.428 0.306 -0.18 0.9</a></li>
-<li class="chapter" data-level="9.17" data-path="head.html"><a href="head.html#summarise-ungrouping-output-override-with-.groups-argument-1"><i class="fa fa-check"></i><b>9.17</b> <code>summarise()</code> ungrouping output (override with <code>.groups</code> argument)</a></li>
-<li class="chapter" data-level="9.18" data-path="head.html"><a href="head.html#a-tibble-3-x-5-1"><i class="fa fa-check"></i><b>9.18</b> # A tibble: 3 x 5</a></li>
-<li class="chapter" data-level="9.19" data-path="head.html"><a href="head.html#drug-mean-sd-min-max-1"><i class="fa fa-check"></i><b>9.19</b> drug mean sd min max</a></li>
-<li class="chapter" data-level="9.20" data-path="head.html"><a href="head.html#section-2"><i class="fa fa-check"></i><b>9.20</b> <chr> <dbl> <dbl> <dbl> <dbl></a></li>
-<li class="chapter" data-level="9.21" data-path="head.html"><a href="head.html#drug_a-0.03-0.3--0.6-0.7"><i class="fa fa-check"></i><b>9.21</b> 1 drug_a 0.03 0.3 -0.6 0.7</a></li>
-<li class="chapter" data-level="9.22" data-path="head.html"><a href="head.html#drug_b--0.01-0.1--0.3-0.4"><i class="fa fa-check"></i><b>9.22</b> 2 drug_b -0.01 0.1 -0.3 0.4</a></li>
-<li class="chapter" data-level="9.23" data-path="head.html"><a href="head.html#drug_c-0.43-0.3--0.2-0.9"><i class="fa fa-check"></i><b>9.23</b> 3 drug_c 0.43 0.3 -0.2 0.9</a></li>
-<li class="chapter" data-level="9.24" data-path="head.html"><a href="head.html#loading-required-package-rstan"><i class="fa fa-check"></i><b>9.24</b> Loading required package: rstan</a></li>
-<li class="chapter" data-level="9.25" data-path="head.html"><a href="head.html#loading-required-package-stanheaders"><i class="fa fa-check"></i><b>9.25</b> Loading required package: StanHeaders</a></li>
-<li class="chapter" data-level="9.26" data-path="head.html"><a href="head.html#rstan-version-2.21.2-gitrev-2e1f913d3ca3"><i class="fa fa-check"></i><b>9.26</b> rstan (Version 2.21.2, GitRev: 2e1f913d3ca3)</a></li>
-<li class="chapter" data-level="9.27" data-path="head.html"><a href="head.html#for-execution-on-a-local-multicore-cpu-with-excess-ram-we-recommend-calling"><i class="fa fa-check"></i><b>9.27</b> For execution on a local, multicore CPU with excess RAM we recommend calling</a></li>
-<li class="chapter" data-level="9.28" data-path="head.html"><a href="head.html#optionsmc.cores-paralleldetectcores."><i class="fa fa-check"></i><b>9.28</b> options(mc.cores = parallel::detectCores()).</a></li>
-<li class="chapter" data-level="9.29" data-path="head.html"><a href="head.html#to-avoid-recompilation-of-unchanged-stan-programs-we-recommend-calling"><i class="fa fa-check"></i><b>9.29</b> To avoid recompilation of unchanged Stan programs, we recommend calling</a></li>
-<li class="chapter" data-level="9.30" data-path="head.html"><a href="head.html#rstan_optionsauto_write-true"><i class="fa fa-check"></i><b>9.30</b> rstan_options(auto_write = TRUE)</a></li>
-<li class="chapter" data-level="9.31" data-path="head.html"><a href="head.html#do-not-specify--marchnative-in-local_cppflags-or-a-makevars-file"><i class="fa fa-check"></i><b>9.31</b> Do not specify ‘-march=native’ in ‘LOCAL_CPPFLAGS’ or a Makevars file</a></li>
-<li class="chapter" data-level="9.32" data-path="head.html"><a href="head.html#section-3"><i class="fa fa-check"></i><b>9.32</b> </a></li>
-<li class="chapter" data-level="9.33" data-path="head.html"><a href="head.html#attaching-package-rstan"><i class="fa fa-check"></i><b>9.33</b> Attaching package: ‘rstan’</a></li>
-<li class="chapter" data-level="9.34" data-path="head.html"><a href="head.html#the-following-object-is-masked-from-packagetidyr"><i class="fa fa-check"></i><b>9.34</b> The following object is masked from ‘package:tidyr’:</a></li>
-<li class="chapter" data-level="9.35" data-path="head.html"><a href="head.html#section-4"><i class="fa fa-check"></i><b>9.35</b> </a></li>
-<li class="chapter" data-level="9.36" data-path="head.html"><a href="head.html#extract"><i class="fa fa-check"></i><b>9.36</b> extract</a></li>
-<li class="chapter" data-level="9.37" data-path="head.html"><a href="head.html#loading-required-package-parallel"><i class="fa fa-check"></i><b>9.37</b> Loading required package: parallel</a></li>
-<li class="chapter" data-level="9.38" data-path="head.html"><a href="head.html#loading-required-package-dagitty"><i class="fa fa-check"></i><b>9.38</b> Loading required package: dagitty</a></li>
-<li class="chapter" data-level="9.39" data-path="head.html"><a href="head.html#rethinking-version-2.01"><i class="fa fa-check"></i><b>9.39</b> rethinking (Version 2.01)</a></li>
-<li class="chapter" data-level="9.40" data-path="head.html"><a href="head.html#section-5"><i class="fa fa-check"></i><b>9.40</b> </a></li>
-<li class="chapter" data-level="9.41" data-path="head.html"><a href="head.html#attaching-package-rethinking"><i class="fa fa-check"></i><b>9.41</b> Attaching package: ‘rethinking’</a></li>
-<li class="chapter" data-level="9.42" data-path="head.html"><a href="head.html#the-following-object-is-masked-from-packagepurrr"><i class="fa fa-check"></i><b>9.42</b> The following object is masked from ‘package:purrr’:</a></li>
-<li class="chapter" data-level="9.43" data-path="head.html"><a href="head.html#section-6"><i class="fa fa-check"></i><b>9.43</b> </a></li>
-<li class="chapter" data-level="9.44" data-path="head.html"><a href="head.html#map"><i class="fa fa-check"></i><b>9.44</b> map</a></li>
-<li class="chapter" data-level="9.45" data-path="head.html"><a href="head.html#the-following-object-is-masked-from-packagestats"><i class="fa fa-check"></i><b>9.45</b> The following object is masked from ‘package:stats’:</a></li>
-<li class="chapter" data-level="9.46" data-path="head.html"><a href="head.html#section-7"><i class="fa fa-check"></i><b>9.46</b> </a></li>
-<li class="chapter" data-level="9.47" data-path="head.html"><a href="head.html#rstudent"><i class="fa fa-check"></i><b>9.47</b> rstudent</a></li>
-<li class="chapter" data-level="9.48" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x"><i class="fa fa-check"></i><b>9.48</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-<li class="chapter" data-level="9.49" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x-1"><i class="fa fa-check"></i><b>9.49</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-<li class="chapter" data-level="9.50" data-path="head.html"><a href="head.html#parsed-with-column-specification"><i class="fa fa-check"></i><b>9.50</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.51" data-path="head.html"><a href="head.html#cols"><i class="fa fa-check"></i><b>9.51</b> cols(</a></li>
-<li class="chapter" data-level="9.52" data-path="head.html"><a href="head.html#country-col_character"><i class="fa fa-check"></i><b>9.52</b> country = col_character(),</a></li>
-<li class="chapter" data-level="9.53" data-path="head.html"><a href="head.html#obesity_rate_perc_pop-col_double"><i class="fa fa-check"></i><b>9.53</b> obesity_rate_perc_pop = col_double()</a></li>
-<li class="chapter" data-level="9.54" data-path="head.html"><a href="head.html#section-8"><i class="fa fa-check"></i><b>9.54</b> )</a></li>
-<li class="chapter" data-level="9.55" data-path="head.html"><a href="head.html#parsed-with-column-specification-1"><i class="fa fa-check"></i><b>9.55</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.56" data-path="head.html"><a href="head.html#cols-1"><i class="fa fa-check"></i><b>9.56</b> cols(</a></li>
-<li class="chapter" data-level="9.57" data-path="head.html"><a href="head.html#default-col_double"><i class="fa fa-check"></i><b>9.57</b> .default = col_double(),</a></li>
-<li class="chapter" data-level="9.58" data-path="head.html"><a href="head.html#country-col_character-1"><i class="fa fa-check"></i><b>9.58</b> country = col_character()</a></li>
-<li class="chapter" data-level="9.59" data-path="head.html"><a href="head.html#section-9"><i class="fa fa-check"></i><b>9.59</b> )</a></li>
-<li class="chapter" data-level="9.60" data-path="head.html"><a href="head.html#see-spec-for-full-column-specifications."><i class="fa fa-check"></i><b>9.60</b> See spec(…) for full column specifications.</a></li>
-<li class="chapter" data-level="9.61" data-path="head.html"><a href="head.html#joining-by-country"><i class="fa fa-check"></i><b>9.61</b> Joining, by = “country”</a></li>
-<li class="chapter" data-level="9.62" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x-2"><i class="fa fa-check"></i><b>9.62</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-<li class="chapter" data-level="9.63" data-path="head.html"><a href="head.html#parsed-with-column-specification-2"><i class="fa fa-check"></i><b>9.63</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.64" data-path="head.html"><a href="head.html#cols-2"><i class="fa fa-check"></i><b>9.64</b> cols(</a></li>
-<li class="chapter" data-level="9.65" data-path="head.html"><a href="head.html#country-col_character-2"><i class="fa fa-check"></i><b>9.65</b> country = col_character(),</a></li>
-<li class="chapter" data-level="9.66" data-path="head.html"><a href="head.html#obesity_rate_perc_pop-col_double-1"><i class="fa fa-check"></i><b>9.66</b> obesity_rate_perc_pop = col_double()</a></li>
-<li class="chapter" data-level="9.67" data-path="head.html"><a href="head.html#section-10"><i class="fa fa-check"></i><b>9.67</b> )</a></li>
-<li class="chapter" data-level="9.68" data-path="head.html"><a href="head.html#parsed-with-column-specification-3"><i class="fa fa-check"></i><b>9.68</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.69" data-path="head.html"><a href="head.html#cols-3"><i class="fa fa-check"></i><b>9.69</b> cols(</a></li>
-<li class="chapter" data-level="9.70" data-path="head.html"><a href="head.html#default-col_double-1"><i class="fa fa-check"></i><b>9.70</b> .default = col_double(),</a></li>
-<li class="chapter" data-level="9.71" data-path="head.html"><a href="head.html#country-col_character-3"><i class="fa fa-check"></i><b>9.71</b> country = col_character()</a></li>
-<li class="chapter" data-level="9.72" data-path="head.html"><a href="head.html#section-11"><i class="fa fa-check"></i><b>9.72</b> )</a></li>
-<li class="chapter" data-level="9.73" data-path="head.html"><a href="head.html#see-spec-for-full-column-specifications.-1"><i class="fa fa-check"></i><b>9.73</b> See spec(…) for full column specifications.</a></li>
-<li class="chapter" data-level="9.74" data-path="head.html"><a href="head.html#joining-by-country-1"><i class="fa fa-check"></i><b>9.74</b> Joining, by = “country”</a></li>
-<li class="chapter" data-level="9.75" data-path="head.html"><a href="head.html#joining-by-country-2"><i class="fa fa-check"></i><b>9.75</b> Joining, by = “country”</a></li>
-<li class="chapter" data-level="9.76" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x-3"><i class="fa fa-check"></i><b>9.76</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>10</b> Data Visualization</a>
+<li class="chapter" data-level="6.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="data-visualization.html"><a href="data-visualization.html#basic-components-of-a-graph"><i class="fa fa-check"></i><b>10.1.1</b> Basic Components of a Graph</a></li>
-<li class="chapter" data-level="10.1.2" data-path="data-visualization.html"><a href="data-visualization.html#best-practices"><i class="fa fa-check"></i><b>10.1.2</b> Best Practices</a></li>
+<li class="chapter" data-level="6.1.1" data-path="data-visualization.html"><a href="data-visualization.html#basic-components-of-a-graph"><i class="fa fa-check"></i><b>6.1.1</b> Basic Components of a Graph</a></li>
+<li class="chapter" data-level="6.1.2" data-path="data-visualization.html"><a href="data-visualization.html#best-practices"><i class="fa fa-check"></i><b>6.1.2</b> Best Practices</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -293,10 +214,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-visualization" class="section level1" number="10">
-<h1><span class="header-section-number">10</span> Data Visualization</h1>
-<div id="learning-objectives" class="section level2" number="10.1">
-<h2><span class="header-section-number">10.1</span> Learning Objectives</h2>
+<div id="data-visualization" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Data Visualization</h1>
+<div id="learning-objectives" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Learning Objectives</h2>
 <ol style="list-style-type: decimal">
 <li><p>Understand the components of a graph</p></li>
 <li><p>Understand best practices in graph designs</p></li>
@@ -315,15 +236,15 @@ Edward Tufte - The Visual Display of Quantitative Information
 <p>We might consider these “high-level” guideposts to data visualization. It is tempting to think of this advice as applying only to modern scientific approaches, since anyone can create a graph on a computer. But Tufte’s book is almost 40 years old. It is a masterpiece of data visualization that is as relevant today as it was in 1983. Tufte includes examples that extend back centuries. The principles that we try to apply in this book are not new. They are simply extensions of a long history of the study of how to best display data.</p>
 <p>On a more fundamental level, we want to first focus on the basic components of common graphs.</p>
 <p>A <strong>graph</strong> is a like a map whose coordinates are defined by cells in a table. It typically contains a vertical <strong>y-axis</strong> and a horizontal <strong>x-axis</strong>. The data are added to the graph by reading reading from columns in a table. In the example below, the data table has two columns corresponding to location data (lat = latitude, long = longitude). It is easy to see how this information would “map” to coordinates on a graph. The x-coordinates would be longitude and the y-coordinates would be latitude. Each pair of x-y coordinates would be a dot. Like this:</p>
-<div class="figure"><span id="fig:unnamed-chunk-29"></span>
-<img src="_main_files/figure-html/unnamed-chunk-29-1.png" alt="a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context." width="1536" />
+<div class="figure"><span id="fig:unnamed-chunk-42"></span>
+<img src="_main_files/figure-html/unnamed-chunk-42-1.png" alt="a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context." width="1536" />
 <p class="caption">
-Figure 10.1: a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context.
+Figure 6.1: a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context.
 </p>
 </div>
 <p><strong>Why make a graph?</strong> The table contains paired latitude and longitude coordinates, but unless you’re a savant at geography, it might not be clear how the coordinates are related. By <strong>plotting the data</strong>, we are able to see patterns that would be difficult or impossible to see in the table. For example, the dots on the left side of (b) are more evenly spaced than the dots on the right side of (b). There are also some visual outliers, like the dot in the lower right, upper left, and lower left. There’s nothing wrong with visual outliers. You’ll see them in every graph you plot. But we would want to explore a little to see what they are. For example, by adding a polygon of US states, it becomes immediately clear what we’re looking at. The lower right “outlier” isn’t an outlier at all (We’ll leave the jokes about Florida unsaid). There are still two dots that don’t have states surrounding them - Alaska and Hawaii. These are still like outliers, but we intuitively know what they are by plotting. None of that information is in the table by itself.</p>
-<div id="basic-components-of-a-graph" class="section level3" number="10.1.1">
-<h3><span class="header-section-number">10.1.1</span> Basic Components of a Graph</h3>
+<div id="basic-components-of-a-graph" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Basic Components of a Graph</h3>
 <p>Nearly all graphs share some basic features.</p>
 <p><strong>y-axis</strong> - Vertical axis. Often used to represent the <em>response</em> variable.</p>
 <p><strong>x-axis</strong> - Horizontal axis. Often used to represent the <em>predictor</em> variable.</p>
@@ -333,17 +254,17 @@ Figure 10.1: a) First six rows of data, b) The same data plotted on an x-y coord
 <p><strong>shapes</strong> - Used to distinguish different groups of data. Can be used to represent a separate response variable.</p>
 <p><strong>lines</strong> - Often used to show trends in the data.</p>
 <p>These basic components form an enormous array of visualizations. Here’s an example using the <em>iris</em> data set, which gives measures of flowers for three different species. It is included with R.</p>
-<div class="figure"><span id="fig:unnamed-chunk-30"></span>
-<img src="_main_files/figure-html/unnamed-chunk-30-1.png" alt="a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species." width="1152" />
+<div class="figure"><span id="fig:unnamed-chunk-43"></span>
+<img src="_main_files/figure-html/unnamed-chunk-43-1.png" alt="a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species." width="1152" />
 <p class="caption">
-Figure 10.2: a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species.
+Figure 6.2: a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species.
 </p>
 </div>
 <p>The table and figures above follow the same sequence as the map before. We start with a table of data, where each row is an individual observation with information on petal length, petal width, and flower species. We then make an initial scatter plot, showing patterns that are hard or impossible to see just by looking at the table. Finally, we add a regression line and some colors for context.</p>
 <p>Even though these graphs are for flowers and the previous graphs were for states, they share the same simple components, derived from data. We tell the graphing software where to find the data (<em>iris</em>), where to find the column for the <strong>y-axis</strong> (<em>Petal.Length</em>), the <strong>x-axis</strong> (<em>Petal.Width</em>), and where to find the column for <strong>color</strong> (<em>Species</em>). If we wanted to add another layer, like size of the individual, we would need to collect that data and simply add it as a fourth column in the data set.</p>
 </div>
-<div id="best-practices" class="section level3" number="10.1.2">
-<h3><span class="header-section-number">10.1.2</span> Best Practices</h3>
+<div id="best-practices" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Best Practices</h3>
 <p>We see bad graphs all the time, from scientists at all levels (undergrad to Professor). Here are some common ways to make a bad graph.</p>
 <p><strong>Recipe for a bad graph</strong></p>
 <ol style="list-style-type: decimal">
@@ -365,7 +286,7 @@ Figure 10.2: a) First six rows of the iris data set, b) Scatterplot of the iris 
 <p><strong>Bad Graph</strong></p>
 <p><img src="images/bad_plot.jpg" /></p>
 <p><strong>Better Graph</strong></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
 <p>These are the same data sets in two different graphs. The first one violates most of the rules for a bad graph (or follows most of the rules, I guess). The second one is better. It isn’t pixelated and the text isn’t stretched. The colors are visible even to a colorblind person (using <code>scale_color_colorblind()</code> from the <em>ggthemes</em> package). The axis labels are a bit more informative, giving the units for the sepal widths and lengths.</p>
 <p>While this may seem like a trivial and obvious comparison, the first version is one we see all the time in student papers, and even in manuscripts submitted by PhDs. The easiest way to avoid this problem is to take the following steps:</p>
 <ol style="list-style-type: decimal">
@@ -377,7 +298,7 @@ Figure 10.2: a) First six rows of the iris data set, b) Scatterplot of the iris 
 </ol>
 <p>Using <em>ggplot</em> in R, we can save a high resolution version of our graph with the <code>ggsave()</code> function.</p>
 <p><strong>Saving a high resolution graph</strong></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
 <p>The code above makes a graph called “my_graph”, calls the graph in R to view it, and then saves it as a .jpg with the <code>ggsave()</code> function. The <code>ggsave()</code> function has several options</p>
 <p><strong>image type</strong> - By adding “.jpg” to the end of our graph name in the <code>file = …</code> statement, we are creating a .jpg. To create a .png, just add “.png” instead. <code>ggsave()</code> can create 10 different file types - .png, .eps, .ps, .tex, .pdf, .jpg, .tiff, .bmp, .svg, or .wmf. Choose the one that works best for you.</p>
 <p><strong>dpi</strong> - dots per inch. The higher then number, the higher the resolution. However, increasing dpi also increases the file-size of your plot, which can make things really slow depending on your computer. A dpi of 500 or 600 is good for nearly all uses.</p>
@@ -413,7 +334,7 @@ Figure 10.2: a) First six rows of the iris data set, b) Scatterplot of the iris 
           </div>
         </div>
       </div>
-<a href="head.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="thinking-quantitatively.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

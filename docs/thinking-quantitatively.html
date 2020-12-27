@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="introduction-to-r.html"/>
-<link rel="next" href="drug-data.html"/>
+<link rel="next" href="data-visualization.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -185,95 +185,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="5.2" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#why-statistics"><i class="fa fa-check"></i><b>5.2</b> Why Statistics</a></li>
+<li class="chapter" data-level="5.3" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#summary-statistics"><i class="fa fa-check"></i><b>5.3</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.4" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#dont-forget-that-quantitative-thinking-includes-thinking"><i class="fa fa-check"></i><b>5.4</b> Don’t forget that Quantitative Thinking includes “thinking”</a></li>
+<li class="chapter" data-level="5.5" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#common-pitfalls-in-statistical-inference"><i class="fa fa-check"></i><b>5.5</b> Common Pitfalls in Statistical Inference</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="drug-data.html"><a href="drug-data.html"><i class="fa fa-check"></i><b>6</b> drug_data %&gt;%</a></li>
-<li class="chapter" data-level="7" data-path="renameprop-recover-y.html"><a href="renameprop-recover-y.html"><i class="fa fa-check"></i><b>7</b> rename(prop_recover = y) %&gt;%</a></li>
-<li class="chapter" data-level="8" data-path="mutateprop-recover-roundprop-recover-2.html"><a href="mutateprop-recover-roundprop-recover-2.html"><i class="fa fa-check"></i><b>8</b> mutate(prop_recover = round(prop_recover, 2)) %&gt;%</a></li>
-<li class="chapter" data-level="9" data-path="head.html"><a href="head.html"><i class="fa fa-check"></i><b>9</b> head()</a>
+<li class="chapter" data-level="6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>6</b> Data Visualization</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="head.html"><a href="head.html#a-tibble-6-x-5"><i class="fa fa-check"></i><b>9.1</b> # A tibble: 6 x 5</a></li>
-<li class="chapter" data-level="9.2" data-path="head.html"><a href="head.html#trial-drug-treatment-control-difference"><i class="fa fa-check"></i><b>9.2</b> trial drug treatment control difference</a></li>
-<li class="chapter" data-level="9.3" data-path="head.html"><a href="head.html#section"><i class="fa fa-check"></i><b>9.3</b> <int> <chr> <dbl> <dbl> <dbl></a></li>
-<li class="chapter" data-level="9.4" data-path="head.html"><a href="head.html#drug_a-1-0.41-0.59"><i class="fa fa-check"></i><b>9.4</b> 1 1 drug_a 1 0.41 0.59</a></li>
-<li class="chapter" data-level="9.5" data-path="head.html"><a href="head.html#drug_a-0.89-0.81-0.08"><i class="fa fa-check"></i><b>9.5</b> 2 2 drug_a 0.89 0.81 0.08</a></li>
-<li class="chapter" data-level="9.6" data-path="head.html"><a href="head.html#drug_a-0.96-0.56-0.4"><i class="fa fa-check"></i><b>9.6</b> 3 3 drug_a 0.96 0.56 0.4</a></li>
-<li class="chapter" data-level="9.7" data-path="head.html"><a href="head.html#drug_a-0.62-0.99--0.37"><i class="fa fa-check"></i><b>9.7</b> 4 4 drug_a 0.62 0.99 -0.37</a></li>
-<li class="chapter" data-level="9.8" data-path="head.html"><a href="head.html#drug_a-1-0.99-0.01"><i class="fa fa-check"></i><b>9.8</b> 5 5 drug_a 1 0.99 0.01</a></li>
-<li class="chapter" data-level="9.9" data-path="head.html"><a href="head.html#drug_a-0.99-0.27-0.72"><i class="fa fa-check"></i><b>9.9</b> 6 6 drug_a 0.99 0.27 0.72</a></li>
-<li class="chapter" data-level="9.10" data-path="head.html"><a href="head.html#summarise-ungrouping-output-override-with-.groups-argument"><i class="fa fa-check"></i><b>9.10</b> <code>summarise()</code> ungrouping output (override with <code>.groups</code> argument)</a></li>
-<li class="chapter" data-level="9.11" data-path="head.html"><a href="head.html#a-tibble-3-x-5"><i class="fa fa-check"></i><b>9.11</b> # A tibble: 3 x 5</a></li>
-<li class="chapter" data-level="9.12" data-path="head.html"><a href="head.html#drug-mean-sd-min-max"><i class="fa fa-check"></i><b>9.12</b> drug mean sd min max</a></li>
-<li class="chapter" data-level="9.13" data-path="head.html"><a href="head.html#section-1"><i class="fa fa-check"></i><b>9.13</b> <chr> <dbl> <dbl> <dbl> <dbl></a></li>
-<li class="chapter" data-level="9.14" data-path="head.html"><a href="head.html#drug_a-0.0315-0.303--0.61-0.72"><i class="fa fa-check"></i><b>9.14</b> 1 drug_a 0.0315 0.303 -0.61 0.72</a></li>
-<li class="chapter" data-level="9.15" data-path="head.html"><a href="head.html#drug_b--0.00950-0.150--0.290-0.38"><i class="fa fa-check"></i><b>9.15</b> 2 drug_b -0.00950 0.150 -0.290 0.38</a></li>
-<li class="chapter" data-level="9.16" data-path="head.html"><a href="head.html#drug_c-0.428-0.306--0.18-0.9"><i class="fa fa-check"></i><b>9.16</b> 3 drug_c 0.428 0.306 -0.18 0.9</a></li>
-<li class="chapter" data-level="9.17" data-path="head.html"><a href="head.html#summarise-ungrouping-output-override-with-.groups-argument-1"><i class="fa fa-check"></i><b>9.17</b> <code>summarise()</code> ungrouping output (override with <code>.groups</code> argument)</a></li>
-<li class="chapter" data-level="9.18" data-path="head.html"><a href="head.html#a-tibble-3-x-5-1"><i class="fa fa-check"></i><b>9.18</b> # A tibble: 3 x 5</a></li>
-<li class="chapter" data-level="9.19" data-path="head.html"><a href="head.html#drug-mean-sd-min-max-1"><i class="fa fa-check"></i><b>9.19</b> drug mean sd min max</a></li>
-<li class="chapter" data-level="9.20" data-path="head.html"><a href="head.html#section-2"><i class="fa fa-check"></i><b>9.20</b> <chr> <dbl> <dbl> <dbl> <dbl></a></li>
-<li class="chapter" data-level="9.21" data-path="head.html"><a href="head.html#drug_a-0.03-0.3--0.6-0.7"><i class="fa fa-check"></i><b>9.21</b> 1 drug_a 0.03 0.3 -0.6 0.7</a></li>
-<li class="chapter" data-level="9.22" data-path="head.html"><a href="head.html#drug_b--0.01-0.1--0.3-0.4"><i class="fa fa-check"></i><b>9.22</b> 2 drug_b -0.01 0.1 -0.3 0.4</a></li>
-<li class="chapter" data-level="9.23" data-path="head.html"><a href="head.html#drug_c-0.43-0.3--0.2-0.9"><i class="fa fa-check"></i><b>9.23</b> 3 drug_c 0.43 0.3 -0.2 0.9</a></li>
-<li class="chapter" data-level="9.24" data-path="head.html"><a href="head.html#loading-required-package-rstan"><i class="fa fa-check"></i><b>9.24</b> Loading required package: rstan</a></li>
-<li class="chapter" data-level="9.25" data-path="head.html"><a href="head.html#loading-required-package-stanheaders"><i class="fa fa-check"></i><b>9.25</b> Loading required package: StanHeaders</a></li>
-<li class="chapter" data-level="9.26" data-path="head.html"><a href="head.html#rstan-version-2.21.2-gitrev-2e1f913d3ca3"><i class="fa fa-check"></i><b>9.26</b> rstan (Version 2.21.2, GitRev: 2e1f913d3ca3)</a></li>
-<li class="chapter" data-level="9.27" data-path="head.html"><a href="head.html#for-execution-on-a-local-multicore-cpu-with-excess-ram-we-recommend-calling"><i class="fa fa-check"></i><b>9.27</b> For execution on a local, multicore CPU with excess RAM we recommend calling</a></li>
-<li class="chapter" data-level="9.28" data-path="head.html"><a href="head.html#optionsmc.cores-paralleldetectcores."><i class="fa fa-check"></i><b>9.28</b> options(mc.cores = parallel::detectCores()).</a></li>
-<li class="chapter" data-level="9.29" data-path="head.html"><a href="head.html#to-avoid-recompilation-of-unchanged-stan-programs-we-recommend-calling"><i class="fa fa-check"></i><b>9.29</b> To avoid recompilation of unchanged Stan programs, we recommend calling</a></li>
-<li class="chapter" data-level="9.30" data-path="head.html"><a href="head.html#rstan_optionsauto_write-true"><i class="fa fa-check"></i><b>9.30</b> rstan_options(auto_write = TRUE)</a></li>
-<li class="chapter" data-level="9.31" data-path="head.html"><a href="head.html#do-not-specify--marchnative-in-local_cppflags-or-a-makevars-file"><i class="fa fa-check"></i><b>9.31</b> Do not specify ‘-march=native’ in ‘LOCAL_CPPFLAGS’ or a Makevars file</a></li>
-<li class="chapter" data-level="9.32" data-path="head.html"><a href="head.html#section-3"><i class="fa fa-check"></i><b>9.32</b> </a></li>
-<li class="chapter" data-level="9.33" data-path="head.html"><a href="head.html#attaching-package-rstan"><i class="fa fa-check"></i><b>9.33</b> Attaching package: ‘rstan’</a></li>
-<li class="chapter" data-level="9.34" data-path="head.html"><a href="head.html#the-following-object-is-masked-from-packagetidyr"><i class="fa fa-check"></i><b>9.34</b> The following object is masked from ‘package:tidyr’:</a></li>
-<li class="chapter" data-level="9.35" data-path="head.html"><a href="head.html#section-4"><i class="fa fa-check"></i><b>9.35</b> </a></li>
-<li class="chapter" data-level="9.36" data-path="head.html"><a href="head.html#extract"><i class="fa fa-check"></i><b>9.36</b> extract</a></li>
-<li class="chapter" data-level="9.37" data-path="head.html"><a href="head.html#loading-required-package-parallel"><i class="fa fa-check"></i><b>9.37</b> Loading required package: parallel</a></li>
-<li class="chapter" data-level="9.38" data-path="head.html"><a href="head.html#loading-required-package-dagitty"><i class="fa fa-check"></i><b>9.38</b> Loading required package: dagitty</a></li>
-<li class="chapter" data-level="9.39" data-path="head.html"><a href="head.html#rethinking-version-2.01"><i class="fa fa-check"></i><b>9.39</b> rethinking (Version 2.01)</a></li>
-<li class="chapter" data-level="9.40" data-path="head.html"><a href="head.html#section-5"><i class="fa fa-check"></i><b>9.40</b> </a></li>
-<li class="chapter" data-level="9.41" data-path="head.html"><a href="head.html#attaching-package-rethinking"><i class="fa fa-check"></i><b>9.41</b> Attaching package: ‘rethinking’</a></li>
-<li class="chapter" data-level="9.42" data-path="head.html"><a href="head.html#the-following-object-is-masked-from-packagepurrr"><i class="fa fa-check"></i><b>9.42</b> The following object is masked from ‘package:purrr’:</a></li>
-<li class="chapter" data-level="9.43" data-path="head.html"><a href="head.html#section-6"><i class="fa fa-check"></i><b>9.43</b> </a></li>
-<li class="chapter" data-level="9.44" data-path="head.html"><a href="head.html#map"><i class="fa fa-check"></i><b>9.44</b> map</a></li>
-<li class="chapter" data-level="9.45" data-path="head.html"><a href="head.html#the-following-object-is-masked-from-packagestats"><i class="fa fa-check"></i><b>9.45</b> The following object is masked from ‘package:stats’:</a></li>
-<li class="chapter" data-level="9.46" data-path="head.html"><a href="head.html#section-7"><i class="fa fa-check"></i><b>9.46</b> </a></li>
-<li class="chapter" data-level="9.47" data-path="head.html"><a href="head.html#rstudent"><i class="fa fa-check"></i><b>9.47</b> rstudent</a></li>
-<li class="chapter" data-level="9.48" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x"><i class="fa fa-check"></i><b>9.48</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-<li class="chapter" data-level="9.49" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x-1"><i class="fa fa-check"></i><b>9.49</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-<li class="chapter" data-level="9.50" data-path="head.html"><a href="head.html#parsed-with-column-specification"><i class="fa fa-check"></i><b>9.50</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.51" data-path="head.html"><a href="head.html#cols"><i class="fa fa-check"></i><b>9.51</b> cols(</a></li>
-<li class="chapter" data-level="9.52" data-path="head.html"><a href="head.html#country-col_character"><i class="fa fa-check"></i><b>9.52</b> country = col_character(),</a></li>
-<li class="chapter" data-level="9.53" data-path="head.html"><a href="head.html#obesity_rate_perc_pop-col_double"><i class="fa fa-check"></i><b>9.53</b> obesity_rate_perc_pop = col_double()</a></li>
-<li class="chapter" data-level="9.54" data-path="head.html"><a href="head.html#section-8"><i class="fa fa-check"></i><b>9.54</b> )</a></li>
-<li class="chapter" data-level="9.55" data-path="head.html"><a href="head.html#parsed-with-column-specification-1"><i class="fa fa-check"></i><b>9.55</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.56" data-path="head.html"><a href="head.html#cols-1"><i class="fa fa-check"></i><b>9.56</b> cols(</a></li>
-<li class="chapter" data-level="9.57" data-path="head.html"><a href="head.html#default-col_double"><i class="fa fa-check"></i><b>9.57</b> .default = col_double(),</a></li>
-<li class="chapter" data-level="9.58" data-path="head.html"><a href="head.html#country-col_character-1"><i class="fa fa-check"></i><b>9.58</b> country = col_character()</a></li>
-<li class="chapter" data-level="9.59" data-path="head.html"><a href="head.html#section-9"><i class="fa fa-check"></i><b>9.59</b> )</a></li>
-<li class="chapter" data-level="9.60" data-path="head.html"><a href="head.html#see-spec-for-full-column-specifications."><i class="fa fa-check"></i><b>9.60</b> See spec(…) for full column specifications.</a></li>
-<li class="chapter" data-level="9.61" data-path="head.html"><a href="head.html#joining-by-country"><i class="fa fa-check"></i><b>9.61</b> Joining, by = “country”</a></li>
-<li class="chapter" data-level="9.62" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x-2"><i class="fa fa-check"></i><b>9.62</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-<li class="chapter" data-level="9.63" data-path="head.html"><a href="head.html#parsed-with-column-specification-2"><i class="fa fa-check"></i><b>9.63</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.64" data-path="head.html"><a href="head.html#cols-2"><i class="fa fa-check"></i><b>9.64</b> cols(</a></li>
-<li class="chapter" data-level="9.65" data-path="head.html"><a href="head.html#country-col_character-2"><i class="fa fa-check"></i><b>9.65</b> country = col_character(),</a></li>
-<li class="chapter" data-level="9.66" data-path="head.html"><a href="head.html#obesity_rate_perc_pop-col_double-1"><i class="fa fa-check"></i><b>9.66</b> obesity_rate_perc_pop = col_double()</a></li>
-<li class="chapter" data-level="9.67" data-path="head.html"><a href="head.html#section-10"><i class="fa fa-check"></i><b>9.67</b> )</a></li>
-<li class="chapter" data-level="9.68" data-path="head.html"><a href="head.html#parsed-with-column-specification-3"><i class="fa fa-check"></i><b>9.68</b> Parsed with column specification:</a></li>
-<li class="chapter" data-level="9.69" data-path="head.html"><a href="head.html#cols-3"><i class="fa fa-check"></i><b>9.69</b> cols(</a></li>
-<li class="chapter" data-level="9.70" data-path="head.html"><a href="head.html#default-col_double-1"><i class="fa fa-check"></i><b>9.70</b> .default = col_double(),</a></li>
-<li class="chapter" data-level="9.71" data-path="head.html"><a href="head.html#country-col_character-3"><i class="fa fa-check"></i><b>9.71</b> country = col_character()</a></li>
-<li class="chapter" data-level="9.72" data-path="head.html"><a href="head.html#section-11"><i class="fa fa-check"></i><b>9.72</b> )</a></li>
-<li class="chapter" data-level="9.73" data-path="head.html"><a href="head.html#see-spec-for-full-column-specifications.-1"><i class="fa fa-check"></i><b>9.73</b> See spec(…) for full column specifications.</a></li>
-<li class="chapter" data-level="9.74" data-path="head.html"><a href="head.html#joining-by-country-1"><i class="fa fa-check"></i><b>9.74</b> Joining, by = “country”</a></li>
-<li class="chapter" data-level="9.75" data-path="head.html"><a href="head.html#joining-by-country-2"><i class="fa fa-check"></i><b>9.75</b> Joining, by = “country”</a></li>
-<li class="chapter" data-level="9.76" data-path="head.html"><a href="head.html#geom_smooth-using-formula-y-x-3"><i class="fa fa-check"></i><b>9.76</b> <code>geom_smooth()</code> using formula ‘y ~ x’</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>10</b> Data Visualization</a>
+<li class="chapter" data-level="6.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="data-visualization.html"><a href="data-visualization.html#basic-components-of-a-graph"><i class="fa fa-check"></i><b>10.1.1</b> Basic Components of a Graph</a></li>
-<li class="chapter" data-level="10.1.2" data-path="data-visualization.html"><a href="data-visualization.html#best-practices"><i class="fa fa-check"></i><b>10.1.2</b> Best Practices</a></li>
+<li class="chapter" data-level="6.1.1" data-path="data-visualization.html"><a href="data-visualization.html#basic-components-of-a-graph"><i class="fa fa-check"></i><b>6.1.1</b> Basic Components of a Graph</a></li>
+<li class="chapter" data-level="6.1.2" data-path="data-visualization.html"><a href="data-visualization.html#best-practices"><i class="fa fa-check"></i><b>6.1.2</b> Best Practices</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -309,8 +230,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">5.2</span> Why Statistics</h2>
 <p><strong>Statistics</strong> is a process of analyzing data to learn about a question of interest. We find that statistics can be daunting for undergraduate students. It was daunting for us as well. The goal of this book is not to teach you how to be a statistician. It is to teach you how to begin working with and understanding data as it pertains to scientific inquiry. The skills you learn here should allow you to read a scientific paper and not have to look up what a standard error is or what a confidence interval is or what the difference is between a median and a mean.</p>
 <p>A poorly kept secret in science is that you need a working understanding of statistics whether you use it formally or not. Consider a doctor who needs to prescribe a drug for disease X. There are three drugs on the market for this disease. The drugmakers have provided you with the following graphs showing how good their drugs are at treating this disease.</p>
-<div class="figure"><span id="fig:unnamed-chunk-19"></span>
-<img src="_main_files/figure-html/unnamed-chunk-19-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\label{fig1:plot}" width="672" />
+<div class="figure"><span id="fig:unnamed-chunk-31"></span>
+<img src="_main_files/figure-html/unnamed-chunk-31-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\label{fig1:plot}" width="672" />
 <p class="caption">
 Figure 5.1: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
 </p>
@@ -318,19 +239,169 @@ Figure 5.1: Proportion of patients that recovered from a disease after taking on
 <p>Figure  above shows the result of twenty trials of each drug. For each trial, the drug makers calculated the percentage of patients that recovered from the disease after taking the drug.</p>
 <p>Which one should the doctor prescribe?</p>
 <p>For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn’t seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drug makers only report recoveries of people who <em>took</em> the drug. What about people who had the same disease but didn’t take a drug? In other words, what about the <em>controls</em>? The doctor asks for this information. Let’s look at the same graph, but now with the data for controls added.</p>
-<p>```{{r, fig.show = “hold”, fig.cap = ‘Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).’, echo = F, align = ‘center’}
-set.seed(222)
-drug_data &lt;- tibble(drug_a_treatment = rbeta(20, 2,.25),
-drug_b_treatment = rbeta(20, 2, 0.3),
-drug_c_treatment = rbeta(20, 2, 2),
-drug_a_control = rbeta(20, 1.8, 0.25),
-drug_b_control = rbeta(20, 1.8, 0.25),
-drug_c_control = rbeta(20, 0.2, 1)) %&gt;%
-mutate(trial = 1:nrow(.)) %&gt;%
-pivot_longer(-trial, names_to = “drug”, values_to = “y”) %&gt;%
-separate(drug, c(“temp”, “drug”, “treatment”)) %&gt;%
-mutate(drug = paste0(temp, "_", drug)) %&gt;%
-select(-temp)</p>
+<div class="figure"><span id="fig:unnamed-chunk-32"></span>
+<img src="_main_files/figure-html/unnamed-chunk-32-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial)." width="672" />
+<p class="caption">
+Figure 5.2: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
+</p>
+</div>
+<p>In the figure above, the black dots are the same as before. The gray dots show the percent of people who recovered without taking the drug. Does this information change your perception of the benefits of taking either drug? In the first graph, it seemed obvious that drugs A and B were better than drug C, because most people recovered with those drugs.</p>
+<p>Adding the control data tells a different story. While it is true that most people recovered when taking drugs A and B, they also recovered without taking those drugs. For drug C, only ~25 to 75 percent of people recovered when taking it, but that percentage appears much higher than the percentage of people that recovered without taking the drug. In some trials, almost no one recovered without the drug. This complicates the decision of which drug to choose.</p>
+<p>Because our doctor took Inquiry and Analysis in Biology <em>and</em> later took biostatistics, they ask for further information. Instead of just looking at the data for each group, they want something more informative. For each trial, they subtract the percent that recovered when taking the drug from the percent that recovered when not taking the drug. Then they plot it. It looks like this.</p>
+<div class="figure"><span id="fig:unnamed-chunk-33"></span>
+<img src="_main_files/figure-html/unnamed-chunk-33-1.png" alt="Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial)." width="672" />
+<p class="caption">
+Figure 5.3: Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).
+</p>
+</div>
+<p>Now we see a different story than the figure we started with. By displaying the differences in recovery, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn’t.</p>
+<p>So far, we have only plotted the data. We haven’t quantified anything yet, but by plotting the data and being self-critical of the ways in which we might be fooling ourselves, we have practiced <strong>quantitative reasoning</strong>. This process also illustrates a broader principle: statistics can not automate scientific decisions. Each of the plots above used statistical software and could be analyzed with a wide array of statistical models. But none of those models <em>know</em> about the experiment. They will all give a result, but it is up to you to interpret its importance.</p>
+<p>Plotting data is among the most important steps in any project. Plotting (aka <em>making graphs</em>, <em>data visualization</em>) does several things. 1) It reveals any obvious problems in data entry. 2) It shows trends in the data. 3) It revealss the experimental design. This last step is crucial. Deciding what to put on the x-axis versus the y-axis, how to label those axes, what range to put on the y-axis, what groups to label in the figure legend…these are just some of the choices you’ll make when plotting data. Students often do this step last, hoping to add a graph at the end to complete an assignment. Don’t do that. Plot early and often, even before you have data. If you know what the axes should be, and which groups will go side-by-side (like the gray and black dots in Figure X), then you have already crystalized nearly everything that you will later write about in the rest of your paper (see <em>Figures First</em> in the previous chapter).</p>
+</div>
+<div id="summary-statistics" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Summary Statistics</h2>
+<p>Now that we’ve plotted our results, the next step is to describe them using summary statistics. <strong>Summary statistics</strong> are numbers that describe some aspect of a data set. They include things like the mean, median, standard deviation, quantiles, minimum, and maximum. In combination with plotting, summary statistics are critical for communicating science. Summary statistics also provide a guide for how to verbally describe your results to your professor, colleague, friend, or whoever is trying to understand your science.</p>
+<p>You should aim to provide at least the following summary statistics for every important result. They are defined below along with the R function that calculates them in italics.</p>
+<p><strong>Mean</strong> The central tendency of your data. calculated as the sum of the value of all data in a group divided by the number of data</p>
+<p><strong>Standard Deviation</strong> The spread of your data. Let’s say you have 10 data points with a mean of 2 and a standard deviation of 0.5. Even though the mean is 2, very few individual data points will be exactly 2. In fact, none of them may be exactly 2. Instead, the data points will “deviate” from the mean. A standard deviation of 0.5 means that the average deviation from the mean is 0.5 absolute units from 2. We usually write this with +/- symbols (2 +/- 0.5), meaning that a typical data point might be anywhere from 2.5 to 1.5.</p>
+<p><strong>Minimum</strong> The smallest value.</p>
+<p><strong>Maximum</strong> The largest value.</p>
+<p>The code below will generate the data set used in Figure 3 above called <em>drug_data</em> - just copy it and run it. Don’t worry about interpreting it for now.</p>
+<p>Once we have a data set, we use the <em>group_by()</em> and <em>summarize()</em> functions to generate the summary statistics.</p>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   drug       mean    sd    min   max
+##   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 drug_a  0.0315  0.303 -0.61   0.72
+## 2 drug_b -0.00950 0.150 -0.290  0.38
+## 3 drug_c  0.428   0.306 -0.18   0.9</code></pre>
+<p>That’s a lot of decimal places! Let’s clean it up a bit before moving on. Compare the code below to the code above. Can you see how we shortened the decimal places? Why did we keep two decimal places for the mean, but only 1 decimal place for everything else?</p>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   drug    mean    sd   min   max
+##   &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 drug_a  0.03   0.3  -0.6   0.7
+## 2 drug_b -0.01   0.1  -0.3   0.4
+## 3 drug_c  0.43   0.3  -0.2   0.9</code></pre>
+<p>Now we’ll add the mean and sd to the plot. Can you see how it is added in the code below?</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>This looks pretty close to a finished product now. It has lots of information in the plot, including the raw data, the mean, and the standard deviation. By combining the summary statistics and the plot, we are ready to write a paragraph about this result.</p>
+<p><em>Across 20 trials, recovery rates were 0.43 +/- 0.3 points higher for groups that took drug C versus that took a placebo. Recovery ranged from -0.2 to 0.9. In comparison, recovery rates for drug A were only 0.03 +/- 0.3 points higher than placebo controls, and recovery rates for drug B were 0.01 +/- 0.1 points worse than placebo controls. However, direct comparison of these drugs is complicated by the fact that raw rates of recovery were highest for drugs A and B, in which nearly all patients recovered in both treatment and control groups. In contrast, recovery rates for drug C were ~50% in the treatment group, but only ~10% in the control. This suggest the potential that the trials were conducted on groups with different underlying probabilities of recovery.</em></p>
+</div>
+<div id="dont-forget-that-quantitative-thinking-includes-thinking" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Don’t forget that Quantitative Thinking includes “thinking”</h2>
+<p>A statistical model alone will not answer your scientific question. The work flow presented above is not a formula for success in every case. Each problem you attempt to solve as a scientist is unique and will require you to make judgment calls. Statistics can help us to justify those judgments, making our decisions less susceptible to personal bias, but they cannot eliminate subjectivity. The point of <em>Quantitative Thinking</em> is not to replace critical thought with computer generated outputs. It is to use the tools of statistics and experimental design to prevent us from fooling ourselves. As Richard Feynman said: “The first principal [of science] is to not fool yourself, and you are the easiest person to fool.”</p>
+</div>
+<div id="common-pitfalls-in-statistical-inference" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Common Pitfalls in Statistical Inference</h2>
+<p>Here are some easy ways to fool yourself in science and quantitative thinking.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Spurious correlations</strong></li>
+</ol>
+<p><em>Assuming that correlations reflect causation. Forgetting about hidden variables</em></p>
+<p>The plot below is from real data. How do you interpret this result?</p>
+<pre><code>## Loading required package: rstan</code></pre>
+<pre><code>## Loading required package: StanHeaders</code></pre>
+<pre><code>## rstan (Version 2.21.2, GitRev: 2e1f913d3ca3)</code></pre>
+<pre><code>## For execution on a local, multicore CPU with excess RAM we recommend calling
+## options(mc.cores = parallel::detectCores()).
+## To avoid recompilation of unchanged Stan programs, we recommend calling
+## rstan_options(auto_write = TRUE)</code></pre>
+<pre><code>## Do not specify &#39;-march=native&#39; in &#39;LOCAL_CPPFLAGS&#39; or a Makevars file</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rstan&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     extract</code></pre>
+<pre><code>## Loading required package: parallel</code></pre>
+<pre><code>## Loading required package: dagitty</code></pre>
+<pre><code>## rethinking (Version 2.01)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rethinking&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     map</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     rstudent</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>The figure shows a clear positive correlation between the divorce rate and the number of Waffle Houses (McElreath 2015). In this case, it is obvious (hopefully) that Waffle Houses are probably not causing divorces. What’s going on? The states that are labeled are all in the South, where Waffle Houses are common. People also happen to get married earlier in the South, which helps to explain the higher than average divorce rates there.</p>
+<p>Here’s another less obvious example.</p>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p>The figure shows a positive relationship between a country’s gross domestic product (GDP) and its life expectancy in 2007. Each dot is a country. In our experience, this correlation is a common one for students to study. They often interpret the result as confirming a benefit of economic activity with how long people live, and conclude that countries can improve life-expectancy simply by improving economic activity.</p>
+<p>But this represents a similar fallacy as the Waffle House-Divorce example. An easy way to see this is to check death certificates. If we did that (we didn’t, but we think we’re safe here), we would probably not find a cause of death that says “Died due to low GDP”. Just like Waffle Houses are associated with “Southerness” and “Southerness” is associated with early age at marriage and early age at marriage leads to higher divorce rates, GDP is associated with its own confounding variable of health care infrastructure. That is itself a large and difficult-to-define metric, but it is closer to explaining the positive correlation between GDP and life expectancy.</p>
+<p>It is certainly true that countries with higher GDP’s tend to also have better health outcomes because they have better health infrastructure. The trick is to think about the actual steps that have to happen for GDP to translate to longer life-expectancy. Each country will make individual choices along those steps, and each choice has the potential to sever the link between GDP and efficient health spending. There is nothing wrong with studying the <em>statistical</em> relationship between GDP and life expectancy. Just be careful in assuming that simply improving GDP will automatically improve life-expectancy.</p>
+<div id="preventing-mistakes-with-spurious-correlations" class="section level4" number="5.5.0.1">
+<h4><span class="header-section-number">5.5.0.1</span> Preventing mistakes with spurious correlations</h4>
+<p>Use similar quantitative reasoning as the doctor did with the drug company results. In essence, ask how an initial result might be missing something crucial (like a control or a confounder). This is especially important if the initial result is something you were expecting to see. If you were expecting to see a positive correlation between x and y and you found it, that’s great. But don’t let that result prevent you from thinking critically about other ways that your result could arise.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Negative Results as Failures</strong></li>
+</ol>
+<p><em>Assuming that your study “failed” because it did not support your hypothesis</em></p>
+<p>You form a hypothesis, expect an outcome, collect data, and find…nothing. No relationship. Nada.</p>
+<p>What do you conclude from this?</p>
+<p>A common mistake is to declare a “failed” experiment. Some students try to start a new project from scratch, just so they can report a “positive” outcome. Don’t do that!</p>
+<p>An unwritten rule of science is that our failures often lead to the most interesting research. After all, you probably did a study thinking you knew the answer. When it fails, it means that something that most scientists might predict is not quite right. Consider geocentrism. When scientists in the 1600’s found that their calculations of the planets and stars were wrong, that was not a failure (well, it was a failure of the mathematical models themselves, but not of the scientific endeavor writ large). Instead, those bad predictions eventually revealed that something that most humans believed (earth at the center of the universe) was wrong. Being wrong did not mean that those scientists were bad scientists. It was perfectly reasonable to expect that the earth was stationary and everything else moved around it.</p>
+<p>In my own research (Wesner’s), a failure lead to a new area of study. We wanted to know how metal contamination from streams would affect insects that lived in those streams. We knew that young insects had high metal concentrations and assumed that the adults would too. We even wrote several grants that made that assumption, asking for money to study how those metals in adult insects would impact birds that fed on them.</p>
+<p>So we collected some adults from contaminated streams and measured the concentration of metals in them. We were shocked. Even though they came from contaminated streams and the larvae in those streams had high metal concentrations, the adults did not. They looked fine. We were wrong. There did not seem to be any risk of metal contamination to birds.</p>
+<p>This was embarrassing, but it also lead to a different line of research. We read the literature and conducted experiments. We determined that lots of contaminants are lost during metamorphosis. But during that loss, many insects also die. It’s too stressful. So the main risk of metals that we studied was not that metals would get into birds and prevent their reproduction. The main risk was that metals would prevent insects from emerging altogether, thereby leading to less food for birds.</p>
+<p>Without this initial “failure”, we never would have discovered the actual links between metal contamination in streams and risks to riparian birds.</p>
+</div>
+<div id="preventing-mistakes-with-negative-results" class="section level4" number="5.5.0.2">
+<h4><span class="header-section-number">5.5.0.2</span> Preventing mistakes with negative results</h4>
+<p>Treat them as an opportunity to learn more. If your hypothesis was not supported, explore the reasons why. Do you predictor and response variables actually measure the quantities of your hypothesis or are they a proxy? If they’re a proxy, maybe they don’t measure what you think they do. Maybe the negative results is robust and it challenges conventional wisdom. That’s exciting! What are the implications of a hypothesis that didn’t pan out? Explore those and suggest how future scientists should proceed now that we know that a given hypothesis isn’t always supported.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Ecological Fallacy</strong></li>
+</ol>
+<p><em>Using aggregate data to infer something about individuals</em></p>
+<p>Extreme obesity is a global public health concern that is defined as a body mass index of 40 kg/m<sup>2</sup> or more. Individuals in this category have increased rates of mortality, often due to increased rates of heart disease, cancer, stroke and other ailments <span class="citation">(<span class="citeproc-not-found" data-reference-id="kitahara2014association"><strong>???</strong></span>)</span>.</p>
+<p>Let’s visualize the relationship between obesity and life-expectancy across countries. In the plot below, each dot is a different country. The line represents a linear regression between the two variables.</p>
+<pre><code>## Parsed with column specification:
+## cols(
+##   country = col_character(),
+##   obesity_rate_perc_pop = col_double()
+## )</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   country = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Joining, by = &quot;country&quot;</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Is this what you expected? This seems like a paradox. Decades of studies clearly show that extreme obesity is linked with poor health outcomes and increased mortality. The plot above appears to contradict this. Countries with a higher percentage of obese people also tend to have <em>higher</em> life expectancy.</p>
+<p>This is an example of the <em>ecological fallacy</em>, which states that we cannot use aggregate data to infer something about individuals. For example, Kuwait has a high obesity rate of ~38% and a high life-expectancy of ~79 years. But those numbers represent averages of about 4 million individuals. If we were to assess a sample of individuals <em>within</em> Kuwait, then we would expect the pattern that we initially hypothesized - <em>at the individual level, extreme obesity is negatively associated with life-expectancy, but at the country-level the pattern is reversed.</em></p>
+<p>As you might expect by now, there are also other reasons to explain these associations, such as hidden variables. For example, look at the plot again, but now with information on GDP per capita.</p>
+<pre><code>## Parsed with column specification:
+## cols(
+##   country = col_character(),
+##   obesity_rate_perc_pop = col_double()
+## )</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   country = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre><code>## Joining, by = &quot;country&quot;
+## Joining, by = &quot;country&quot;</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>This is the same data, but now a third variable is presented, showing GDP per capita (in US 2007 Dollars). The scatter of the dots is non-random in the sense that countries with large GDP tend to be clustered in areas of both high life-expectancy and higher obesity rates.</p>
+</div>
+<div id="preventing-the-ecological-fallacy-mistake" class="section level4" number="5.5.0.3">
+<h4><span class="header-section-number">5.5.0.3</span> Preventing the ecological fallacy mistake</h4>
+<p>Relate your hypotheses and explanations to the level of your data. For example:</p>
+<p><strong>What We Initially Wanted to Study</strong> How does obesity affect survival?</p>
+<p><strong>What We Actually Studied</strong> What is the correlation between obesity rates and life expectancy among countries?</p>
+<p><strong>Data Level</strong> Countries</p>
+<p><strong>Faulty Description</strong> Individuals with extreme obesity live longer</p>
+<p><strong>Correct Description</strong> At the country level, there is a positive statistical correlation between obesity rates and life expectancy.</p>
+
+</div>
 </div>
 </div>
             </section>
@@ -339,7 +410,7 @@ select(-temp)</p>
         </div>
       </div>
 <a href="introduction-to-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="drug-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
