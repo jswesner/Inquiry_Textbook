@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Thinking Quantitatively
 
 ## Learning Objectives
@@ -24,9 +30,13 @@ library(gridExtra)
 library(grid)
 ```
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = F)
+```
+
 ## Why Statistics
 
-Statistics is the process of making inferences from data. That's it. We find that statistics can be daunting for undergraduate students. It was daunting for us as well. The goal of this book is not to teach you how to be a statistician. It is to teach you how to begin working with and understanding data as it pertains to scientific inquiry. The skills you learn here should allow you to read a scientific paper and not have to look up what a standard error is or what a confidence interval is or what the difference is between a median and a mean.
+**Statistics** is a process of analyzing data to learn about a question of interest. We find that statistics can be daunting for undergraduate students. It was daunting for us as well. The goal of this book is not to teach you how to be a statistician. It is to teach you how to begin working with and understanding data as it pertains to scientific inquiry. The skills you learn here should allow you to read a scientific paper and not have to look up what a standard error is or what a confidence interval is or what the difference is between a median and a mean.
 
 A poorly kept secret in science is that you need a working understanding of statistics whether you use it formally or not. Consider a doctor who needs to prescribe a drug for disease X. There are three drugs on the market for this disease. The drugmakers have provided you with the following graphs showing how good their drugs are at treating this disease.
 
@@ -53,7 +63,7 @@ Figure \ref{fig1:plot} above shows the result of twenty trials of each drug. For
 
 Which one should the doctor prescribe?
 
-For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn't seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drugmakers only report recoveries of people who *took* the drug. What about people who had the same disease but didn't take a drug? In other words, what about the *controls*? The doctor asks for this information. Let's look at the same graph, but now with the data for controls added.
+For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn't seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drug makers only report recoveries of people who *took* the drug. What about people who had the same disease but didn't take a drug? In other words, what about the *controls*? The doctor asks for this information. Let's look at the same graph, but now with the data for controls added.
 
 ```{r echo=FALSE}
 set.seed(222)
@@ -120,27 +130,27 @@ ggplot(drug_data, aes(x = drug, y = difference)) +
 
 Now we see a different story than the figure we started with. By displaying the differences in recover, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn't.
 
-So far, we have only plotted the data. We haven't quantified anything yet, but by plotting the data and being self-critical of the ways in which we might be fooling ourselves, we have practiced *quantitative reasoning*.
+So far, we have only plotted the data. We haven't quantified anything yet, but by plotting the data and being self-critical of the ways in which we might be fooling ourselves, we have practiced **quantitative reasoning**. This process also illustrates a broader principle: statistics can not automate scientific decisions. Each of the plots above used statistical software and could be analyzed with a wide array of statistical models. But none of those models *know* about the experiment. They will all give a result, but it is up to you to interpret its importance.
 
-Plotting data as among the most important steps in any project. Plotting (aka *making graphs*, *data visualization*) does several things. 1) It reveals any obvious problems in data entry. 2) It shows obvious trends in the data. 3) It crystalizes the experimental design. This last step is crucial. Deciding what to put on the x-axis versus the y-axis, how to label those axes, what range to put on the y-axis, what groups to label in the figure legend...these are just some of the choices you'll make when plotting data. Students often do this step last, hoping to add a graph at the end to complete an assignment. Don't do that. Plot early and often, even before you have data. If you know what the axes should be, and which groups will go side-by-side (like the gray and black dots in Figure X), then you have already crystalized nearly everything that you will later write about in the rest of your paper. We call this process *Figures First*, and give examples in later chapters.
+Plotting data is among the most important steps in any project. Plotting (aka *making graphs*, *data visualization*) does several things. 1) It reveals any obvious problems in data entry. 2) It shows trends in the data. 3) It revealss the experimental design. This last step is crucial. Deciding what to put on the x-axis versus the y-axis, how to label those axes, what range to put on the y-axis, what groups to label in the figure legend...these are just some of the choices you'll make when plotting data. Students often do this step last, hoping to add a graph at the end to complete an assignment. Don't do that. Plot early and often, even before you have data. If you know what the axes should be, and which groups will go side-by-side (like the gray and black dots in Figure X), then you have already crystalized nearly everything that you will later write about in the rest of your paper (see *Figures First* in the previous chapter).
 
 ## Summary Statistics
 
-Now that we've plotted our results, the next step is to describe them using summary statistics. Summary statistics are numbers that describe some aspect of the data. They include things like the mean, median, standard deviation, quantiles, minimum, and maximum. In combination with plotting, summary statistics are critical for communicating science. Summary statistics also provide a guide for how to verbally describe your results to your professor, colleague, friend, or whoever is trying to understand your science.
+Now that we've plotted our results, the next step is to describe them using summary statistics. **Summary statistics** are numbers that describe some aspect of a data set. They include things like the mean, median, standard deviation, quantiles, minimum, and maximum. In combination with plotting, summary statistics are critical for communicating science. Summary statistics also provide a guide for how to verbally describe your results to your professor, colleague, friend, or whoever is trying to understand your science.
 
 You should aim to provide at least the following summary statistics for every important result. They are defined below along with the R function that calculates them in italics.
 
-**Mean** The central tendency of your data. calculated as the sum of the value of all data in a group divided by the number of data points in that group. *mean()*
+**Mean** The central tendency of your data. calculated as the sum of the value of all data in a group divided by the number of data
 
-**Standard Deviation** The spread of your data. Let's say you have 10 data points with a mean of 2 and a standard deviation of 0.5. Even though the mean is 2, very few individual data points will be exactly 2. In fact, none of them may be exactly 2. Instead, the data points will "deviate" from the mean. A standard deviation of 0.5 means that the average deviation from the mean is 0.5 absolute units from 2. We usually write this with +/- symbols (2 +/- 0.5), meaning that a typical data point might be anywhere from 2 + 0.5 to 2 - 0.5, that is 2.5 to 1.5. *sd()*
+**Standard Deviation** The spread of your data. Let's say you have 10 data points with a mean of 2 and a standard deviation of 0.5. Even though the mean is 2, very few individual data points will be exactly 2. In fact, none of them may be exactly 2. Instead, the data points will "deviate" from the mean. A standard deviation of 0.5 means that the average deviation from the mean is 0.5 absolute units from 2. We usually write this with +/- symbols (2 +/- 0.5), meaning that a typical data point might be anywhere from 2.5 to 1.5.
 
-**Minimum** The smallest value. *min()*
+**Minimum** The smallest value.
 
-**Maximum** The largest value. *max()*
+**Maximum** The largest value.
 
 The code below will generate the data set used in Figure 3 above called *drug\_data* - just copy it and run it. Don't worry about interpreting it for now.
 
-```{r echo=TRUE, paged.print=TRUE}
+```{r}
 library(tidyverse)
 set.seed(222)
 drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
@@ -360,4 +370,4 @@ Relate your hypotheses and explanations to the level of your data. For example:
 
 **Faulty Description** Individuals with extreme obesity live longer
 
-**Correct Description** At the country level, there is a positive correlation between obesity rates and life expectancy.
+**Correct Description** At the country level, there is a positive statistical correlation between obesity rates and life expectancy.

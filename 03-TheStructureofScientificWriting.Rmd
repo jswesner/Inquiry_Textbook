@@ -1,12 +1,18 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # The Structure of Scientific Writing
 
 ## Learning Objectives
 
 1.  Understand the basic sections of scientific papers.
 
-2.  Develop a plan for how to build your paper.
+2.  Develop a plan for how to read science and write your paper.
 
-## How Science is Made
+## Pieces of Papers
 
 There are millions of scientific papers in published journals and thousands of university lab courses that require scientific papers in some form. The vast majority have these sections:
 
@@ -82,15 +88,22 @@ Later chapters of this book will discuss each of these in detail. In this chapte
 -   Make them as simple as possible
 -   The reader should be able to guess what the figure axes will be based on the written sections above. No surprises.
 
-# Putting it all together
+## Putting it all together
 
 You are probably familiar with some or all of these sections of a scientific paper. The next challenge is harder - finding a way to put these sections together so that they result in an understandable and perhaps even enjoyable thing to read. That is the hard part, and it's why you're taking this class or reading this book. Here are some tips to get you started.
 
 1)  *Hourglass Structure*
 
-Think of your scientific paper as having a beginning that sets out the broad ideas, a middle that has all of the technical details, and an end that leaves you with a core take-home message. A common way to visualize that is with an hourglass in which each each section of the paper moves from top to bottom (Fig. X).
+Think of a scientific paper as having a beginning that sets out the broad ideas, a middle that has all of the technical details, and an end that leaves you with a core take-home message. A common way to visualize that is with an hourglass in which each each section of the paper moves from top to bottom (Fig. 1). The narrower sections have technical details that are relevant to your specific study. The broader sections relate those details to broader ideas. Often it can be easier to write the middle parts first.
 
-MAKE FIG X.
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = F)
+```
+
+```{r echo=FALSE, paged.print=FALSE, paged.print=TRUE, out.width = "60%", fig.cap = "The hourglass structure of a scientific paper. The width of the hourglass reflects the purpose of each secion. The overall paper leads the reader from a broad concept to specific methods and results. Then it tells the reader how those specific results have changed our understanding of the broader concept in the introduction."}
+
+knitr::include_graphics(here::here("images/hourglass.png"))
+```
 
 2)  *Figures First*
 
@@ -98,19 +111,25 @@ One of our favorite ways to start writing a paper is to not write at all, but in
 
 Here's an example using a manuscript that one of us wrote [@wesner_forecasting_2020].
 
-![Example of "Figures First". The finished paper on the left started with the single figure on the right. The text was added in service of this figure and other figures in the paper.](images/covid_paper_all.jpg)
+```{r echo=FALSE, paged.print=FALSE, paged.print=TRUE, out.width = "100%", fig.cap = "The final paper for Wesner et al. 2020 had lots of technical details and broader context about COVID hospitalizations (left). But it started with only a single figure (right)."}
 
-![The initial figure](images/post_all_plot.jpg)
+knitr::include_graphics(here::here("images/covid_paper_all.jpg"))
+```
 
-We spent a lot of time thinking about how to make this figure, because we used it to guide our writing. A well-made figure is more than just a visualization. It it also an outline for the paper itself. Here are some examples, linking that parts of the graph to sections of the written text.
+```{r echo=FALSE, paged.print=FALSE, paged.print=TRUE, out.width = "100%", fig.cap = "The initial figure. We made this first and then wrote the rest of the paper around it."}
 
-**y-axis** The y-axis says "Cumulative Hospitalizations". As a reader, if this figure was all we had seen, we could deduce that the paper had something to do with hospitalization trends over time. That's not trivial. There are millions of scientific papers published each year on a vast array of disciplines (biology, physics, math, sociology, etc). With just the y-axis here, we now know that this paper is probably in the field of medicine or public health. It also starts at zero, so we can surmise that this study is measuring hospitalizations at the beginning of whatever is causing them.
+knitr::include_graphics(here::here("images/post_all_plot.jpg"))
+```
 
-**x-axis** The x-axis has abbreviations for seven months, so we can assume the the predictor variable here is time, and that the duration of the study is less than one year.
+We spent a lot of time thinking about how to make this figure, because we used it to guide our writing. A well-made figure is more than just a visualization. It it also an outline for the paper itself. Here are some examples, linking parts of the graph to sections of the written text.
 
-**key** There are three time trends presented. One of them is for All of South Dakota. The others are for a county (Minnehaha County) and everything outside of Minnehaha County.
+**y-axis** The y-axis says "Cumulative Hospitalizations". As a reader, if this figure was all we had seen, we could deduce that the paper had something to do with hospitalization trends over time. That's not trivial. There are millions of scientific papers published each year on a vast array of disciplines (biology, physics, math, sociology, etc). With just the y-axis here, we now know that this paper is probably in the field of medicine or public health. The axis also starts at zero, so we can surmise that this study is measuring hospitalizations at the beginning of whatever is causing them.
 
-**panels** The three time trends are presented across two models (Model 1 and Model 2). We can't tell much about those models from the plot alone, but this gives us something to search for in the text.
+**x-axis** The x-axis has abbreviations for seven months, so we can assume that one predictor variable here is time and that the duration of the study is less than one year.
+
+**key** There are three time trends presented. One of them is for All of South Dakota. The others are for a county (Minnehaha County) and everything Outside of Minnehaha County. As a reader, we would use this information to guide us by finding the definitions of these groups in the text.
+
+**panels** The three time trends are presented across two models (Model 1 and Model 2), shown in the upper and lower panels. We can't tell much about those models from the plot alone, but this gives us something to search for in the text.
 
 **data** The plot appears to show individual data points, presumably of the number of cumulative hospitalizations on each day. If we counted them all up, we could know exactly how many data points are in the analysis.
 
@@ -132,7 +151,7 @@ The first two sentences of the abstract give further clues as to why the y-axis 
 
 Here are the first sentences of each paragraph of the introduction.
 
-> *The novel coronavirus (SARS-CoV-2) was first detected in December 2019 in Wuhan, China and has since spread globally. The disease caused by SARS-CoV-2...*
+> *The novel coronavirus (SARS-CoV-2) was first detected in December 2019 in Wuhan, China and has since spread globally. The disease is caused by SARS-CoV-2...*
 >
 > *Predicting hospitalization needs due to COVID-19 may be particularly challenging in rural areas. For example, relative*....
 >
@@ -146,7 +165,7 @@ From skimming just the first sentences of the introduction, we've discovered tha
 
 > *We fit the Weibull function to two sets of data that describe 1) the cumulative hospitalizations for the state of South Dakota and 2) the cumulative hospitalizations for subgroups of Minnehaha County and the rest of South Dakota.*
 
-This sentence from the methods resolves the two **panels**. Now we know that the authors fit the data in two ways, and that model 2 appears to use data that are subgroups of model 1.
+This sentence from the methods resolves the two **panels**. Now we know that the authors fit the data in two ways and that model 2 appears to use data that are subgroups of model 1.
 
 5.  Results:
 
@@ -158,6 +177,34 @@ The results section here is three paragraphs long, and we've only pasted a few s
 
 > The most important result of this study is that modeling trends separately in urban versus rural parts of a state population reveal different projections of cumulative hospitalizations than if modeled only using state-level data. In particular, the model...
 
-The discussion continues to provide context for the details in the rest of the paper. Now we can see what the author's think is the most important result, and how the patterns in the plot reinforce that result. We don't have to agree with this. There are other parts to the paper and maybe we think those are more important...or that the paper is not really interesting at all. That is all fine. The main point is that we are able to judge the work based on clearly written text.
+The discussion continues to provide context for the details in the rest of the paper. Now we can see what the authors think is the most important result, and how the patterns in the plot reinforce that result. We don't have to agree with this. There are other parts to the paper and maybe we think those are more important...or that the paper is not really interesting at all. That is all fine. The main point is that we are able to judge the work based on clearly written text.
 
 This method - *Figures First* - is helpful in two ways. 1) It helps us to organize our writing, and 2) It helps us to quickly read and understand other scientific papers. Try it out!
+
+## How to Read a Scientific Paper
+
+The same features that help you write a scientific paper can also help to read one. Here are some tips that no one ever told us as undergraduates:
+
+### You don't need to start at the beginning
+
+Just because a scientific paper starts with an Introduction doesn't mean you need to read that part first. In our own reading, we often do this:
+
+1) Read the abstract and look for the main conclusions
+
+2) Look at the figures or tables. Are the main conclusions obvious in the figures or tables? If not, there is reason to worry. For example, if the abstract says "Insect abundance declined by 40% in the acid treatment relative to the control", then we better be able to find a figure that shows insect abundance on the y-axis and the two treatments (control and acid) on the x-axis. If we see instead a figure with insect diversity on the y-axis and three treatments on the x-axis, then we know this paper is going to be difficult to understand. Maybe we should move on.
+
+3) After checking the abstract and the figures, we then read the introduction. It should tell us why the authors think this study is important. If we were reading the paper to learn about gene methylation, but the introduction is focused on a statistical procedure, then perhaps this paper isn't going to answer the question we thought. Maybe we should move to a different paper.
+
+4) If we've committed to the paper, then we read the main results section and perhaps skim the discussion, looking for clues as to what the most important findings are and how they generate new knowledge.
+
+5) Finally, we parse the methods and analyses. Do we agree with these methods? Did they reflect the goals of the study? Do the analyses make sense? Sometimes we discover that the methods are faulty, even if the paper is in a peer-reviewed journal. If we like the conclusion, but disagree with the methods, then maybe the conclusion is wrong, too.
+
+6) If all of the above boxes check out, then we can decide to use that paper in our own work and cite it.
+
+### It doesn't need to take forever to read a paper
+
+Once you get a feel for parsing papers, then you can usually proceed through the steps above pretty quickly. Often we might skim 4-5 papers before finally finding one that reports on a topic we're interested in. Of those, we might fully read only a handful of the most relevant papers. The whole process of deciding on a paper can take just a few minutes. In fact, you can probably tell within 30-seconds whether you want to commit more time to the paper or move on.
+
+### You don't need to understand every word
+
+You will rarely read a scientific paper in which you understand everything right off the bat. For one of us (Wesner), our field of study is insect and fish ecology. When reading papers in our expertise, we can usually understand them pretty easily, but only after doing it repeatedly over 15 years. But every other paper in a new discipline has new terminology. It's slower for us. That's OK. **Don't get caught up in the jargon**. You can learn that later. If it seems important to know right away, then just look it up. Otherwise, get comfortable with not knowing everything. When reading a paper, focus on the broad picture. Look at the discussion to see what the authors thought was important. If it isn't clear from the discussion, then maybe the authors themselves don't actually know what was important. Move on to a different paper and come back again later.

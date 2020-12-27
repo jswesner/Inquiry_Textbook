@@ -14,7 +14,7 @@ What makes a good graph? According to Edward Tufte [@tufte_visual_1983], it is t
 
 > ...graphical excellence requires telling the truth about the data `r tufte::quote_footer('Edward Tufte - The Visual Display of Quantitative Information')`
 
-We might consider these "high-level" guideposts to data visualization. It is tempting to think of this advice as applying only to modern scientific approaches, since anyone can create a graph on a computer. But Tufte's book is almost 40 years old. It is a masterpiece of data visualization that is as relevant today as it was in 1983. Moreover, Tufte includes examples that extend back centuries. The principles that we try to apply in this book are not new. They are simply extensions of a long history of the study of how to best display data.
+We might consider these "high-level" guideposts to data visualization. It is tempting to think of this advice as applying only to modern scientific approaches, since anyone can create a graph on a computer. But Tufte's book is almost 40 years old. It is a masterpiece of data visualization that is as relevant today as it was in 1983. Tufte includes examples that extend back centuries. The principles that we try to apply in this book are not new. They are simply extensions of a long history of the study of how to best display data.
 
 On a more fundamental level, we want to first focus on the basic components of common graphs.
 
@@ -43,7 +43,7 @@ plot_grid(map_grob, map1, map2, nrow = 1, labels = "auto")
 
 ```
 
-The table contains paired latitude and longitude coordinates, but unless you're a savant at geography, it might not be clear how the coordinates are related. By plotting the data, we are able to see patterns that would be difficult or impossible to see in the table. For example, the dots on the left side of (b) are more evenly spaced than the dots on the right side of (b). There are also some visual outliers, like the dot in the lower right, upper left, and lower left. There's nothing wrong with visual outliers. You'll see them in every graph you plot. But we would want to explore a little to see what they are. For example, by adding a polygon of US states, it becomes immediately clear what we're looking at. The lower right "outlier" isn't an outlier at all (We'll leave the jokes about Florida unsaid). There are still two dots that don't have states surrounding them - Alaska and Hawaii. These are still like outliers, but we intuitively know what they are by plotting. None of that information is in the table by itself.
+**Why make a graph?** The table contains paired latitude and longitude coordinates, but unless you're a savant at geography, it might not be clear how the coordinates are related. By **plotting the data**, we are able to see patterns that would be difficult or impossible to see in the table. For example, the dots on the left side of (b) are more evenly spaced than the dots on the right side of (b). There are also some visual outliers, like the dot in the lower right, upper left, and lower left. There's nothing wrong with visual outliers. You'll see them in every graph you plot. But we would want to explore a little to see what they are. For example, by adding a polygon of US states, it becomes immediately clear what we're looking at. The lower right "outlier" isn't an outlier at all (We'll leave the jokes about Florida unsaid). There are still two dots that don't have states surrounding them - Alaska and Hawaii. These are still like outliers, but we intuitively know what they are by plotting. None of that information is in the table by itself.
 
 ### Basic Components of a Graph
 
@@ -97,11 +97,11 @@ Even though these graphs are for flowers and the previous graphs were for states
 
 ### Best Practices
 
-We see bad graphs all the time, from scientists at all levels (undergrad to Professor). Here are some common ways to make a *bad* graph.
+We see bad graphs all the time, from scientists at all levels (undergrad to Professor). Here are some common ways to make a bad graph.
 
 **Recipe for a bad graph**
 
-1)  Make sure the font is really small
+1)  Make the font really small
 
 2)  Give really vague names to the axes
 
@@ -121,9 +121,9 @@ We see bad graphs all the time, from scientists at all levels (undergrad to Prof
 
 4)  Save the graph in a standard format, like .jpg, .png, or .svg
 
-5)  If you're writing in Word, use the Import button to import your graph. Don't paste.
+5)  If you're writing in Word, use the Import button in Word to import your graph. Don't copy and paste.
 
-These simple steps will not ensure that your graph is a good graph *per se*, but they will ensure that your graph is readable in its final form. Here's a comparison:
+These simple steps will not ensure a good graph, but they will ensure that your graph is readable in its final form. Here's a comparison:
 
 **Bad Graph**
 
@@ -166,21 +166,21 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
 
 ```
 
-These are the same data sets in two different graphs. The first one violates most of the rules for a bad graph (or follows most of the rules, I guess). The second one is better. It isn't pixelated and the text isn't stretched. The colors are visible even to a colorblind person (using *scale\_color\_colorblind()* from the *ggthemes* package). The axis labels are a bit more informative, giving the units for the sepal widths and lengths.
+These are the same data sets in two different graphs. The first one violates most of the rules for a bad graph (or follows most of the rules, I guess). The second one is better. It isn't pixelated and the text isn't stretched. The colors are visible even to a colorblind person (using `scale_color_colorblind()` from the *ggthemes* package). The axis labels are a bit more informative, giving the units for the sepal widths and lengths.
 
 While this may seem like a trivial and obvious comparison, the first version is one we see all the time in student papers, and even in manuscripts submitted by PhDs. The easiest way to avoid this problem is to take the following steps:
 
-1) Create the graph in your software
+1)  Create the graph in your software
 
-2) Save it as a high-resolution figure in a common format, like .jpg, .png, or .svg.
+2)  Save it as a high-resolution figure in a common format, like .jpg, .png, or .svg.
 
-3) Import it to your text document using the import button
+3)  Import it to your text document using the import button
 
-4) If it doesn't look right, delete it from the text document
+4)  If it doesn't look right, delete it from the text document
 
-5) Return to step 1 and edit as needed
+5)  Return to step 1 and edit as needed
 
-Using *ggplot* in R, we can save a high resolution version of our graph with the *ggsave()* function. 
+Using *ggplot* in R, we can save a high resolution version of our graph with the `ggsave()` function.
 
 **Saving a high resolution graph**
 
@@ -195,25 +195,14 @@ my_graph
 ggsave(my_graph, file = "my_graph.jpg", dpi = 500, width = 6, height = 6, units = "in")
 ```
 
-The code above makes a graph called "my_graph", calls the graph in R to view it, and then saves it as a .jpg with the *ggsave()* function. The *ggsave()* function has several options
+The code above makes a graph called "my\_graph", calls the graph in R to view it, and then saves it as a .jpg with the `ggsave()` function. The `ggsave()` function has several options
 
-*image type* - By adding ".jpg" to the end of our graph name in the "file = ..." statement, we are creating a .jpg. To create a .png, just add ".png" instead. *ggsave()* can create 10 different file types - .png, .eps, .ps, .tex, .pdf, .jpg, .tiff, .bmp, .svg, or .wmf. Choose the one that works best for you.
+**image type** - By adding ".jpg" to the end of our graph name in the `file = …` statement, we are creating a .jpg. To create a .png, just add ".png" instead. `ggsave()` can create 10 different file types - .png, .eps, .ps, .tex, .pdf, .jpg, .tiff, .bmp, .svg, or .wmf. Choose the one that works best for you.
 
-*dpi* - dots per inch. The higher then number, the higher the resolution. However, increasing dpi also increases the file-size of your plot, which can make things really slow depending on your computer. A dpi of 500 or 600 is good for nearly all uses.
+**dpi** - dots per inch. The higher then number, the higher the resolution. However, increasing dpi also increases the file-size of your plot, which can make things really slow depending on your computer. A dpi of 500 or 600 is good for nearly all uses.
 
-*width* - This sets the width of your graph.
+**width** - This sets the width of your graph.
 
-*height* - This sets the height of your graph.
+**height** - This sets the height of your graph.
 
-*units* - This sets the units for width and height. We put in "in" above, which means that we're saving this graph to an expected size of 6x6 inches. If we set units to "cm", then it would be 6x6 cm and so on. Pick whatever measurement unit you are most comfortable with. We like inches because it is easy to imagine what a 6x6 inch graph would look like on a standard piece of 8x11.5 in paper. And becuase we grew up in the US, so the metric system is not as intuitive for us.
-
-
-
-
-
-
-
-
-
-
-
+**units** - This sets the units for width and height. We put `units = "in"` above, which means that we're saving this graph to an expected size of 6x6 inches. If we set units to "cm", then it would be 6x6 cm and so on. Pick whatever measurement unit you are most comfortable with. We like inches because it is easy to imagine what a 6x6 inch graph would look like on a standard piece of 8x11.5 in paper. And because we grew up in the US, so the metric system is not as intuitive for us.
