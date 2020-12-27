@@ -54,6 +54,12 @@ p1 <- ggplot(drug_data, aes(x = drug, y = y)) +
   labs(y = "Percent of patients that recovered",
        x = "Type of Drug") +
   ylim(0,1)
+
+ggsave(p1, file = here("figures/p1.jpg"))
+
+knitr::include_graphics(here("figures/p1.jpg"))
+
+
 ```
 
 Figure \ref{fig1:plot} above shows the result of twenty trials of each drug. For each trial, the drug makers calculated the percentage of patients that recovered from the disease after taking the drug.
