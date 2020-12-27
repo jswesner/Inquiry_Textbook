@@ -189,17 +189,17 @@ The same features that help you write a scientific paper can also help to read o
 
 Just because a scientific paper starts with an Introduction doesn't mean you need to read that part first. In our own reading, we often do this:
 
-1) Read the abstract and look for the main conclusions
+1)  Read the abstract and look for the main conclusions
 
-2) Look at the figures or tables. Are the main conclusions obvious in the figures or tables? If not, there is reason to worry. For example, if the abstract says "Insect abundance declined by 40% in the acid treatment relative to the control", then we better be able to find a figure that shows insect abundance on the y-axis and the two treatments (control and acid) on the x-axis. If we see instead a figure with insect diversity on the y-axis and three treatments on the x-axis, then we know this paper is going to be difficult to understand. Maybe we should move on.
+2)  Look at the figures or tables. Are the main conclusions obvious in the figures or tables? If not, there is reason to worry. For example, if the abstract says "Insect abundance declined by 40% in the acid treatment relative to the control", then we better be able to find a figure that shows insect abundance on the y-axis and the two treatments (control and acid) on the x-axis. If we see instead a figure with insect diversity on the y-axis and three treatments on the x-axis, then we know this paper is going to be difficult to understand. Maybe we should move on.
 
-3) After checking the abstract and the figures, we then read the introduction. It should tell us why the authors think this study is important. If we were reading the paper to learn about gene methylation, but the introduction is focused on a statistical procedure, then perhaps this paper isn't going to answer the question we thought. Maybe we should move to a different paper.
+3)  After checking the abstract and the figures, we then read the introduction. It should tell us why the authors think this study is important. If we were reading the paper to learn about gene methylation, but the introduction is focused on a statistical procedure, then perhaps this paper isn't going to answer the question we thought. Maybe we should move to a different paper.
 
-4) If we've committed to the paper, then we read the main results section and perhaps skim the discussion, looking for clues as to what the most important findings are and how they generate new knowledge.
+4)  If we've committed to the paper, then we read the main results section and perhaps skim the discussion, looking for clues as to what the most important findings are and how they generate new knowledge.
 
-5) Finally, we parse the methods and analyses. Do we agree with these methods? Did they reflect the goals of the study? Do the analyses make sense? Sometimes we discover that the methods are faulty, even if the paper is in a peer-reviewed journal. If we like the conclusion, but disagree with the methods, then maybe the conclusion is wrong, too.
+5)  Finally, we parse the methods and analyses. Do we agree with these methods? Did they reflect the goals of the study? Do the analyses make sense? Sometimes we discover that the methods are faulty, even if the paper is in a peer-reviewed journal. If we like the conclusion, but disagree with the methods, then maybe the conclusion is wrong, too.
 
-6) If all of the above boxes check out, then we can decide to use that paper in our own work and cite it.
+6)  If all of the above boxes check out, then we can decide to use that paper in our own work and cite it.
 
 ### It doesn't need to take forever to read a paper
 
