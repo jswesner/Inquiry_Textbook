@@ -138,7 +138,7 @@ ggplot(drug_data, aes(x = drug, y = diff)) +
   geom_point(position = position_jitter(width = 0.05)) + 
   labs(y = "Difference in recovery between treatment and control",
        x = "Type of Drug") + 
-  scale_color_grey(start = .6, end = 0) + ylim(0,1)
+  scale_color_grey(start = .6, end = 0)
 
 ```
 
