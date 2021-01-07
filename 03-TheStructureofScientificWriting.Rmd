@@ -22,11 +22,11 @@ There are millions of scientific papers in published journals and thousands of u
 
 Later chapters of this book will discuss each of these in detail. In this chapter, we briefly introduce each section and then provide a guide for how to approach your writing project so that these rigid sections become a fluid and interesting scientific story. The lecture for this section is here: [Lecture Link](https://docs.google.com/presentation/d/1t8Ggc_xpu1eapc2UbTm8kGzCPWLQLi4AXnKyjM_4jKM/edit?usp=sharing)
 
-## Title
+**Title**
 
 -   Short and descriptive
 
-## Abstract
+**Abstract**
 
 -   One or two sentences that introduce the topic.
 -   One sentence that states your hypothesis.
@@ -34,14 +34,14 @@ Later chapters of this book will discuss each of these in detail. In this chapte
 -   Two-three sentences of the *main* results with some quantitative information as needed (but no p-values).
 -   One or two sentences that summarize the main finding.
 
-## Introduction
+**Introduction**
 
 -   What big question are you going to answer for us?
 -   Why is this question important?
 -   Lots of references
 -   4-5 paragraphs is usually plenty.
 
-## Methods
+**Methods**
 
 -   What did you do to answer this important question?
 -   How did you analyze your data?
@@ -50,7 +50,7 @@ Later chapters of this book will discuss each of these in detail. In this chapte
 -   Few references.
 -   2-8 paragraphs is usually plenty.
 
-## Results
+**Results**
 
 -   Write what you discovered.
 -   Clear and simple and quantitative.
@@ -58,25 +58,25 @@ Later chapters of this book will discuss each of these in detail. In this chapte
 -   Usually zero references here.
 -   1-4 paragraphs is usually plenty.
 
-## Discussion
+**Discussion**
 
 -   Now you can interpret
 -   *The most important result of this study was...*
 -   Lots of references.
 -   4-6 paragraphs is usually plenty.
 
-## References
+**References**
 
 -   What is known and unknown?
 -   Establishes trust between writer and reader.
 -   Gives credit to other ideas.
 -   Pick one format (there are lots of ways to write citations) and stick to it.
 
-## Tables
+**Tables**
 
 -   Summary statistics or raw data
 
-## Figures
+**Figures**
 
 -   Make the font readable
 -   Make them as simple as possible

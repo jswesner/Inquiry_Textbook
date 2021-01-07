@@ -210,6 +210,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="finding-the-literature.html"><a href="finding-the-literature.html#why-does-it-matter"><i class="fa fa-check"></i><b>7.5</b> Why does it matter?</a></li>
 <li class="chapter" data-level="7.6" data-path="finding-the-literature.html"><a href="finding-the-literature.html#you-do-not-need-to-pay-for-journal-articles"><i class="fa fa-check"></i><b>7.6</b> You do not need to pay for journal articles</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="introductions.html"><a href="introductions.html"><i class="fa fa-check"></i><b>8</b> INTRODUCTIONS</a></li>
+<li class="chapter" data-level="9" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#methods"><i class="fa fa-check"></i><b>9</b> Methods</a></li>
 </ul>
 
       </nav>
@@ -301,8 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Click anywhere on the script window so that you see the flashing prompt. Type the code below and then type <em>ctrl+enter</em>. (NOTE: If you just hit enter without adding ctrl, it won’t work. It will just move you to the next line. Get in the habit of typing <em>ctrl+enter</em> to run your code).</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r.html#cb1-1"></a><span class="co">#type this and then hit ctrl+enter</span></span>
 <span id="cb1-2"><a href="introduction-to-r.html#cb1-2"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># ctrl+enter</span></span></code></pre></div>
-<pre><code>## Warning in install.packages :
-##   package &#39;tidyverse&#39; is in use and will not be installed</code></pre>
+<pre><code>## Error in install.packages : Updating loaded packages</code></pre>
 <p>Like this: <img src="images/first_code_tidy.png" style="width:100.0%" /></p>
 <p>The code above tells R to install a package called <em>tidyverse</em>. You only have to do this once. After it’s installed, it will always be available when you open R, but you’ll have to tell R when you want to use it each time by typing <code>library(tidyverse)</code>.</p>
 <p><strong>Packages</strong> are bits of code that someone wrote and then converted into a series of shortcuts. R has 1000’s of packages for just about any task you can think of. The <strong>tidyverse package</strong> actually contains a bunch of other packages within it. As a result, when you install it for the first time, it will generate a lot of activity in your console, with red text and “<a href="https://" class="uri">https://</a>..” links all over the place. That is all normal. Just give it a few minutes. You’ll know it’s done when you see the chevron <code>&gt;</code> in the console.</p>
@@ -698,6 +699,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
