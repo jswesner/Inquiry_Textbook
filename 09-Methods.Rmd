@@ -1,0 +1,275 @@
+# Methods
+
+If you have never seen or even heard of *Law and Order*, you have achieved something few people have. There have been nearly 1300 episodes combined in the five different series, and in most of those episodes, someone must testify about something they did or saw. However familiar the oath they take is before testifying, most people never examine it closely enough to sus out why it is said in such a specific, and seemingly redundant, way.
+
+"I affirm that the testimony I am about to give is the truth, the whole truth, and nothing but the truth."
+
+Why three different statements? Isn't the truth... the truth? Yes and no. Let us pretend you went into a convenience store to buy a candy bar. While you were there, a masked individual entered, pointed a weapon at the clerk, took all the money from the register, and left. Now, let us examine how each of the statements can be "true" while at the same time incomplete.
+
+You are asked to give an account of the events. The following are different statements you decide to give.
+
+"I went to the store to purchase a candy bar."
+
+Did you tell the truth? Sure. You did not however, tell the *whole* truth. So, let us try again.
+
+"I went to the store to purchase a candy bar. This guy in a mask walked in. He pointed this weapon at the clerk. Clerk gives him the money. He leaves. I could tell he wanted to stay and steal more, but I scared him off because I got in a martial arts pose. He knew not to mess with me. I am like a camo belt
+in Tae Kwon Do"
+
+Did you tell the truth? The truth is in there. Did you tell the whole truth? Yes. Every relevant event is detailed in your account. Did you tell *nothing but the truth*? No. You added information that is not relevant. Giving extra information can be just as harmful as leaving out information.
+
+One last try.
+
+"I went to the store to purchase a candy bar. This guy in a mask walked in. He pointed a weapon at the clerk. The clerk gave him the money. The guy in the mask left."
+
+The truth, the whole truth, nothing but the truth.
+
+What does this have to do with the methods section of your research essay? The easiest way to remember what goes in the methods section is to think of it like testifying. What should you include?
+
+"I affirm that the information I am about to give are the methods, the whole methods, and nothing but the methods."
+
+Your methods section will help contextualize the position from which you did your experiment. It is important that others know this position so they may better understand the way you ultimately interpret and discuss your findings. 
+
+Important elements to the methods section are as follows:
+
+a\. Description of data sets acquired and used. 
+
+b\. Description of experiment/methods is clear and complete. 
+
+c\. Which response variables analyzed? Which statistical analyses/program used?
+
+d\. Methods presented in past tense.
+
+The length of the methods section can vary greatly depending on the research. As long as you adhere to the "nothing but the truth" idea, you will avoid superfluous information that will hurt the quality of the section. Likewise, make sure to include "the whole truth." Leaving out information will similarly hurt the
+essay.
+
+Below are examples of a methods sections along with analysis.
+
+**EXAMPLE A**
+
+To test our hypothesis, we collected the majority of our data and information from Gapminder, an online database of global statistics. We compared the data of the land used agriculturally (% of total agricultural land) and agriculture (%GDP), with mortality rate attributed to unsafe water (unsafe sanitation and lack of hygiene (per 100,000 population)) and agricultural water withdrawal (% of total water withdrawal). We then transferred the data we found into RStudio to analyze it and create graphs to inform our hypothesis.
+
+Another source of information used includes researching scholarly sources to find more information on the correlation between the intensity of agriculture and water quality. Information on pollution from agricultural runoff, seasonal changes, and varieties of agriculture were a few of the topics that were focused on. The information gathered then allows for a more fixed source that results in bad water quality and how agriculture specifically affects water quality.
+
+Analysis:
+
+It
+begins with an adequate description of data used and where it was acquired. It
+then defines in good detail what their variables mean. This is instead of
+boilerplate language that is non-specific: e.g. "We measured agriculture and
+water quality..." It does use ***active language*** instead of ***passive
+language*** which should be corrected. (Active vs. passive language will
+be discussed in the GRAMMAR section below. It is contrary to what is expected
+in many writing courses, so it may take special effort.)
+
+The
+paragraph then explains what was done with that data. It is important to
+include these steps. An important purpose of the methods section is to show how
+an experiment was done **so that it can be replicated, and the results can be
+reproduced**. If some elements are missing, the experiment can not be fully
+replicated. You may have given the "truth," but you have not given the "whole
+truth."
+
+The
+second paragraph is not quite as good. It is not nearly as detailed as the
+first paragraph. It also fails to lay out *why*. It is important that a
+reader understands the purpose for any actions. It is also too general in *how*
+the analysis will be done. There are a thousand different ways the data can be
+analyzed; the reader needs to be told specifics. Lastly, there is a shift in
+tense. **The entire methods section should be written in the past tense**.
+(For more on writing in the past tense, see the GRAMMAR section below). Since information
+was gathered in the past and was analyzed in the past, then it '"allowed'
+for a more fixed source."
+
+Let us
+look at part of a successful methods section. Remember, this section can vary
+in length substantially. Looking at part of a successful methods section is
+helpful since the same rules and expectations apply to the entire section as it
+does to each paragraph.
+
+**EXAMPLE
+B**
+
+*Specimen
+Collection*
+
+Insects were collected in the summer (May -- August) of
+2014 and 2015 from eight nearby rivers and streams connected to the Missouri
+National Recreational River as well as the Missouri River itself (Supplementary
+Information, Table S1). Larval insects sampled from the substrate were taken
+using a D-frame dip net at each site. Adults were captured using three floating
+emergence traps with an area of 0.36 m^2^ each, set for three days per
+sampling trip. Different habitats (e.g. debris, rip-rap, shoreline) were
+sampled when available to increase taxonomic representation. Traps were set
+once per week during the sampling period. Benthic samples were taken once when
+emergence traps were set and again when traps were retrieved. Adults were
+aspirated from the emergence traps at the end of the sampling period. Upon
+collection, samples were preserved in 95% ethanol on site and stored at -20°C
+at the University of South Dakota. Specimens were sorted and identified to the
+lowest possible taxonomic level or by morphological characteristics (species
+and morphospecies) and stored until DNA extraction.
+
+Analysis:
+
+It is easy to how this is successful. It
+is clear and concise giving all the information needed so that others could
+repeat the process. It explains *how* and *why* things are being
+done.
+
+Different habitats (e.g. debris, rip-rap,
+shoreline) were sampled when available to increase taxonomic representation.
+
+What was done?
+
+                        Different habitats (e.g. debris, rip-rap,
+shoreline) were sampled when available
+
+Why was it done?
+
+                                to
+increase taxonomic representation.
+
+The section remains in consistent ***past
+tense***, and it is written in ***passive voice***.
+
+ 
+
+GRAMMAR-
+
+ 
+
+**TENSE**
+
+It
+can be a difficult adjustment exclusively writing in the past tense. Commonly,
+composition classes instruct students to write in the present tense. Once this
+is learned, it can be difficult to "unlearn," even when just a short section.
+
+It
+might help to think of it like testifying.
+
+Thinking
+back to our convenience store robbery, if we present our recollection of the
+event in in different tenses, it can sound quite odd:
+
+FUTURE TENSE
+
+"I will
+want a candy bar from the local store and plan on walking to it..."
+
+It
+makes no sense almost immediately.
+
+PRESENT TENSE
+
+"I am hungry, so I walk to the local
+store and buy a candy bar. This guy walks in and points a weapon at the clerk.
+He is wearing a mask and the clerk looks scared."
+
+It
+is easier to understand than future tense, but it has a conversational tone. It
+sounds more like someone under hypnosis reliving the experience. **The methods
+section relays a set of actions you have already taken. It needs to be
+delivered to the reader as such.**
+
+PAST TENSE
+
+"I went to the store to purchase a candy bar. This guy in a mask walked
+in. He pointed a weapon at the clerk. The clerk gave him the money. The guy in
+the mask left."
+
+Clear,
+concise reporting of events in the past tense.
+
+ 
+
+**VOICE (ACTIVE VS. PASSIVE)**
+
+*Voice* indicates the relationship between
+the subject and the verb in a sentence.
+
+If the
+subject of the sentence is performing or being the verb, it is considered *active*
+voice.
+
+                        Amy
+punched a hole in the wall out of frustration.
+
+                                Amy smells like her air
+conditioner stopped working.
+
+In both of
+the above sentences, Amy is the subject of the sentence, and in both sentences
+she is performing the verb. She is punching something, and she is in the state
+of being something (in the case smelling).
+
+If the
+subject of the sentence is having something done to it, it is considered *passive* voice.
+
+                        The
+building was burned down by Amy.
+
+                                The smell was coming from Amy.
+
+In both of
+the above sentences, the subject (building and smell) are having things acted
+upon them. (The building is being burned and the smell is coming from someone).
+
+Here are
+examples from the methods sections used earlier in the chapter.
+
+From
+Example A:
+
+To test our hypothesis, we collected
+the majority of our data and information from Gapminder, an online database of
+global statistics.
+
+First, identify the subject of the sentence: "We"
+
+Then identify the verb: "collected"
+
+Then ask if the subject is "performing" or "being" the
+verb. In this case, the answer is "yes." That means the sentence is in *active
+voice* and needs to be corrected.
+
+The easiest way to do this is to use the verb of the
+sentence. Use it to ask the question, "who or what is *performing* or *being* something." In this instance we ask, "Who or what is being
+collected?" The answer: "data and
+information from Gapminder, an online database of global statistics."
+
+How do we change active to passive? Simple, make this
+object the subject of the sentence and make what was the subject of the
+sentence the object (if it is even needed).
+
+Corrected
+sentence for Example A:
+
+Data and information from Gapminder,
+an online database of global statistics, was collected to test the hypothesis.
+
+Identify the subject: "Data and information"
+
+Identify the verb: "was collected"
+
+Then ask if the subject is "performing" or "being" the
+verb. In this case, the answer is "no." That means the sentence is in passive
+voice.
+
+From
+Example B
+
+Adults were captured using three floating emergence
+traps with an area of 0.36 m^2^ each, set for three days per sampling
+trip.
+
+Identify the subject: "Adults"
+
+Identify the Verb: "Were captured"
+
+Then ask if the subject is "performing" or "being" the
+verb. In this case, the answer is "no." That means the sentence is in passive
+voice.
+
+Sentences like this one are often written incorrectly
+as, "We captured insects several times using traps." Here, the subject, "we,"
+is performing the action, "captured," which makes the sentence active.

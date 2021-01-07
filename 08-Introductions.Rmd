@@ -1,0 +1,145 @@
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# INTRODUCTIONS
+
+A friend of yours pulls you aside at a party because there is something they want to talk to you about. There is someone they want you to "get to know," and they want to be the one to introduce you. The person of interest is coming to the party and will be there soon, so your friend quickly gives you all the information they think is relevant to prepare you for what comes next.
+
+On the topic of relevance, you will have to trust me that through years of teaching writing, this method is far more memorable versus the academese often used in most writing textbooks. (Looking up the word "academese" should give you a nice ironic chuckle, but it is not necessary for our purposes).
+
+Ask yourself how one might best introduce this mysterious and momentarily arriving stranger. Also imagine how the friend might fail at giving the information expected and often required. Examining this in coordination with the introduction to a research paper will hopefully illuminate and clarify the different elements of your introduction. Specifically:
+
+1.  Introduce the broader topic
+2.  Summarize and integrate the work of others
+3.  Stay focused
+4.  Be detailed
+
+Helping with this will be examples that are at different points in the writing process. Having exemplary work to model your writing after is helpful, seeing and identifying common mistakes that we all make is often more so. The following examples will be labeled as follows:
+
+The friend's introduction to the mysterious stranger
+
+A)  An essay in need of important revision
+
+B)  An essay further along in the process
+
+C)  A model of successful work
+
+D)  After each section, we will analyze what went right and wrong in each of the examples.
+
+Whether romantic interest or scholarly research paper, it is important to build intrigue. The best way to do this is the $\color{blue}{\text{"and, and, and, but, therefore"}}$ method. It's a super catchy name, we know. Below, we will go through the introductions of the four examples explained above.
+
+**Begin with statements of fact that can be verified by research.**
+
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| A | Smarla is a twenty-four-year-old south Dakota native who lives near Yankton.                                                                                                                                                                                                                                       |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| B | No one could argue that children are the future of any thriving civilization. We should be doing everything we can to assure them a healthy lifestyle.                                                                                                                                                             |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| C | Clean water as a resource provides human populations with safe water for recreation, sanitation, consumption, industry, and hygiene. Because of this, the health of water bodies and availability of safe water in a region can act as an indicator of public health (Centers for Disease Control and Prevention). |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| D | Wolbachia is a genus of bacteria found within the tissues of several groups of arthropods (Werren et al. 2008; Pietri et al. 2016).                                                                                                                                                                                |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Analysis:
+
+A)  Solid. Gives good information that is easily verifiable and useful for someone to know.
+
+B)  There are two main issues. First, it uses a sweeping generalization or absolute statement (these types of statements oftentimes are general principles being used as fact. Whereas the statement "children are the future" is generally accepted, to write that "no one could argue" is demonstrably untrue. Statements using "everybody," "nobody," "all," unless verifiable, will often fall into this category.) Second, the writing has an informal tone that relies on opinion more than it does research supported evidence.
+
+C)  The opening statements are solid enough and supportable. There is a citation; however, the citation itself is incorrect. It is imperative that citations adhere to the appropriate style. Unless otherwise stated, this will be APA style.
+
+D)  Opening is a clear, supported statement that is free of opinion and informal tone. The citation is correct and will lead the reader to the source material.
+
+**The introduction should continue with your first "*and*" statement.** This is a continuation of providing information important to the reader. These should again be clear, specific statements easily verifiable and supported by research.
+
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| A | For the last few years, Smarla has worked in sales while dabbling in import and export.                                                                                                                                                                                                                                                                                                                                                               |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| B | The number of babies born per woman is caused primarily by education and healthcare. This number is commonly referred to as birth rate.                                                                                                                                                                                                                                                                                                               |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| C | Worldwide, the abundance and intensity of agriculture varies as it exists in many forms including farming, livestock, fisheries, and horticulture. Agricultural production is a contributor of soil degradation (Zalidis et al. 2002) and of a nonpoint source pollution called agricultural runoff that ends up in bodies of water through the practices of fertilization, pesticide usage, poor farm management, and irrigation (Dowd et al. 2008). |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| D | They typically infect the reproductive tissues of insects where they can manipulate reproduction of their hosts to enhance the vertical transmission of Wolbachia from mother to offspring (Werren et al. 2008).                                                                                                                                                                                                                                      |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Analysis:
+
+A.) Pretty good. Details are a little sketchy. Import and export usually mean questionable things if Hollywood movies are to be believed. Concrete details are important.
+
+B)  Although the average reader will most likely understand what the first sentence means, it is important to make clear exactly what you mean. "Education and healthcare" do not cause babies to be born. Whether the writer means that education and healthcare, "influence," "correlate to," or "predict," word choice matters a great deal.
+
+C)  These statements build on earlier ones. In addition, the citation is correct. It is important, however, to make sure that all terms used are clearly defined if there is a possibility for confusion. In this section "nonpoint source pollution" has yet to be defined.
+
+D)  Solid. Additional factual statements supported by properly cited evidence.
+
+*An important thing to note is that the* $\color{blue}{\text{"and, and, and, but, therefore"}}$ *method begins with more than one* $\color{blue}{\text{"and."}}$ *Beginning your research essay with multiple instances of research supported evidence both helps build intrigue as well as establish credibility.*
+
+\
+**After multiple** $\color{blue}{\text{"and"}}$ statements, the next step is $\color{blue}{\text{"but."}}$ This can be thought of as a transition from "what we know" to "what we don't know." This will help the reader follow your logical progression. This can also help you develop your answer to the question, "why is this work important."
+
++---+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| A | Even with a good number of common acquaintances, there isn't a great deal known about past relationships, but I still get the vibe from Smarla that you should get to know them.                                                                                                                                                                                                                          |
++---+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| B | Another important factor contributing to global birth rates is the quality of healthcare. Accessibility to quality healthcare shows an increase in birth rates, lower infant mortality rates, and also an increase in the life expectancy for infants (Bitler and Schmidt, 2012).                                                                                                                         |
++---+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| C | There are many other variables that need to be explored to understand how agriculture may affect water quality and public health... These all will be studied to clearly understand if water quality is significantly affected by agriculture and therefore how it can be resolved.                                                                                                                       |
++---+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| D | Despite the high incidence among arthropods in general, little research exists on the incidence of Wolbachia in aquatic insects, defined as insects whose larval stages are in freshwater aquatic environments. For example, using data from a recent global meta-analysis (Hilgenboecker et al. 2008), we estimate that less than 5% of tested insect species have aquatic stages in their life-history. |
++---+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Analysis:
+
+A)  Demonstrates gaps in knowledge while beginning to project forward in assessment.
+
+B)  Whereas it is important to establish what is known, the function of the essay can not be to simply inform the reader of data already known. Additionally, it is important to accurately represent the research that is being referenced and cited. This passage fails to do that.
+
+C)  Although this has the appearance of a $\color{blue}{\text{"but"}}$ statement, it remains very vague as to its purpose and what, if any, question it intends to answer.
+
+D)  This demonstrates a transition from establishing what is known to what is unknown while still maintaining rigorous adherence to research supported argument.
+
+Although not expressly part of the $\color{blue}{\text{"and, and, and, but, therefore"}}$ method, it is important to establish the importance of the research that has been done. Since the $\color{blue}{\text{"but"}}$ section should include the "unknown," it should also **demonstrate why answering that unknown is important.**
+
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| A | You need to find someone because you are lonely and starting to bum the rest of us out.                                                                                                                     |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| B | Unstated                                                                                                                                                                                                    |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| C | Understanding the influence that agriculture has on water quality will help better ensure a future of safe water for drinking, recreation, and hygiene.                                                     |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| D | These types of surveys are important to understand the global infection frequency of Wolbachia so that future research on the potential impact of these bacteria on arthropod populations can be assessed.  |
++---+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Analysis:
+
+A)  A clear and direct statement of purpose and importance.
+
+B)  B leaves this unstated. It is important to try and objectively examine your work to help answer the question, "who cares?" If you cannot answer it, chance are others will struggle as well.
+
+C)  Although this statement does address the importance of the study, it is again very broad. This is probably due to the somewhat undefined earlier section. Staying focused is very important. This statement also appears at the end of their introduction making it read as an afterthought.
+
+D)  Clear and concise, D specifically includes the importance of the study and directs the reader to what will be expected in the pages ahead.
+
+**The final step of the** $\color{blue}{\text{"and, and, and, but, therefore"}}$ method should tie up the different threads of your introduction to this point. If you have employed all the elements properly, you will have a focused and detailed examination of your topic that lays out what you know, what you don't know, why gaining that unknown information is important, and finally what your initial guiding hypothesis is.
+
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| A | Although nothing is certain, I think you and Smarla have enough in common, and under the circumstances, you probably couldn't do a whole lot better.                                                                                                                                                                                                                                                         |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| B | We speculate that education will have the least amount of impact on birth rates per woman in 175 countries, because education does not determine if women are fit to have a child. We hypothesize that healthcare will have a slightly greater impact because of the role contraceptives play in healthcare.                                                                                                 |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| C | We hypothesized that the percentage of agricultural land in a region will inversely correlate to that region's quality of water. Areas of the world with more intense agricultural practices should then exhibit a lower quality of water, and therefore a lower quality of public health.                                                                                                                   |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| D | Here, we estimate the incidence of Wolbachia in aquatic and terrestrial insects using data from our own field collections along with previously published databases (Sontowski et al. (2015), Weinert et al. (2015), Wiwatanaratanabutr et al. (2016)). We present estimates of Wolbachia incidence for aquatic and terrestrial insects as a whole, and also for individual orders of major aquatic insects. |
++---+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Analysis:
+
+A)  Acknowledges the unknown again; states hypothesis.
+
+B)  Because it is building off of an introduction that is vague throughout, B continues to argue in generalities. It does succeed, however, in identifying its main argument.
+
+C)  C is more successful in that it can be more developed than B. It is also successful in that it identifies its novel terms whereas earlier it failed to do so. Also, it should maintain present tense (as the others do). "We hypothesize that..." instead of, "We hypothesized that..."
+
+D)  Once again, staying focused and being detailed oriented allows for a clear, specific, and readily understandable ending to the introduction.
+
+Depending on the journal (or instructor), you will be expected to end the introduction with summarizing major findings. However, as an entire section of the essay is dedicated to a discussion of those very findings as well as the abstract, some criticize the redundancy of this practice.

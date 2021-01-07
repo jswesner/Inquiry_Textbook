@@ -2,9 +2,8 @@
 title: "Inquiry and Analysis in Biology"
 bibliography: "./bib/inquiry_textbook_all.bib"
 delete_merged_file: true
-output:
-  html_document: default
-  word_document: default
+site: bookdown::bookdown_site
+output: bookdown::gitbook
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
 header-includes: #allows you to add in your own Latex packages

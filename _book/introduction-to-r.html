@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Introduction to R | Inquiry and Analysis in Biology</title>
+  <meta name="description" content="4 Introduction to R | Inquiry and Analysis in Biology" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Introduction to R | Inquiry and Analysis in Biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Introduction to R | Inquiry and Analysis in Biology" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-structure-of-scientific-writing.html"/>
+<link rel="next" href="thinking-quantitatively.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="overview.html"><a href="overview.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.2</b> Who This Book is For</a></li>
+<li class="chapter" data-level="1.3" data-path="overview.html"><a href="overview.html#about-this-book"><i class="fa fa-check"></i><b>1.3</b> About This Book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-process-of-science.html"><a href="the-process-of-science.html"><i class="fa fa-check"></i><b>2</b> The Process of Science</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="the-process-of-science.html"><a href="the-process-of-science.html#what-is-science"><i class="fa fa-check"></i><b>2.2</b> What is Science?</a></li>
+<li class="chapter" data-level="2.3" data-path="the-process-of-science.html"><a href="the-process-of-science.html#science-versus-non-science"><i class="fa fa-check"></i><b>2.3</b> Science versus Non-science</a></li>
+<li class="chapter" data-level="2.4" data-path="the-process-of-science.html"><a href="the-process-of-science.html#science-communication-is-hard"><i class="fa fa-check"></i><b>2.4</b> Science Communication is Hard</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html"><i class="fa fa-check"></i><b>3</b> The Structure of Scientific Writing</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#pieces-of-papers"><i class="fa fa-check"></i><b>3.2</b> Pieces of Papers</a></li>
+<li class="chapter" data-level="3.3" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#title"><i class="fa fa-check"></i><b>3.3</b> Title</a></li>
+<li class="chapter" data-level="3.4" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#abstract"><i class="fa fa-check"></i><b>3.4</b> Abstract</a></li>
+<li class="chapter" data-level="3.5" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#introduction"><i class="fa fa-check"></i><b>3.5</b> Introduction</a></li>
+<li class="chapter" data-level="3.6" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#methods"><i class="fa fa-check"></i><b>3.6</b> Methods</a></li>
+<li class="chapter" data-level="3.7" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#results"><i class="fa fa-check"></i><b>3.7</b> Results</a></li>
+<li class="chapter" data-level="3.8" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#discussion"><i class="fa fa-check"></i><b>3.8</b> Discussion</a></li>
+<li class="chapter" data-level="3.9" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#references"><i class="fa fa-check"></i><b>3.9</b> References</a></li>
+<li class="chapter" data-level="3.10" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#tables"><i class="fa fa-check"></i><b>3.10</b> Tables</a></li>
+<li class="chapter" data-level="3.11" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#figures"><i class="fa fa-check"></i><b>3.11</b> Figures</a></li>
+<li class="chapter" data-level="3.12" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#putting-it-all-together"><i class="fa fa-check"></i><b>3.12</b> Putting it all together</a></li>
+<li class="chapter" data-level="3.13" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#how-to-read-a-scientific-paper"><i class="fa fa-check"></i><b>3.13</b> How to Read a Scientific Paper</a>
+<ul>
+<li class="chapter" data-level="3.13.1" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#you-dont-need-to-start-at-the-beginning"><i class="fa fa-check"></i><b>3.13.1</b> You don’t need to start at the beginning</a></li>
+<li class="chapter" data-level="3.13.2" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#it-doesnt-need-to-take-forever-to-read-a-paper"><i class="fa fa-check"></i><b>3.13.2</b> It doesn’t need to take forever to read a paper</a></li>
+<li class="chapter" data-level="3.13.3" data-path="the-structure-of-scientific-writing.html"><a href="the-structure-of-scientific-writing.html#you-dont-need-to-understand-every-word"><i class="fa fa-check"></i><b>3.13.3</b> You don’t need to understand every word</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#r-and-rstudio"><i class="fa fa-check"></i><b>4.2</b> R and RStudio</a></li>
+<li class="chapter" data-level="4.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#how-to-use-this-chapter"><i class="fa fa-check"></i><b>4.3</b> How to Use This Chapter</a></li>
+<li class="chapter" data-level="4.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#data-analysis-workflow"><i class="fa fa-check"></i><b>4.4</b> Data Analysis Workflow</a></li>
+<li class="chapter" data-level="4.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#getting-started-in-rstudio"><i class="fa fa-check"></i><b>4.5</b> Getting Started in RStudio</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#create-a-folder-on-your-computer-for-your-analyses"><i class="fa fa-check"></i><b>4.5.1</b> Create a folder on your computer for your analyses</a></li>
+<li class="chapter" data-level="4.5.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#open-rstudio"><i class="fa fa-check"></i><b>4.5.2</b> Open RStudio</a></li>
+<li class="chapter" data-level="4.5.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#create-a-project"><i class="fa fa-check"></i><b>4.5.3</b> Create a project</a></li>
+<li class="chapter" data-level="4.5.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#open-a-script"><i class="fa fa-check"></i><b>4.5.4</b> Open a script</a></li>
+<li class="chapter" data-level="4.5.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#install-a-package"><i class="fa fa-check"></i><b>4.5.5</b> Install a package</a></li>
+<li class="chapter" data-level="4.5.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#your-first-script"><i class="fa fa-check"></i><b>4.5.6</b> Your first script</a></li>
+<li class="chapter" data-level="4.5.7" data-path="introduction-to-r.html"><a href="introduction-to-r.html#importing-your-own-data-to-rstudio"><i class="fa fa-check"></i><b>4.5.7</b> Importing your own data to RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#why-to-code-instead-of-click"><i class="fa fa-check"></i><b>4.6</b> Why to Code Instead of Click</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html"><i class="fa fa-check"></i><b>5</b> Thinking Quantitatively</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#why-statistics"><i class="fa fa-check"></i><b>5.2</b> Why Statistics</a></li>
+<li class="chapter" data-level="5.3" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#summary-statistics"><i class="fa fa-check"></i><b>5.3</b> Summary Statistics</a></li>
+<li class="chapter" data-level="5.4" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#dont-forget-that-quantitative-thinking-includes-thinking"><i class="fa fa-check"></i><b>5.4</b> Don’t forget that Quantitative Thinking includes “thinking”</a></li>
+<li class="chapter" data-level="5.5" data-path="thinking-quantitatively.html"><a href="thinking-quantitatively.html#common-pitfalls-in-statistical-inference"><i class="fa fa-check"></i><b>5.5</b> Common Pitfalls in Statistical Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>6</b> Data Visualization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="data-visualization.html"><a href="data-visualization.html#basic-components-of-a-graph"><i class="fa fa-check"></i><b>6.1.1</b> Basic Components of a Graph</a></li>
+<li class="chapter" data-level="6.1.2" data-path="data-visualization.html"><a href="data-visualization.html#best-practices"><i class="fa fa-check"></i><b>6.1.2</b> Best Practices</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="finding-the-literature.html"><a href="finding-the-literature.html"><i class="fa fa-check"></i><b>7</b> Finding the Literature</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="finding-the-literature.html"><a href="finding-the-literature.html#peer-review"><i class="fa fa-check"></i><b>7.2</b> Peer Review</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="finding-the-literature.html"><a href="finding-the-literature.html#what-it-is"><i class="fa fa-check"></i><b>7.2.1</b> What it is</a></li>
+<li class="chapter" data-level="7.2.2" data-path="finding-the-literature.html"><a href="finding-the-literature.html#what-it-isnt"><i class="fa fa-check"></i><b>7.2.2</b> What it isn’t</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="finding-the-literature.html"><a href="finding-the-literature.html#primary-versus-secondary-versus-whatever-you-just-googled."><i class="fa fa-check"></i><b>7.3</b> Primary versus Secondary versus whatever you just Googled.</a></li>
+<li class="chapter" data-level="7.4" data-path="finding-the-literature.html"><a href="finding-the-literature.html#is-this-a-primary-or-secondary-paper"><i class="fa fa-check"></i><b>7.4</b> Is this a primary or secondary paper?</a></li>
+<li class="chapter" data-level="7.5" data-path="finding-the-literature.html"><a href="finding-the-literature.html#why-does-it-matter"><i class="fa fa-check"></i><b>7.5</b> Why does it matter?</a></li>
+<li class="chapter" data-level="7.6" data-path="finding-the-literature.html"><a href="finding-the-literature.html#you-do-not-need-to-pay-for-journal-articles"><i class="fa fa-check"></i><b>7.6</b> You do not need to pay for journal articles</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Inquiry and Analysis in Biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-r" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Introduction to R</h1>
+<div id="learning-objectives" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Learning Objectives</h2>
+<ol style="list-style-type: decimal">
+<li><p>Be able to download and open R and RStudio.</p></li>
+<li><p>Understand how to import data to R.</p></li>
+<li><p>Understand how to create a graph in R.</p></li>
+</ol>
+<p><a href="https://docs.google.com/presentation/d/1VJUOzvqMubmcRoJWAklv6ZlwM5WydgO7vyAwgsnPYsk/edit?usp=sharing">Link to Lecture</a></p>
+</div>
+<div id="r-and-rstudio" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> R and RStudio</h2>
+<p>So far we’ve discussed the nature of science and the structure of scientific papers. Now we’re going to introduce a central method that is required of most modern science: scientific computing. It is almost impossible to conduct science without a computer, especially since we need to analyze data. We also need to store the data, organize it, plot it, summarize, and report it. Lots of tools do that. In this book, we use the computing software R <span class="citation">(<span class="citeproc-not-found" data-reference-id="R_core_team2020"><strong>???</strong></span>)</span>. It is among the most popular programs for analyzing scientific data and it is designed specifically for the workflow we use in this book. It is also free. Here’s how you get it.</p>
+<ol style="list-style-type: decimal">
+<li><p>Download R: (<a href="https://mirror.las.iastate.edu/CRAN/" class="uri">https://mirror.las.iastate.edu/CRAN/</a>). Follow the link above and choose your operating system - Linux, Mac OS, or Windows</p></li>
+<li><p>Download RStudio: (<a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a>)</p></li>
+</ol>
+<p>All of the examples in this book are generated using R. Actually, that’s not quite correct. While R is the workhorse, the examples in this book are generated through an interface to R called RStudio <span class="citation">(<span class="citeproc-not-found" data-reference-id="rstudio_2020"><strong>???</strong></span>)</span>.</p>
+<p>R looks like this: <img src="images/Rlogo.svg" style="width:5.0%" /> <em>Download only</em></p>
+<p>RStudio looks like this: <img src="images/rstudio_icon.png" style="width:5.0%" /> <em>Download, open, and use</em></p>
+<p>Once you’ve downloaded both programs, you’ll only need to open RStudio. It automatically uses R in the background. It is possible to do everything only in base R, but we prefer RStudio as a more user-friendly interface.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+</div>
+<div id="how-to-use-this-chapter" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> How to Use This Chapter</h2>
+<p>This book is not meant as a stand-alone R reference. It is meant as a companion to university-level labs and lectures, in which students can work through examples with an instructor or TA nearby to fill in the gaps and troubleshoot.</p>
+<p>When starting R, these are the types of questions many students have:</p>
+<p><em>“Is this the right program?”</em> <em>“What is a script again?”</em> <em>“How do you make the arrow?”</em> <em>“What is that squiggly sign?”</em> <em>“I ran the code and nothing happened…”</em></p>
+<p>In other words, we expect students to have lots of questions in this new and unfamiliar environment. Everyone started this way and the easiest way to find the answers is to ask an expert.</p>
+<p>However, there are lots of excellent R guides out there for students who are interested in learning more detail. Here are a few of our favorites:</p>
+<p><strong>R for Data Science</strong> (free) - <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a> <span class="citation">(<span class="citeproc-not-found" data-reference-id="wickham2016r"><strong>???</strong></span>)</span> <strong>The R Book</strong> <span class="citation">(<span class="citeproc-not-found" data-reference-id="crawley2012r"><strong>???</strong></span>)</span> <strong>Getting Started with R: An Introduction for Biologists</strong> <span class="citation">(<span class="citeproc-not-found" data-reference-id="beckerman2017getting"><strong>???</strong></span>)</span> <strong>Data Visualization: A Practical Introduction</strong> <span class="citation">(<span class="citeproc-not-found" data-reference-id="healy2018data"><strong>???</strong></span>)</span> <strong>dplyr and tidyr cheatsheets</strong> - (<a href="https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf</a>) <strong>ggplot2 cheatsheet</strong> - (<a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf</a>)</p>
+</div>
+<div id="data-analysis-workflow" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Data Analysis Workflow</h2>
+<p><img src="images/data_workflow.png" /></p>
+<p>In this book, we focus on learning a few fundamental tasks that are common to the workflow of most data science projects <span class="citation">(Wickham et al. 2019)</span>. Nearly every study that includes data has a workflow similar to that above. We gather data, get it into a program (<strong>Import</strong>), get it in the right format (<strong>Tidy</strong>), and then analyze it with plots (<strong>Visualize</strong>), Models, Transformations, etc. When we’ve finished, we communicate the results to our peers. You’ll learn how to complete these steps in R because its designed specifically for this type of workflow. But the workflow applies regardless of the software you use.</p>
+</div>
+<div id="getting-started-in-rstudio" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Getting Started in RStudio</h2>
+<p>Before the fun stuff happens, we need to determine where things will be saved on our computer. If you’d prefer to skip this step, that is OK. Just be prepared for certain doom.</p>
+<div id="create-a-folder-on-your-computer-for-your-analyses" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Create a folder on your computer for your analyses</h3>
+<p>For example, if this is for a class called Biology 280, you might create a folder called <code>BIO280_R</code>. If you have data to analyze (like an Excel file or a .csv), save it in this folder as well.</p>
+</div>
+<div id="open-rstudio" class="section level3" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Open RStudio</h3>
+<p>Click the RStudio icon <img src="images/rstudio_icon.png" style="width:5.0%" /></p>
+</div>
+<div id="create-a-project" class="section level3" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Create a project</h3>
+<p><em>File -&gt; New Project… -&gt; Existing Directory -&gt; Browse -&gt;</em> [NAME OF YOUR FOLDER]</p>
+<p>You only need to do this once. After you create a project, all of the work you do within that project (data analysis, graphs, text) will be saved in it. If it all goes well, you should see a screen like this, with the name of your project in the upper right hand corner.</p>
+<p><img src="images/new_project_done.png" style="width:100.0%" /></p>
+</div>
+<div id="open-a-script" class="section level3" number="4.5.4">
+<h3><span class="header-section-number">4.5.4</span> Open a script</h3>
+<p><em>File -&gt; New File -&gt; R Script</em> or <em>ctrl+shift+N</em></p>
+<p>You should now see a screen like the one below, with four windows.</p>
+<p><img src="images/new_script.png" style="width:100.0%" /></p>
+<p>The window on the lower right shows all of the <strong>Files</strong> in the folder you created on your computer. If you add something to that folder from outside of R, it will show up here as well.</p>
+<p>The window on the upper right shows your <strong>Environment</strong>. When you create something in R, like a new data frame or a plot, it will show up in the Environment (But it won’t be saved. More on that later).</p>
+<p>The window on the upper left shows your <strong>Script</strong>. This is where you tell R what to do.</p>
+<p>The window on the bottom left is the <strong>Console</strong>. It keeps a running list of all of the procedures you perform. For example, if you run code in the script, it will show up here. When something goes wrong, you’ll also see the error message here.</p>
+</div>
+<div id="install-a-package" class="section level3" number="4.5.5">
+<h3><span class="header-section-number">4.5.5</span> Install a package</h3>
+<p>Click anywhere on the script window so that you see the flashing prompt. Type the code below and then type <em>ctrl+enter</em>. (NOTE: If you just hit enter without adding ctrl, it won’t work. It will just move you to the next line. Get in the habit of typing <em>ctrl+enter</em> to run your code).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r.html#cb1-1"></a><span class="co">#type this and then hit ctrl+enter</span></span>
+<span id="cb1-2"><a href="introduction-to-r.html#cb1-2"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># ctrl+enter</span></span></code></pre></div>
+<pre><code>## Error in install.packages : Updating loaded packages</code></pre>
+<p>Like this: <img src="images/first_code_tidy.png" style="width:100.0%" /></p>
+<p>The code above tells R to install a package called <em>tidyverse</em>. You only have to do this once. After it’s installed, it will always be available when you open R, but you’ll have to tell R when you want to use it each time by typing <code>library(tidyverse)</code>.</p>
+<p><strong>Packages</strong> are bits of code that someone wrote and then converted into a series of shortcuts. R has 1000’s of packages for just about any task you can think of. The <strong>tidyverse package</strong> actually contains a bunch of other packages within it. As a result, when you install it for the first time, it will generate a lot of activity in your console, with red text and “<a href="https://" class="uri">https://</a>..” links all over the place. That is all normal. Just give it a few minutes. You’ll know it’s done when you see the chevron <code>&gt;</code> in the console.</p>
+</div>
+<div id="your-first-script" class="section level3" number="4.5.6">
+<h3><span class="header-section-number">4.5.6</span> Your first script</h3>
+<p>Now you are ready for the fun parts. To begin coding your first script, we are going to take an unorthodox approach. Instead of starting with first principles, we’ll start with the Visualize and Model steps from the workflow and then deconstruct that to learn the principles.</p>
+<p>Copy the code below and paste it in your script. Then run the code (by clicking <em>ctrl+enter</em> from the first line down). Do not try to interpret it yet. There is a lot going on here. We’ll break it down next.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-r.html#cb3-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb3-2"><a href="introduction-to-r.html#cb3-2"></a><span class="co">#load a package</span></span>
+<span id="cb3-3"><a href="introduction-to-r.html#cb3-3"></a><span class="kw">library</span>(tidyverse) </span>
+<span id="cb3-4"><a href="introduction-to-r.html#cb3-4"></a></span>
+<span id="cb3-5"><a href="introduction-to-r.html#cb3-5"></a><span class="co"># make the data and &quot;model&quot; the mean and sd.</span></span>
+<span id="cb3-6"><a href="introduction-to-r.html#cb3-6"></a>d &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-7"><a href="introduction-to-r.html#cb3-7"></a><span class="st">  </span><span class="kw">group_by</span>(cyl) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-8"><a href="introduction-to-r.html#cb3-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(mpg), <span class="dt">sd =</span> <span class="kw">sd</span>(mpg)) </span>
+<span id="cb3-9"><a href="introduction-to-r.html#cb3-9"></a></span>
+<span id="cb3-10"><a href="introduction-to-r.html#cb3-10"></a><span class="co">#plot the data</span></span>
+<span id="cb3-11"><a href="introduction-to-r.html#cb3-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
+<span id="cb3-12"><a href="introduction-to-r.html#cb3-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) <span class="op">+</span></span>
+<span id="cb3-13"><a href="introduction-to-r.html#cb3-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd)) <span class="op">+</span></span>
+<span id="cb3-14"><a href="introduction-to-r.html#cb3-14"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Miles Per Gallon&quot;</span>,</span>
+<span id="cb3-15"><a href="introduction-to-r.html#cb3-15"></a>       <span class="dt">x =</span> <span class="st">&quot;Cylinders&quot;</span>) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Here is what you just did:</p>
+<ol style="list-style-type: decimal">
+<li><p>Loaded the <strong>tidyverse</strong> package.</p></li>
+<li><p>Created a <strong>data frame</strong> <em>d</em> that was a modified version of the data frame <em>mtcars</em>.</p></li>
+<li><p>Added two new columns to <em>d</em>: one containing the mean mpg for each type of cylinder and another containing the standard deviation.</p></li>
+<li><p>Plotted miles per gallon as a function of cylinders as raw data.</p></li>
+<li><p>Added a mean and standard deviation to the plot.</p></li>
+<li><p>Modified the axis names.</p></li>
+</ol>
+<p>If you’re a normal person, this should all be mysterious. Here’s the good news. The code above is about as complex as we will get in this book. It is also modular. That is crucial. It means that you don’t have to know every step to get started. Each batch of code that precedes <em><code>%&gt;%</code></em> or <em><code>+</code></em> will run by itself.</p>
+<p>Let’s break the code down into individual components:</p>
+<p><strong>1) Loaded the <em>tidyverse</em> package.</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r.html#cb4-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb4-2"><a href="introduction-to-r.html#cb4-2"></a><span class="co">#load a package</span></span>
+<span id="cb4-3"><a href="introduction-to-r.html#cb4-3"></a><span class="kw">library</span>(tidyverse) </span></code></pre></div>
+<p><strong>What it does</strong> This code uses the function <code>library()</code> to load a package called <em>tidyverse</em>. The rest of the code depends on loading this package first.</p>
+<p><strong>Did it work?</strong> Check the output in the console (lower left window). Red text is normal. It does not necessarily mean there is an error. If you see the prompt <code>&gt;</code>, that is a good sign. If you see words like <code>"there is no package called…"</code>, <code>"Error…"</code>, <code>"failed…"</code>, then it probably didn’t work.</p>
+<p><strong>Things to check if it doesn’t work</strong></p>
+<ul>
+<li>Did you install the package first?</li>
+<li>Did you misspell anything?</li>
+<li>Did you add a capital letter somewhere?</li>
+<li>Did you hit <em>enter</em> instead of <em>ctrl-enter</em>?</li>
+</ul>
+<p><strong>2) Created a data frame <em>d</em> that was a modified version of the data frame <em>mtcars</em>.</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-r.html#cb5-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb5-2"><a href="introduction-to-r.html#cb5-2"></a><span class="co">#load a package</span></span>
+<span id="cb5-3"><a href="introduction-to-r.html#cb5-3"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb5-4"><a href="introduction-to-r.html#cb5-4"></a></span>
+<span id="cb5-5"><a href="introduction-to-r.html#cb5-5"></a>d &lt;-<span class="st"> </span>mtcars</span></code></pre></div>
+<p><strong>What it does</strong> This code creates a <strong>data frame</strong> called <em>d</em> that contains all of the data that are in <em>mtcars</em>. A data frame is just a table with rows and columns. Try running <code>View(mtcars)</code> and you’ll see what the data frame looks like. <em>mtcars</em> is one of many data frames that are built in to R. It contains data on things like miles per gallon, weight, and horsepower for different types of cars.</p>
+<p>The symbol <code>&lt;-</code> is how we assign bits of code to objects in R. It’s a combination of the lesser than sign <code>&lt;</code> and the minus sign <code>-</code>. You will use this symbol all the time.</p>
+<p><strong>Did it work?</strong> Do you see an object named <em>d</em> in the Environment window (upper right) that has “32 obs. of 11 variables”? If not, it didn’t work.</p>
+<p>Visually, the <em>d</em> in the Environment window is the only thing that will automatically show up if it worked. Another way to check is simply to view the data frame, like this:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-r.html#cb6-1"></a><span class="kw">head</span>(d)</span></code></pre></div>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<p>This shows a snapshot of the first few rows of the data frame that exists in the object <em>d</em>. It is essentially the same as any other spreadsheet you might make in another program, like Excel. Each row contains information on mpg, cylinders (cyl), horsepower(hp), etc. for each type of car.</p>
+<p>You can isolate individual columns:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-r.html#cb8-1"></a>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(mpg, cyl) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+<pre><code>##                    mpg cyl
+## Mazda RX4         21.0   6
+## Mazda RX4 Wag     21.0   6
+## Datsun 710        22.8   4
+## Hornet 4 Drive    21.4   6
+## Hornet Sportabout 18.7   8
+## Valiant           18.1   6</code></pre>
+<p>Or check the types of columns:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introduction-to-r.html#cb10-1"></a><span class="kw">str</span>(d)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:	32 obs. of  11 variables:
+##  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+##  $ disp: num  160 160 108 258 360 ...
+##  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##  $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+##  $ qsec: num  16.5 17 18.6 19.4 17 ...
+##  $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+##  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+##  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+##  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</code></pre>
+<p>This shows that the object <em>d</em> is a data frame with 32 observations (rows) of 11 variables (columns). It also lists the variables and gives a preview of the first 10 rows. [Note: instead of a data frame, you might see the word <em>tibble</em>. That is another name for a data frame used by the <em>tidyverse</em> package. It has some important distinctions, but they are not relevant for this chapter].</p>
+<p><strong>Things to check if it doesn’t work</strong></p>
+<ul>
+<li>Did you misspell anything?</li>
+<li>Did you add a capital letter somewhere?</li>
+<li>Did you hit <em>enter</em> instead of <em>ctrl-enter</em>?</li>
+<li>Is there a space in the arrow <code>&lt; -</code>? There shouldn’t be.</li>
+</ul>
+<p><strong>Challenges</strong></p>
+<ul>
+<li>Give the data frame a different name other than <em>d</em>.</li>
+<li>Select other columns using the <em>select()</em> function.</li>
+</ul>
+<p><strong>3) Added two new columns to <em>d</em>: one containing the mean mpg for each type of cylinder and another containing the standard deviation.</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction-to-r.html#cb12-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb12-2"><a href="introduction-to-r.html#cb12-2"></a><span class="co">#load a package</span></span>
+<span id="cb12-3"><a href="introduction-to-r.html#cb12-3"></a><span class="kw">library</span>(tidyverse) </span>
+<span id="cb12-4"><a href="introduction-to-r.html#cb12-4"></a></span>
+<span id="cb12-5"><a href="introduction-to-r.html#cb12-5"></a><span class="co"># make the data and &quot;model&quot; the mean and sd</span></span>
+<span id="cb12-6"><a href="introduction-to-r.html#cb12-6"></a>d &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-7"><a href="introduction-to-r.html#cb12-7"></a><span class="st">  </span><span class="kw">group_by</span>(cyl) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-8"><a href="introduction-to-r.html#cb12-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(mpg), <span class="dt">sd =</span> <span class="kw">sd</span>(mpg)) </span></code></pre></div>
+<p><strong>What it does</strong> This code adds a column summarizing the mean and sd of mpg for cars with different numbers of cylinders. We also have a new symbol <code>%&gt;%</code> called a “pipe”. You can either type it directly or use a shortcut <em>ctrl-shift-m</em>. Think of it as a way of telling R “and then…”.</p>
+<p>In sentence form, the code is saying this.</p>
+<p><code>d &lt;- mtcars %&gt;%</code></p>
+<p><em>create a data frame called d that contains all of the data that are in mtcars <strong>and then</strong>…</em></p>
+<p><code>group_by(cyl) %&gt;%</code></p>
+<p><em>assign each type of cylinder to a group <strong>and then</strong>…</em></p>
+<p><code>mutate(mean = mean(mpg), sd = sd(mpg))</code></p>
+<p><em>create a new column called mean that contains the mean mpg’s for each type of cylinder. Also create a new column called sd that contains the standard deviation for each type of cylinder</em></p>
+<p><strong>Did it work?</strong> Check the columns again with <code>str()</code>. Do you see the columns mean and sd now? Do you see the odd addendum that starts with “-attr(*,”groups“)…”? If so, then it worked.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction-to-r.html#cb13-1"></a><span class="kw">str</span>(d)</span></code></pre></div>
+<pre><code>## tibble [32 x 13] (S3: grouped_df/tbl_df/tbl/data.frame)
+##  $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl : num [1:32] 6 6 4 6 8 6 8 4 4 6 ...
+##  $ disp: num [1:32] 160 160 108 258 360 ...
+##  $ hp  : num [1:32] 110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat: num [1:32] 3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##  $ wt  : num [1:32] 2.62 2.88 2.32 3.21 3.44 ...
+##  $ qsec: num [1:32] 16.5 17 18.6 19.4 17 ...
+##  $ vs  : num [1:32] 0 0 1 1 0 1 0 1 1 1 ...
+##  $ am  : num [1:32] 1 1 1 0 0 0 0 0 0 0 ...
+##  $ gear: num [1:32] 4 4 4 3 3 3 3 4 4 4 ...
+##  $ carb: num [1:32] 4 4 1 1 2 1 4 2 2 4 ...
+##  $ mean: num [1:32] 19.7 19.7 26.7 19.7 15.1 ...
+##  $ sd  : num [1:32] 1.45 1.45 4.51 1.45 2.56 ...
+##  - attr(*, &quot;groups&quot;)= tibble [3 x 2] (S3: tbl_df/tbl/data.frame)
+##   ..$ cyl  : num [1:3] 4 6 8
+##   ..$ .rows: list&lt;int&gt; [1:3] 
+##   .. ..$ : int [1:11] 3 8 9 18 19 20 21 26 27 28 ...
+##   .. ..$ : int [1:7] 1 2 4 6 10 11 30
+##   .. ..$ : int [1:14] 5 7 12 13 14 15 16 17 22 23 ...
+##   .. ..@ ptype: int(0) 
+##   ..- attr(*, &quot;.drop&quot;)= logi TRUE</code></pre>
+<p><strong>Things to check if it doesn’t work</strong></p>
+<ul>
+<li>Did you load the library <code>library(tidyverse)</code>? The pipes <code>%&gt;%</code> only work if the <em>tidyverse</em> package is loaded.</li>
+<li>Did you misspell anything?</li>
+<li>Did you type out “cylinders” instead of using “cyl”? Computers don’t know those are related.</li>
+<li>Did you add a capital letter somewhere?</li>
+<li>Did you hit <em>enter</em> instead of <em>ctrl-enter</em>?</li>
+<li>Is there a space in the arrow <code>&lt; -</code> or the pipes <code>% &gt;%</code>? There shouldn’t be.</li>
+<li>Did you put the package in quotes when calling the <code>library()</code> function: <code>library("tidyverse")</code>?</li>
+</ul>
+<p><strong>Challenges</strong></p>
+<ul>
+<li>Summarize mpg by the number of gears instead of cylinders</li>
+<li>Add a column that calculates the median in addition to the mean and sd</li>
+</ul>
+<p><strong>4) Plotted miles per gallon as a function of cylinders as raw data.</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introduction-to-r.html#cb15-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb15-2"><a href="introduction-to-r.html#cb15-2"></a><span class="co">#load a package</span></span>
+<span id="cb15-3"><a href="introduction-to-r.html#cb15-3"></a><span class="kw">library</span>(tidyverse) </span>
+<span id="cb15-4"><a href="introduction-to-r.html#cb15-4"></a></span>
+<span id="cb15-5"><a href="introduction-to-r.html#cb15-5"></a><span class="co"># make the data and &quot;model&quot; the mean and sd</span></span>
+<span id="cb15-6"><a href="introduction-to-r.html#cb15-6"></a>d &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-7"><a href="introduction-to-r.html#cb15-7"></a><span class="st">  </span><span class="kw">group_by</span>(cyl) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-8"><a href="introduction-to-r.html#cb15-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(mpg), <span class="dt">sd =</span> <span class="kw">sd</span>(mpg)) </span>
+<span id="cb15-9"><a href="introduction-to-r.html#cb15-9"></a></span>
+<span id="cb15-10"><a href="introduction-to-r.html#cb15-10"></a><span class="co">#plot the data</span></span>
+<span id="cb15-11"><a href="introduction-to-r.html#cb15-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
+<span id="cb15-12"><a href="introduction-to-r.html#cb15-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><strong>What it does</strong> This code uses the powerful plotting package called <strong>ggplot2</strong> <span class="citation">(Wickham 2016)</span>. It included when you installed the tidyverse. The “gg” stands for “The Grammar of Graphics” [<span class="citation">(<span class="citeproc-not-found" data-reference-id="wilkinson"><strong>???</strong></span>)</span>)_2012-_grammar], a fundamental set of principles for producing just about any plot you can think of (and rules for why some types of plots are better than others).</p>
+<p>Making anything with ggplot2 usually requires at least two things: 1) a call to <code>ggplot(...)</code> where we specify the data along with the x and y axes or other aesthetics, and 2) a call to <code>geom_…</code>, where we tell ggplot2 how to plot the data. There are lots of geoms, as you can see in this cheatsheet (<a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf</a>). For most practices in this book, we will use <code>geom_point()</code>, which simply adds a dot for each x-y coordinate that we specified in the <code>aes()</code> function.</p>
+<p>Once we have our base plot, everything else is added with <code>+</code>. This can be a point of confusion. The <code>+</code> has a similar meaning as the pipe <code>%&gt;%</code>, but ggplot2 only uses <code>+</code>. Accidentally typing <code>%&gt;%</code> instead of <code>+</code> is a common mistake even for experienced coders (like authors of textbooks about data analysis).</p>
+<p>You can see the iterative nature of ggplot by breaking it down further, adding one thing at a time.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="introduction-to-r.html#cb16-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb16-2"><a href="introduction-to-r.html#cb16-2"></a><span class="co">#load a package</span></span>
+<span id="cb16-3"><a href="introduction-to-r.html#cb16-3"></a><span class="kw">library</span>(tidyverse) </span>
+<span id="cb16-4"><a href="introduction-to-r.html#cb16-4"></a></span>
+<span id="cb16-5"><a href="introduction-to-r.html#cb16-5"></a><span class="co"># make the data and &quot;model&quot; the mean and sd</span></span>
+<span id="cb16-6"><a href="introduction-to-r.html#cb16-6"></a>d &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb16-7"><a href="introduction-to-r.html#cb16-7"></a><span class="st">  </span><span class="kw">group_by</span>(cyl) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb16-8"><a href="introduction-to-r.html#cb16-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(mpg), <span class="dt">sd =</span> <span class="kw">sd</span>(mpg)) </span>
+<span id="cb16-9"><a href="introduction-to-r.html#cb16-9"></a></span>
+<span id="cb16-10"><a href="introduction-to-r.html#cb16-10"></a><span class="co">#Create a placeholder for a plot</span></span>
+<span id="cb16-11"><a href="introduction-to-r.html#cb16-11"></a><span class="kw">ggplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="introduction-to-r.html#cb17-1"></a><span class="co">#Assign the data frame d to the plot</span></span>
+<span id="cb17-2"><a href="introduction-to-r.html#cb17-2"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-2.png" width="672" /></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="introduction-to-r.html#cb18-1"></a><span class="co">#Assign the aesthetics</span></span>
+<span id="cb18-2"><a href="introduction-to-r.html#cb18-2"></a><span class="co">#Put numbers from the column cyl on the x</span></span>
+<span id="cb18-3"><a href="introduction-to-r.html#cb18-3"></a><span class="co">#For each value of cyl on the x, add the corresponding value from the mpg column</span></span>
+<span id="cb18-4"><a href="introduction-to-r.html#cb18-4"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-3.png" width="672" /></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="introduction-to-r.html#cb19-1"></a><span class="co">#Tell ggplot how to plot the x-y values with a geom.</span></span>
+<span id="cb19-2"><a href="introduction-to-r.html#cb19-2"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
+<span id="cb19-3"><a href="introduction-to-r.html#cb19-3"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-4.png" width="672" /></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introduction-to-r.html#cb20-1"></a><span class="co">#Change the default shape of the dots</span></span>
+<span id="cb20-2"><a href="introduction-to-r.html#cb20-2"></a><span class="co">#Any number from 1-25 will produce a different shape. (http://www.cookbook-r.com/Graphs/Shapes_and_line_types/)</span></span>
+<span id="cb20-3"><a href="introduction-to-r.html#cb20-3"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
+<span id="cb20-4"><a href="introduction-to-r.html#cb20-4"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-5.png" width="672" /></p>
+<p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
+<p><strong>Things to check if it doesn’t work</strong></p>
+<ul>
+<li>Did you leave a hanging plus <code>+</code> at the end of the code? If so, remove it.</li>
+<li>Did you write <code>ggplot2()</code> instead of <code>ggplot()</code>?</li>
+<li>Did you remember to assign the x and y axes within the <code>aes()</code> function?</li>
+<li>Did you put a pipe <code>%&gt;%</code> instead of a plus <code>+</code>?</li>
+<li>Did you misspell anything?</li>
+<li>Did you type out “cylinders” instead of using “cyl”? R doesn’t know those are related.</li>
+<li>Did you add a capital letter somewhere?</li>
+<li>Did you hit <em>enter</em> instead of <em>ctrl-enter</em>?</li>
+<li>Is there a space in the arrow <code>&lt; -</code> or the pipes <code>% &gt;%</code>? There shouldn’t be.</li>
+<li>Did you put the package in quotes when calling the <code>library()</code> function: <code>library("tidyverse")</code>?</li>
+<li>Did you load the library <code>library(tidyverse)</code>? The pipes <code>%&gt;%</code> only work if the tidyverse package is loaded.</li>
+</ul>
+<p><strong>Challenges</strong></p>
+<ul>
+<li>Assign a different y variable</li>
+<li>Change the shape</li>
+<li>In addition to shape, make the colors green (HINT: see the cheatsheet (<a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf</a>))</li>
+</ul>
+<p><strong>5) Added a mean and standard deviation to the plot.</strong></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introduction-to-r.html#cb21-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb21-2"><a href="introduction-to-r.html#cb21-2"></a><span class="co">#load a package</span></span>
+<span id="cb21-3"><a href="introduction-to-r.html#cb21-3"></a><span class="kw">library</span>(tidyverse) </span>
+<span id="cb21-4"><a href="introduction-to-r.html#cb21-4"></a></span>
+<span id="cb21-5"><a href="introduction-to-r.html#cb21-5"></a><span class="co"># make the data and &quot;model&quot; the mean and sd</span></span>
+<span id="cb21-6"><a href="introduction-to-r.html#cb21-6"></a>d &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-7"><a href="introduction-to-r.html#cb21-7"></a><span class="st">  </span><span class="kw">group_by</span>(cyl) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb21-8"><a href="introduction-to-r.html#cb21-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(mpg), <span class="dt">sd =</span> <span class="kw">sd</span>(mpg)) </span>
+<span id="cb21-9"><a href="introduction-to-r.html#cb21-9"></a></span>
+<span id="cb21-10"><a href="introduction-to-r.html#cb21-10"></a><span class="co">#plot the data</span></span>
+<span id="cb21-11"><a href="introduction-to-r.html#cb21-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
+<span id="cb21-12"><a href="introduction-to-r.html#cb21-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) <span class="op">+</span></span>
+<span id="cb21-13"><a href="introduction-to-r.html#cb21-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><strong>What it does</strong> The new geom <code>geom_pointrange()</code> adds the mean and standard deviation to the plot. If we only typed <code>geom_pointrange()</code>, it wouldn’t work. That’s because the geom requires three values that we haven’t assigned yet: y, ymin, and ymax. In this case, we want y to be the mean of each group. We want the error bar to range from ymin to ymax. ymin is the mean minus the standard deviation for each group mean-sd. ymax is the mean plus the standard deviation mean+sd. With those values, ggplot draws a line from ymin to ymax.</p>
+<p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
+<p><strong>Things to check if it doesn’t work</strong></p>
+<ul>
+<li>Did you leave a hanging plus <code>+</code> at the end of the code? If so, remove it.</li>
+<li>Did you write <code>ggplot2()</code> instead of <code>ggplot()</code>?</li>
+<li>Did you remember to assign the x and y axes within the <code>aes()</code> function?</li>
+<li>Did you put a pipe <code>%&gt;%</code> instead of a plus <code>+</code>?</li>
+<li>Did you misspell anything?</li>
+<li>Did you type out “cylinders” instead of using “cyl”? R doesn’t know those are related.</li>
+<li>Did you add a capital letter somewhere?</li>
+<li>Did you hit enter instead of ctrl-enter?</li>
+<li>Is there a space in the arrow <code>&lt; -</code> or the pipes <code>% &gt;%</code>? There shouldn’t be.</li>
+<li>Did you put the package in quotes when calling the <code>library()</code> function: <code>library("tidyverse")</code>?</li>
+<li>Did you load the library <code>library(tidyverse)</code>? The pipes <code>%&gt;%</code>only work if the tidyverse package is loaded.</li>
+</ul>
+<p><strong>6) Modified the axis names.</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introduction-to-r.html#cb22-1"></a><span class="co">#Copy this code, paste it in your script, and run it.</span></span>
+<span id="cb22-2"><a href="introduction-to-r.html#cb22-2"></a><span class="co">#load a package</span></span>
+<span id="cb22-3"><a href="introduction-to-r.html#cb22-3"></a><span class="kw">library</span>(tidyverse) </span>
+<span id="cb22-4"><a href="introduction-to-r.html#cb22-4"></a></span>
+<span id="cb22-5"><a href="introduction-to-r.html#cb22-5"></a><span class="co"># make the data and &quot;model&quot; the mean and sd</span></span>
+<span id="cb22-6"><a href="introduction-to-r.html#cb22-6"></a>d &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb22-7"><a href="introduction-to-r.html#cb22-7"></a><span class="st">  </span><span class="kw">group_by</span>(cyl) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb22-8"><a href="introduction-to-r.html#cb22-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(mpg), <span class="dt">sd =</span> <span class="kw">sd</span>(mpg)) </span>
+<span id="cb22-9"><a href="introduction-to-r.html#cb22-9"></a></span>
+<span id="cb22-10"><a href="introduction-to-r.html#cb22-10"></a><span class="co">#plot the data</span></span>
+<span id="cb22-11"><a href="introduction-to-r.html#cb22-11"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> d, <span class="kw">aes</span>(<span class="dt">x =</span> cyl,<span class="dt">y =</span> mpg)) <span class="op">+</span></span>
+<span id="cb22-12"><a href="introduction-to-r.html#cb22-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape =</span> <span class="dv">21</span>) <span class="op">+</span></span>
+<span id="cb22-13"><a href="introduction-to-r.html#cb22-13"></a><span class="st">  </span><span class="kw">geom_pointrange</span>(<span class="kw">aes</span>(<span class="dt">y =</span> mean, <span class="dt">ymin =</span> mean<span class="op">-</span>sd, <span class="dt">ymax =</span> mean<span class="op">+</span>sd)) <span class="op">+</span></span>
+<span id="cb22-14"><a href="introduction-to-r.html#cb22-14"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Miles Per Gallon&quot;</span>,</span>
+<span id="cb22-15"><a href="introduction-to-r.html#cb22-15"></a>       <span class="dt">x =</span> <span class="st">&quot;Cylinders&quot;</span>) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><strong>What it does</strong> The function <code>labs()</code> replaces the title of the x and y axis with whatever we put in quotes.</p>
+<p><strong>Did it work?</strong> The plot above should appear in the plot window (lower right).</p>
+<p><strong>Things to check if it doesn’t work</strong></p>
+<ul>
+<li>Did you remember the comma?</li>
+<li>Did you switch the x and y?</li>
+<li>Did you leave a hanging plus + at the end of the code? If so, remove it.</li>
+<li>Did you write <code>ggplot2()</code> instead of <code>ggplot()</code>?</li>
+<li>Did you remember to assign the x and y axes within the <code>aes()</code> function?</li>
+<li>Did you put a pipe <code>%&gt;%</code> instead of a plus <code>+</code>?</li>
+<li>Did you misspell anything?</li>
+<li>Did you type out “cylinders” instead of using “cyl”? R doesn’t know those are related.</li>
+<li>Did you add a capital letter somewhere?</li>
+<li>Did you hit enter instead of ctrl-enter?</li>
+<li>Is there a space in the arrow <code>&lt; -</code> or the pipes <code>% &gt;%</code>? There shouldn’t be.</li>
+<li>Did you put the package in quotes when calling the <code>library()</code> function: <code>library("tidyverse")</code>?</li>
+<li>Did you load the library <code>library(tidyverse)</code>? The pipes <code>%&gt;%</code> only work if the tidyverse package is loaded.</li>
+</ul>
+<p><strong>Challenges</strong></p>
+<ul>
+<li>Rename the x and y axes</li>
+<li>Add a title within the <code>labs()</code> function using <code>title = "put your title here"</code></li>
+</ul>
+</div>
+<div id="importing-your-own-data-to-rstudio" class="section level3" number="4.5.7">
+<h3><span class="header-section-number">4.5.7</span> Importing your own data to RStudio</h3>
+<p>To <strong>get your own data into R</strong>, first save the data into the same folder as your project.</p>
+<p>Look in the lower right panel of RStudio. Click on “Files”. Do you see the data set you saved? Click on it and choose Import Dataset….</p>
+<p>Like this:</p>
+<p><img src="images/import_example.png" /></p>
+<p>After you click Import Dataset…., you’ll see a preview of your data set like this:</p>
+<p><img src="images/import_button.png" /> Stop here and check the preview. Does everything look right? Are the column names correct? If not, you might need to check the box for “First Rows as Names” on the lower left.</p>
+<p>From here, you have two options. 1) Click “Import”, or 2) Copy the code in the Preview Code box, cancel the preview, and paste the code into your script. We strongly recommend the second option.</p>
+<p>Clicking will work, but if you come back to your script and need to reload the data, you’ll have to do this process again. If you instead copy the code and paste it into your script, then your code becomes self-contained and you won’t forget any steps in the future.</p>
+<p>Here is where you can copy from. We don’t copy the <code>View()</code> part, but you can if you want:</p>
+<p><img src="images/copy_import_code.png" /></p>
+<p>Then paste it at the beginning of your script and run it. Our data set is called <em>continents</em>. Yours will probably be different, though.</p>
+<p><img src="images/copy_import_code_pasted.png" /></p>
+<p>Do you see the name of your data set in the upper right panel? If so, success! If not, re-try the steps above or ask your instructor. You are now ready to practice the coding you’ve learned on your own data set.</p>
+</div>
+</div>
+<div id="why-to-code-instead-of-click" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Why to Code Instead of Click</h2>
+<p>R is a programming language, which means that it can only do what you tell it to do by typing. RStudio has a few clickable shortcuts, but it still requires nearly everything to be typed into a script.</p>
+<p>There are other programs that conduct statistical and graphical analyses without using code. We choose to use R instead for several reasons.</p>
+<p><strong>Clicking Isn’t Actually Easier</strong></p>
+<p>Undergraduates are incredibly savvy with some aspects of computers, particularly in nagivating social media platforms. But in our experience, students often struggle with even rudimentary tasks in programs that professors think are easy, such as Microsoft Excel or SPSS. These programs have their own bewildering array of shortcuts and buttons <span class="citation">(Nash 2008)</span>. For example, while this Excel function might make perfect sense to a seasoned user</p>
+<p>=STDEV.P(A$1:A$7)</p>
+<p>it can be just as confusing to a new student as the similar function in R <code>sd(data$column)</code>.</p>
+<p>Similarly, while it may seem easier to run an ANOVA in SPSS by simply clicking the ANOVA button, this too is often misleading. Having helped students that are part way through a project in SPSS or other clickable programs, we almost always have to start their entire analysis over when a problem arises. The reason is that, by the time the ANOVA button is clicked, there have already been a series of steps in data preparation and uploading that might have generated a problem. In R, we can find these problems easily, because the script leaves a breadcrumb trail of each step. In non-scripting programs, there are no breadcrumbs, so solving the problem becomes much more complicated. And no matter what program you use or how simple your data seems, there will be problems to solve.</p>
+<p><strong>Data Ethics</strong></p>
+<p>A basic requirement in modern science is that the results of scientific findings could be reproduced by someone else. There are two levels to this. The <strong>first level of reproducibility</strong> is the description of the experimental approach, which is contained in a Methods section in a scientific publication. This ensures that someone else could read a Methods section and reproduce the steps of the experiment exactly without having to ask the author (who may no longer be alive or just doesn’t respond to email).</p>
+<p>The <strong>second level of reproducibility</strong> is in the analysis of a data set presented in a scientific publication. All analyses involve myriad human decisions. For example, what do we do with outliers (extreme data values that may be real or may be a result of data entry error or errors in the instruments)? What if half of our fish died in the middle of an experiment? Should we replace them with new ones? There are no easy answers to these questions. Each experiment has its own quirks and they will all involve subjective decisions by the scientist.</p>
+<p>What do we do about these subjective decisions? The golden rule is to be transparent about them. First, describe them in the Methods and provide a justification for them. Second, always include a way for readers to easily find the raw data and any scripts. This is where using computer code over clicking makes a huge difference. If the raw data and script are available, then it is simple for someone else to run the analysis later and see the decisions you made about the data quirks. Different scientists will make different decisions about each of those quirks. The most important thing is not which decision is made <em>per se</em>, but that the trail of breadcrumbs exists to <em>allow</em> a decision to be transparent.</p>
+<p>That may seem a little daunting. It is scary to have someone else see all of your decisions. But here’s the actual truth: The person who will benefit most from your transparent data and code is not another scientist. <strong>It is you</strong>. In two days, two months, or two years, you will eventually have to return to an old analysis. You’ll need it to wrap up that semester’s term paper or reanalyze something from your thesis. You will NOT NOT NOT NOT NOT remember what you have done, no matter how obvious it seemed when you were doing it. For that reason, having script that is reproducible will save you hours, maybe weeks, of otherwise wasted time. Trust us…just trust us.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Except for JR, an English professor who doesn’t understand any of this. We assume he is currently pontificating about the literary importance of using <em>salve</em> versus <em>halve</em> in the writings of Chaucer (who uses neither word). JR has a large collection of feathered pens and prefers to write on low gloss paper sourced from the Pacific Northeast.<a href="introduction-to-r.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-structure-of-scientific-writing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="thinking-quantitatively.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

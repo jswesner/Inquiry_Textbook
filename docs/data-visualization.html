@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="thinking-quantitatively.html"/>
-
+<link rel="next" href="finding-the-literature.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -197,6 +197,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.2" data-path="data-visualization.html"><a href="data-visualization.html#best-practices"><i class="fa fa-check"></i><b>6.1.2</b> Best Practices</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="finding-the-literature.html"><a href="finding-the-literature.html"><i class="fa fa-check"></i><b>7</b> Finding the Literature</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="overview.html"><a href="overview.html#learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="finding-the-literature.html"><a href="finding-the-literature.html#peer-review"><i class="fa fa-check"></i><b>7.2</b> Peer Review</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="finding-the-literature.html"><a href="finding-the-literature.html#what-it-is"><i class="fa fa-check"></i><b>7.2.1</b> What it is</a></li>
+<li class="chapter" data-level="7.2.2" data-path="finding-the-literature.html"><a href="finding-the-literature.html#what-it-isnt"><i class="fa fa-check"></i><b>7.2.2</b> What it isn’t</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="finding-the-literature.html"><a href="finding-the-literature.html#primary-versus-secondary-versus-whatever-you-just-googled."><i class="fa fa-check"></i><b>7.3</b> Primary versus Secondary versus whatever you just Googled.</a></li>
+<li class="chapter" data-level="7.4" data-path="finding-the-literature.html"><a href="finding-the-literature.html#is-this-a-primary-or-secondary-paper"><i class="fa fa-check"></i><b>7.4</b> Is this a primary or secondary paper?</a></li>
+<li class="chapter" data-level="7.5" data-path="finding-the-literature.html"><a href="finding-the-literature.html#why-does-it-matter"><i class="fa fa-check"></i><b>7.5</b> Why does it matter?</a></li>
+<li class="chapter" data-level="7.6" data-path="finding-the-literature.html"><a href="finding-the-literature.html#you-do-not-need-to-pay-for-journal-articles"><i class="fa fa-check"></i><b>7.6</b> You do not need to pay for journal articles</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -236,8 +249,8 @@ Edward Tufte - The Visual Display of Quantitative Information
 <p>We might consider these “high-level” guideposts to data visualization. It is tempting to think of this advice as applying only to modern scientific approaches, since anyone can create a graph on a computer. But Tufte’s book is almost 40 years old. It is a masterpiece of data visualization that is as relevant today as it was in 1983. Tufte includes examples that extend back centuries. The principles that we try to apply in this book are not new. They are simply extensions of a long history of the study of how to best display data.</p>
 <p>On a more fundamental level, we want to first focus on the basic components of common graphs.</p>
 <p>A <strong>graph</strong> is a like a map whose coordinates are defined by cells in a table. It typically contains a vertical <strong>y-axis</strong> and a horizontal <strong>x-axis</strong>. The data are added to the graph by reading reading from columns in a table. In the example below, the data table has two columns corresponding to location data (lat = latitude, long = longitude). It is easy to see how this information would “map” to coordinates on a graph. The x-coordinates would be longitude and the y-coordinates would be latitude. Each pair of x-y coordinates would be a dot. Like this:</p>
-<div class="figure"><span id="fig:unnamed-chunk-41"></span>
-<img src="_main_files/figure-html/unnamed-chunk-41-1.png" alt="a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context." width="1536" />
+<div class="figure"><span id="fig:unnamed-chunk-30"></span>
+<img src="_main_files/figure-html/unnamed-chunk-30-1.png" alt="a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context." width="1536" />
 <p class="caption">
 Figure 6.1: a) First six rows of data, b) The same data plotted on an x-y coordinate with latitude (lat) on the y-axis and longitude (long) on the x-axis, c) The same plot, but with polygons of US States added for context.
 </p>
@@ -254,8 +267,8 @@ Figure 6.1: a) First six rows of data, b) The same data plotted on an x-y coordi
 <p><strong>shapes</strong> - Used to distinguish different groups of data. Can be used to represent a separate response variable.</p>
 <p><strong>lines</strong> - Often used to show trends in the data.</p>
 <p>These basic components form an enormous array of visualizations. Here’s an example using the <em>iris</em> data set, which gives measures of flowers for three different species. It is included with R.</p>
-<div class="figure"><span id="fig:unnamed-chunk-42"></span>
-<img src="_main_files/figure-html/unnamed-chunk-42-1.png" alt="a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species." width="1152" />
+<div class="figure"><span id="fig:unnamed-chunk-31"></span>
+<img src="_main_files/figure-html/unnamed-chunk-31-1.png" alt="a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species." width="1152" />
 <p class="caption">
 Figure 6.2: a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species.
 </p>
@@ -265,7 +278,7 @@ Figure 6.2: a) First six rows of the iris data set, b) Scatterplot of the iris d
 </div>
 <div id="best-practices" class="section level3" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> Best Practices</h3>
-<p>We see bad graphs all the time, from scientists at all levels (undergrad to Professor). Here are some common ways to make a bad graph.</p>
+<p>We see bad graphs all the time from scientists at all levels (undergrad to Professor). Here are some common ways to make a bad graph.</p>
 <p><strong>Recipe for a bad graph</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Make the font really small</p></li>
@@ -284,9 +297,19 @@ Figure 6.2: a) First six rows of the iris data set, b) Scatterplot of the iris d
 </ol>
 <p>These simple steps will not ensure a good graph, but they will ensure that your graph is readable in its final form. Here’s a comparison:</p>
 <p><strong>Bad Graph</strong></p>
-<p><img src="images/bad_plot.jpg" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-32"></span>
+<img src="images/bad_plot.jpg" alt="Bad graph. Corners are stretched. Everything is blurry. Text is too small." width="70%" />
+<p class="caption">
+Figure 6.3: Bad graph. Corners are stretched. Everything is blurry. Text is too small.
+</p>
+</div>
 <p><strong>Better Graph</strong></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-33"></span>
+<img src="_main_files/figure-html/unnamed-chunk-33-1.png" alt="Better graph. Text is readable. Axis units are defined. Nothing is blurred. Colors are colorblind friendly." width="70%" />
+<p class="caption">
+Figure 6.4: Better graph. Text is readable. Axis units are defined. Nothing is blurred. Colors are colorblind friendly.
+</p>
+</div>
 <p>These are the same data sets in two different graphs. The first one violates most of the rules for a bad graph (or follows most of the rules, I guess). The second one is better. It isn’t pixelated and the text isn’t stretched. The colors are visible even to a colorblind person (using <code>scale_color_colorblind()</code> from the <em>ggthemes</em> package). The axis labels are a bit more informative, giving the units for the sepal widths and lengths.</p>
 <p>While this may seem like a trivial and obvious comparison, the first version is one we see all the time in student papers, and even in manuscripts submitted by PhDs. The easiest way to avoid this problem is to take the following steps:</p>
 <ol style="list-style-type: decimal">
@@ -298,7 +321,14 @@ Figure 6.2: a) First six rows of the iris data set, b) Scatterplot of the iris d
 </ol>
 <p>Using <em>ggplot</em> in R, we can save a high resolution version of our graph with the <code>ggsave()</code> function.</p>
 <p><strong>Saving a high resolution graph</strong></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="data-visualization.html#cb27-1"></a><span class="co">#make a plot with the built-in R dataset mtcars</span></span>
+<span id="cb27-2"><a href="data-visualization.html#cb27-2"></a>my_graph &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> mtcars, <span class="kw">aes</span>(<span class="dt">x =</span> mpg, <span class="dt">y =</span> wt)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span>
+<span id="cb27-3"><a href="data-visualization.html#cb27-3"></a></span>
+<span id="cb27-4"><a href="data-visualization.html#cb27-4"></a><span class="co">#View the plot in R</span></span>
+<span id="cb27-5"><a href="data-visualization.html#cb27-5"></a>my_graph</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-visualization.html#cb28-1"></a><span class="co">#Save the plot as a .jpg to our working directory</span></span>
+<span id="cb28-2"><a href="data-visualization.html#cb28-2"></a><span class="kw">ggsave</span>(my_graph, <span class="dt">file =</span> <span class="st">&quot;my_graph.jpg&quot;</span>, <span class="dt">dpi =</span> <span class="dv">500</span>, <span class="dt">width =</span> <span class="dv">6</span>, <span class="dt">height =</span> <span class="dv">6</span>, <span class="dt">units =</span> <span class="st">&quot;in&quot;</span>)</span></code></pre></div>
 <p>The code above makes a graph called “my_graph”, calls the graph in R to view it, and then saves it as a .jpg with the <code>ggsave()</code> function. The <code>ggsave()</code> function has several options</p>
 <p><strong>image type</strong> - By adding “.jpg” to the end of our graph name in the <code>file = …</code> statement, we are creating a .jpg. To create a .png, just add “.png” instead. <code>ggsave()</code> can create 10 different file types - .png, .eps, .ps, .tex, .pdf, .jpg, .tiff, .bmp, .svg, or .wmf. Choose the one that works best for you.</p>
 <p><strong>dpi</strong> - dots per inch. The higher then number, the higher the resolution. However, increasing dpi also increases the file-size of your plot, which can make things really slow depending on your computer. A dpi of 500 or 600 is good for nearly all uses.</p>
@@ -306,36 +336,16 @@ Figure 6.2: a) First six rows of the iris data set, b) Scatterplot of the iris d
 <p><strong>height</strong> - This sets the height of your graph.</p>
 <p><strong>units</strong> - This sets the units for width and height. We put <code>units = "in"</code> above, which means that we’re saving this graph to an expected size of 6x6 inches. If we set units to “cm”, then it would be 6x6 cm and so on. Pick whatever measurement unit you are most comfortable with. We like inches because it is easy to imagine what a 6x6 inch graph would look like on a standard piece of 8x11.5 in paper. And because we grew up in the US, so the metric system is not as intuitive for us.</p>
 
-<div id="refs" class="references hanging-indent">
-<div>
-<p>Nash, John C. 2008. “Teaching Statistics with Excel 2007 and Other Spreadsheets.” <em>Computational Statistics &amp; Data Analysis</em> 52 (10): 4602–6. <a href="https://doi.org/10.1016/j.csda.2008.03.008">https://doi.org/10.1016/j.csda.2008.03.008</a>.</p>
-</div>
-<div>
-<p>Tufte, Edward R, and Peter R Graves-Morris. 1983. <em>The Visual Display of Quantitative Information</em>. Vol. 2. 9. Graphics press Cheshire, CT.</p>
-</div>
-<div>
-<p>Wesner, Jeff S, Dan Van Peursem, Jose Flores, Yuhlong Lio, and Chelsea Wesner. 2020. “Forecasting Hospitalizations Due to COVID-19 in South Dakota, USA.” <em>medRxiv</em>.</p>
-</div>
-<div>
-<p>Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the Tidyverse.” <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="thinking-quantitatively.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="thinking-quantitatively.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="finding-the-literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

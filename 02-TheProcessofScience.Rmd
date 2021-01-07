@@ -10,7 +10,7 @@
 
 > If you want to study the effect of bloodletting on a condition, divide the patients into two groups, perform bloodletting only on one group, watch both, and compare the results. `r tufte::quote_footer('Al-Razi (Rhazes) 865 – 925 AD')`
 
-Does this quote, more than 1000 years old, represent the scientific method? You are likely aware of the basic components of the scientific method:
+Does this quote, more than 1000 years old, represent the scientific method? You are likely aware of the basic components of the **scientific method**:
 
 -   *Make an observation*
 -   *Pose a question*
@@ -46,6 +46,6 @@ Scientific disciplines can seem stilting. Each branch of science is full of jarg
 
 ## Science Communication is Hard
 
-Because science requires us to focus on the nitpicky details, it can often feel bland and formulaic, especially when reading the scientific literature. But there is also a benefit to having to constantly explain and justify your decisions as a scientist. First, it helps *you* to understand what you've actually done. As a scientist, I (Wesner) am a poor note taker. I always think that I'll remember the temperature that I just recorded in tank 5. No need to get my notes wet now just to write down 23.5 degrees C. But I also know that a) I will most certainly have forgotten that number five minutes from now, and b) I will then have to explain why that number is missing from my data sheet in the paper that I'll write 5 months from now. How can someone trust that I collected the data rigorously if I have to write: *Data from tank 5 are missing because I forgot to write them down.*.
+Because science requires us to focus on the nitpicky details, science writing can often feel bland, formulaic, and overly detailed. But there is a benefit to having to constantly explain and justify your decisions as a scientist. First, it helps *you* to understand what you've actually done. As a scientist, I (Wesner) am a poor note taker. I always think that I'll remember the temperature that I just recorded in tank 5. No need to get my notes wet now just to write down 23.5 degrees C. But I also know that a) I will most certainly have forgotten that number five minutes from now, and b) I will then have to explain why that number is missing from my data sheet in the paper that I'll write 5 months from now. How can someone trust that I collected the data rigorously if I have to write: *Data from tank 5 are missing because I forgot to write them down.*.
 
 The other benefit of the details is that science writing has an egalitarian appeal to it. No matter how famous the scientist is, she cannot simply claim something as true without explaining the details. And on the flip side, no one is too junior to ask for proof. This requirement to document the details helps to prevent science from becoming overwhelmingly dictated by a few gatekeepers. That is not to say that science represents a utopia. Far, far from it. But requirements to "show your work" is one way to prevent it from becoming just another place where prestige and power matter more than truth.

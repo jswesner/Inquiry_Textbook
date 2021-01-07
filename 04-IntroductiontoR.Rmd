@@ -15,10 +15,6 @@ library(RefManageR)
 
 [Link to Lecture](https://docs.google.com/presentation/d/1VJUOzvqMubmcRoJWAklv6ZlwM5WydgO7vyAwgsnPYsk/edit?usp=sharing)
 
-Links to Tutorials
-
-[Importing data into R](https://rpubs.com/jwesner/530743) [Transforming data from wide to long format (Tidying)](https://rpubs.com/jwesner/530744) [Visualization](https://rpubs.com/jwesner/530745) [Model - linear regression](https://rpubs.com/jwesner/530746) [Model with merged data (merging two data sets and running a linear regression)](https://rpubs.com/jwesner/531334)
-
 ## R and RStudio
 
 So far we've discussed the nature of science and the structure of scientific papers. Now we're going to introduce a central method that is required of most modern science: scientific computing. It is almost impossible to conduct science without a computer, especially since we need to analyze data. We also need to store the data, organize it, plot it, summarize, and report it. Lots of tools do that. In this book, we use the computing software R [@R_core_team2020]. It is among the most popular programs for analyzing scientific data and it is designed specifically for the workflow we use in this book. It is also free. Here's how you get it.
@@ -27,15 +23,15 @@ So far we've discussed the nature of science and the structure of scientific pap
 
 2.  Download RStudio: (<https://rstudio.com/products/rstudio/download/#download>)
 
-All of the examples in this book are generated using R. Actually, that's not quite correct. While R is the workhorse, the examples in this book are generated through an interface to R called RStudio [@rstudio_2020].
+All of the examples in this book are generated using R. Actually, that's not quite correct. While R is the workhorse, the examples in this book are generated through an interface to R called RStudio [@rstudio_team_rstudio_2020].
 
 R looks like this: ![](images/Rlogo.svg){width="5%"} *Download only*
 
 RStudio looks like this: ![](images/rstudio_icon.png){width="5%"} *Download, open, and use*
 
-Once you've downloaded both programs, you'll only need to open RStudio. It automatically uses R in the background. It is possible to do everything only in base R, but we prefer RStudio as a more user-friendly interface.[^1]
+Once you've downloaded both programs, you'll only need to open RStudio. It automatically uses R in the background. It is possible to do everything only in base R, but we prefer RStudio as a more user-friendly interface.[^introductiontor-1]
 
-[^1]: Except for JR, an English professor who doesn't understand any of this. We assume he is currently pontificating about the literary importance of using *salve* versus *halve* in the writings of Chaucer (who uses neither word). JR has a large collection of feathered pens and prefers to write on low gloss paper sourced from the Pacific Northeast.
+[^introductiontor-1]: Except for JR, an English professor who doesn't understand any of this. We assume he is currently pontificating about the literary importance of using *salve* versus *halve* in the writings of Chaucer (who uses neither word). JR has a large collection of feathered pens and prefers to write on low gloss paper sourced from the Pacific Northeast.
 
 ## How to Use This Chapter
 
@@ -49,7 +45,17 @@ In other words, we expect students to have lots of questions in this new and unf
 
 However, there are lots of excellent R guides out there for students who are interested in learning more detail. Here are a few of our favorites:
 
-**R for Data Science** (free) - <https://r4ds.had.co.nz/> [@wickham2016r] **The R Book** [@crawley2012r] **Getting Started with R: An Introduction for Biologists** [@beckerman2017getting] **Data Visualization: A Practical Introduction** [@healy2018data] **dplyr and tidyr cheatsheets** - (<https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf>) **ggplot2 cheatsheet** - (<https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>)
+**R for Data Science** (free) - <https://r4ds.had.co.nz/> [@grolemund]
+
+**The R Book** [@crawley_r_2012]
+
+**Getting Started with R: An Introduction for Biologists** [@beckerman_getting_2017] **D**
+
+**ata Visualization: A Practical Introduction** [@healy_data_2018]
+
+**dplyr and tidyr cheatsheets** - (<https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf>)
+
+**ggplot2 cheatsheet** - (<https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>)
 
 ## Data Analysis Workflow
 
@@ -97,7 +103,7 @@ The window on the bottom left is the **Console**. It keeps a running list of all
 
 Click anywhere on the script window so that you see the flashing prompt. Type the code below and then type *ctrl+enter*. (NOTE: If you just hit enter without adding ctrl, it won't work. It will just move you to the next line. Get in the habit of typing *ctrl+enter* to run your code).
 
-```{r eval=FALSE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #type this and then hit ctrl+enter
 install.packages("tidyverse") # ctrl+enter
 ```
@@ -114,7 +120,7 @@ Now you are ready for the fun parts. To begin coding your first script, we are g
 
 Copy the code below and paste it in your script. Then run the code (by clicking *ctrl+enter* from the first line down). Do not try to interpret it yet. There is a lot going on here. We'll break it down next.
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse) 
@@ -152,7 +158,7 @@ Let's break the code down into individual components:
 
 **1) Loaded the *tidyverse* package.**
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse) 
@@ -171,7 +177,7 @@ library(tidyverse)
 
 **2) Created a data frame *d* that was a modified version of the data frame *mtcars*.**
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse)
@@ -187,7 +193,7 @@ The symbol `<-` is how we assign bits of code to objects in R. It's a combinatio
 
 Visually, the *d* in the Environment window is the only thing that will automatically show up if it worked. Another way to check is simply to view the data frame, like this:
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 head(d)
 ```
 
@@ -195,13 +201,13 @@ This shows a snapshot of the first few rows of the data frame that exists in the
 
 You can isolate individual columns:
 
-```{r}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 d %>% select(mpg, cyl) %>% head()
 ```
 
 Or check the types of columns:
 
-```{r}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 str(d)
 ```
 
@@ -221,7 +227,7 @@ This shows that the object *d* is a data frame with 32 observations (rows) of 11
 
 **3) Added two new columns to *d*: one containing the mean mpg for each type of cylinder and another containing the standard deviation.**
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse) 
@@ -250,7 +256,7 @@ In sentence form, the code is saying this.
 
 **Did it work?** Check the columns again with `str()`. Do you see the columns mean and sd now? Do you see the odd addendum that starts with "-attr(\*, "groups")..."? If so, then it worked.
 
-```{r}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 str(d)
 ```
 
@@ -271,7 +277,7 @@ str(d)
 
 **4) Plotted miles per gallon as a function of cylinders as raw data.**
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse) 
@@ -286,7 +292,7 @@ ggplot(data = d, aes(x = cyl,y = mpg)) +
   geom_point(shape = 21) 
 ```
 
-**What it does** This code uses the powerful plotting package called **ggplot2** [@ggplot2]. It included when you installed the tidyverse. The "gg" stands for "The Grammar of Graphics" [@wilkinson2012grammar], a fundamental set of principles for producing just about any plot you can think of (and rules for why some types of plots are better than others).
+**What it does** This code uses the powerful plotting package called **ggplot2** [@wickham_ggplot2_2016]. It included when you installed the tidyverse. The "gg" stands for "The Grammar of Graphics" [@wilkinson)_2012-_grammar], a fundamental set of principles for producing just about any plot you can think of (and rules for why some types of plots are better than others).
 
 Making anything with ggplot2 usually requires at least two things: 1) a call to `ggplot(...)` where we specify the data along with the x and y axes or other aesthetics, and 2) a call to `geom_…`, where we tell ggplot2 how to plot the data. There are lots of geoms, as you can see in this cheatsheet (<https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>). For most practices in this book, we will use `geom_point()`, which simply adds a dot for each x-y coordinate that we specified in the `aes()` function.
 
@@ -294,7 +300,7 @@ Once we have our base plot, everything else is added with `+`. This can be a poi
 
 You can see the iterative nature of ggplot by breaking it down further, adding one thing at a time.
 
-```{r}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse) 
@@ -349,7 +355,7 @@ ggplot(data = d, aes(x = cyl,y = mpg)) +
 
 **5) Added a mean and standard deviation to the plot.**
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse) 
@@ -385,7 +391,7 @@ ggplot(data = d, aes(x = cyl,y = mpg)) +
 
 **6) Modified the axis names.**
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #Copy this code, paste it in your script, and run it.
 #load a package
 library(tidyverse) 

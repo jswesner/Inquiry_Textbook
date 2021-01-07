@@ -97,7 +97,7 @@ Even though these graphs are for flowers and the previous graphs were for states
 
 ### Best Practices
 
-We see bad graphs all the time, from scientists at all levels (undergrad to Professor). Here are some common ways to make a bad graph.
+We see bad graphs all the time from scientists at all levels (undergrad to Professor). Here are some common ways to make a bad graph.
 
 **Recipe for a bad graph**
 
@@ -127,33 +127,15 @@ These simple steps will not ensure a good graph, but they will ensure that your 
 
 **Bad Graph**
 
-![](images/bad_plot.jpg)
+```{r, fig.cap = "Bad graph. Corners are stretched. Everything is blurry. Text is too small.", echo=FALSE, out.width = "70%", message=FALSE, warning=FALSE, paged.print=FALSE}
 
-```{r fig.height=8, fig.width=16, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+knitr::include_graphics("images/bad_plot.jpg")
 
-# library(imager)
-# library(cowplot)
-# library(here)
-# 
-# bad_plot <- load.image(here("images/bad_plot.jpg"))
-# 
-# bad_plot.df <- plot(bad_plot) %>% as.data.frame(wide = "c") %>% 
-#   mutate(rgb.val = rgb(c.1, c.2, c.2))
 ```
 
 **Better Graph**
 
-```{r echo=FALSE, fig.height=5, fig.width=7, message=FALSE, warning=FALSE, paged.print=FALSE}
-library(imager)
-library(cowplot)
-library(here)
-
-# bad <- ggplot(bad_plot.df, aes(x = x, y = y)) +
-#   geom_raster(aes(fill = rgb.val)) + 
-#   scale_fill_identity() +
-#   scale_y_reverse() +
-#   theme_void()
-
+```{r echo=FALSE, fig.cap = "Better graph. Text is readable. Axis units are defined. Nothing is blurred. Colors are colorblind friendly.", out.width = "70%", message=FALSE, warning=FALSE, paged.print=FALSE}
 
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
   geom_point(size = 3) +
@@ -184,7 +166,7 @@ Using *ggplot* in R, we can save a high resolution version of our graph with the
 
 **Saving a high resolution graph**
 
-```{r}
+```{r echo=TRUE}
 #make a plot with the built-in R dataset mtcars
 my_graph <- ggplot(data = mtcars, aes(x = mpg, y = wt)) + geom_point()
 
