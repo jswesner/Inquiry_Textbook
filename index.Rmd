@@ -2,18 +2,42 @@
 title: "Inquiry and Analysis in Biology"
 bibliography: "./bib/inquiry_textbook_all.bib"
 delete_merged_file: true
+author:
+  - Jeff Wesner, Ph.D., University of South Dakota, Department of Biology
+  - Joseph Raiche, Ph.D., University of South Dakota, Department of English
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+bookdown::gitbook:
+  config:
+    toc:
+      collapse: subsection
+cover-image: "images/book_cover.jpg"
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
 header-includes: #allows you to add in your own Latex packages
 - \usepackage{float} #use the 'float' package
 - \floatplacement{figure}{H} #make every figure with caption = h
-
 ---
 
-# Preface {.unnumbered}
+# Preface {-}
 
-```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html')}
-knitr::include_graphics('images/book_cover.jpg')
-```
+Erich Von Wolf, as the legend goes, was a German Chemist and researcher in the latter half of the 19th century who in 1870 “published” his findings on the iron content of several items including milk, beef, asparagus, and what has garnered far too much attention, spinach.
+ 
+The legend goes that when recording the iron content of spinach, he inadvertently moved the decimal point one space to the right. This caused a ten-fold increase in the reported iron content of the leafy green. 
+
+The error was left unchallenged until 1936. Seven years earlier the New York’s Evening Journal’s long running comic strip Thimble Theatre, debuted a new character: the often ill-mannered, uneducated, spinach loving, “iron” man, Popeye. In 1981, T.J. Hamblin argued in his article, “Fake,” appearing in the British Medical Journal that America’s increase in spinach consumption was due to the popularity of the comic that based its superfood on a transcription error. 
+
+That is how the legend goes.
+
+So, why should it matter to you?
+
+Science is the reason we “know” anything. In its simplest form, observation leads to inquiry which leads to experiment which leads to data which leads to understanding. If I see an orange light source that turns a fallen tree into a dark powder, I might be tempted to examine that light source closely. I want to know what it feels like, so I reach out to touch it. I quickly receive some data and come to the understanding that I should not do that again.
+
+Now, what good is my knowledge? 
+
+There are three ways I can use my knowledge. I can keep it for myself and build off of it to try and answer new questions. This, of course, leaves all others to similarly attempt the same test to access the same information. I can tell everyone that I encounter about the orange light source that hurt me; this shares the knowledge with a small group of people but does do some good. Finally, I can write it down thus sharing it with the entire scientific community. This mode of transmission does the most good (by saving the most hands). 
+
+Effectively transmitting information is one of the most important tools for any scientist. Once the information is gathered, processed, and conclusions drawn, the next step is to add it to the ongoing conversation that is scientific discourse. This conversation is millennia old and will continue in perpetuity. An effective contribution will help others by allowing them to understand the knowledge that has come before them so that they may move on to the next question, the next advancement, the next contribution.
+This book builds on the knowledge that students entering BIOL 280 have amassed in the writing courses they have taken up to this point. It does this in two separate, yet similarly important, ways. On one hand, this text will lay out in pragmatic terms the elements of, wait for it, Inquiry and Analysis in Biology. It is important that when someone is preparing work to submit, they have quick and straightforward access to the standards and expectations they are being held to. 
+
+On the other hand, for information to take root beyond the immediacy of the next paper to hand in, it is often just as important to understand why something is expected of them. Too many students endure years of, “the comma goes here,” or, “this is what the citation should look like,” which can be helpful in the short term but leaves them unprepared when a situation arises that is not exactly the same. This text will try to do both: “this is what the citation should look like, and here is why, so you can adapt in different situations.”
+

@@ -1,14 +1,14 @@
 # Finding the Literature
 
-## Learning Objectives
+## Peer Review
+
+**Learning Objectives**
 
 1.  Understand what peer review is and isn't.
 
 2.  Understand the different types of scientific papers.
 
 3.  Understand how to find relevant scientific literature.
-
-## Peer Review
 
 ### What it is
 
@@ -24,9 +24,9 @@ Once the paper is accepted, it will get assigned to a volume of the journal and 
 
 Peer review does not guarantee that a paper's results are correct. It means that at least a handful of other experts have read the paper an deemed it sufficient to be published in a journal. Getting published is no easy task in science. It is common for papers to get rejected from multiple journals before they are finally accepted, a process that can take years from the initial submission of the authors. Rejection doesn't mean that the work is not important. Consider Edward Jenner, who discovered vaccination against smallpox. He tried to publish his results in 1797, but the paper was rejected. Reviewers thought he needed more examples of his vaccination procedures (i.e. more replicates). He obtained them and later published his work in a journal a few years later [@riedel_edward_2005].
 
-Peer review does not guarantee that a published result is correct, either. In fact, many scientific ideas turn out to be wrong. This was famously reported in an analysis by John Ioannidis provocatively titled "Why most published research findings are false" [@ioannidis_why_2005]. There is a lot of debate about whether this is strictly true and, more importantly, why. One obvious explanation is that science has always learned as much or more from its failures as from its successes. It is hard to proceed any other way. By definition, scientific studies reveal and study new ideas and phenomena. If we already knew the answers to these ideas ahead of time and the science always got the right answer, then we wouldn't actually need science at all. Consider another truism from economics: Most Small Businesses Fail. Just like there are lots of ideas out there, there are also lots of businesses, many of which won't succeed. But like economics, out best hope is that the best succeed *on average* over time and we tend to end up with better ideas (and businesses) in the end.
+Peer review does not guarantee that a published result is correct, either. In fact, many scientific ideas turn out to be wrong. This was famously reported in an analysis by John Ioannidis provocatively titled "Why most published research findings are false" [@ioannidis_why_2005]. There is a lot of debate about whether this is strictly true and, more importantly, why. One obvious explanation is that science has always learned as much or more from its failures as from its successes. It is hard to proceed any other way. By definition, scientific studies reveal and study new ideas and phenomena. If we already knew the answers to these ideas ahead of time and the science always got the right answer, then we wouldn't actually need science at all. Consider another truism from economics: Most Small Businesses Fail. Just like there are lots of ideas out there, there are also lots of businesses, many of which won't succeed. But like economics, our best hope is that the best succeed *on average* over time and we tend to end up with better ideas (and businesses) in the end.
 
-## Primary versus Secondary versus whatever you just Googled.
+**Primary versus Secondary versus whatever you just Googled.**
 
 Scientific studies are generally reported as either primary literature or secondary literature. **Primary** literature consists of scientific papers that collect data, analyze it, and report on the outcome. **Secondary** literature consists of scientific papers that report or comment on already published findings. It includes things like Reviews, Commentary, or Meta-Analyses. When you find a scientific paper, it is sometimes labeled as a "Review" or "Commentary" or something else. In those cases, it is simple to identify a secondary source. More often, papers are not labeled clearly and you'll have to do more work. Here are some tips for deciding whether your paper is primary or secondary.
 
@@ -52,7 +52,7 @@ knitr::include_graphics(here::here("images/google_scholar_search.png"))
 
 Notice how you get a completely different set of results than searching on just www.google.com. All results except one (a book chapter) are peer-reviewed papers. Most are primary literature. Many contain a direct link to the pdf. Just by using the proper search engine, we made life a lot easier. If you haven't bookmarked Google Scholar, do it now.
 
-## Is this a primary or secondary paper?
+**Is this a primary or secondary paper?**
 
 **Look in the Abstract**
 
@@ -68,7 +68,7 @@ Are the methods missing? Does the paper also lack other common sections, like Re
 
 Do you see information that discusses how the authors searched the literature and extracted data? If so, then you've probably found a meta-analysis.
 
-## Why does it matter?
+**Why does it matter?**
 
 On a practical level, you're science professors may often require a certain number of papers that you cite to be **Primary** or **Secondary**. Using the quick tips above will just save you a lot of worry when you write a paper for a class.
 
@@ -78,7 +78,7 @@ By contrast, the primary literature represents findings from a single study. The
 
 Primary and secondary literature represent a dance that is taking place in the scientific community. When experts read and publish primary research articles, they may notice important points that are routinely missed. Then they write opinion or commentary pieces to highlight those points. But if they are labeled as opinions, the are just that. You are free to disagree with them and form your own opinion. But you can't do that until you understand the primary literature first. That is the dance that produces all of those weird college syllabi that specify X number of primary versus secondary sources. It's not to make a trivial target. It's to encourage you to delve deep into a few ideas at all levels of their production.
 
-## You do not need to pay for journal articles
+**You do not need to pay for journal articles**
 
 It is common to find a paper that you want to read, only to click on it and be given a paywall. Don't pay it. Ever. If you are at a university, then your university likely has access to the papers from that journal. If they don't, then they can get a copy through interlibrary loan, which is a process by which different libraries share material that one library subscribes to and another library doesn't. Nearly all universities have some version of this system. As a student, you pay fees to support access to science. Learn your system and use it!
 

@@ -1,0 +1,156 @@
+# References
+
+Wallace Notestein in 1929 quipped, “If you copy from one book, that’s plagiarism; if you copy from many books, that’s research.” Similar statements have been credited to many different people in the near century that has followed. 
+
+Whenever you use the ideas of someone else, it needs to be documented in your report. This is done two different ways: an in-text reference as well as a full entry on the references page. Both serve important purposes. The in-text reference acknowledges the work of the others while also informing its audience about further reading that can be done. The references page gives the relevant information so any reader who wishes to access the material can do so.
+
+It is important that each in-text reference has a corresponding reference on the references page. Likewise, an entry on the references page should not appear unless it was referenced in the text of the report. 
+
+Once you get the hang of the in-text reference, they are quite easy, but first you have to get the hang of them. Exactly what goes in the in-text reference depends on who or what you are writing for. As is the case with many elements of writing in the sciences, a certain journal, organization, or even professor can have a style that they require, and none of them are wrong as long as they are adhering to one of the many accepted styles. 
+
+It is important that you confirm style expectations with whomever or whatever you are composing your report for. For the purpose of these examples, the “Name-Year” system, or simply NY system, will be used.
+
+NAME YEAR SYSTEM (NY System)
+
+In-text reference:
+
+Basic format:        (surname year of publication).
+
+> Example:        …almost certainly due to the importance of mosquitoes in disease transmission (Gubler 1998).  
+
+Basic format when using a direct quotation (rare): (surname year of publication, p. page number).
+
+> Example:        It has been argued, “Wolbachia are just misunderstood. People should get to know them before
+calling them parasites” (Askew 2018, p. 14).
+
+Placement:         The reference should be placed immediately following direct mention of relevant information regarding the source. Do not wait until the end of a lengthy sentence to place your in-text reference. Direct relevant information includes the title, author, word or phrase alluding to source material. 
+
+> Incorrect:        We generated posterior distributions for each parameter via the Hamiltonian Monte Carlo method
+using rstan via the rethinking package in R. For each model, we ran four independent chains for 2000 
+iterations, generating 8000 total estimates of the posterior distribution for each parameter. (Stan
+Development Team 2016) (McElreath 2016).
+
+> Correct:          We generated posterior distributions for each parameter via the Hamiltonian Monte Carlo method
+using rstan (Stan Development Team 2016) via the rethinking package (McElreath 2016) in R. For each model, we ran four
+independent chains for 2000 iterations, generating 8000 total estimates of the posterior distribution for each parameter.
+
+
+
+Format:         Place the in-text reference enclosed in parentheses. Use the surname of the author followed by the year of publication. There is no punctuation placed between the surname and publication year. The in-text reference is placed before terminating punctuation.
+
+> Incorrect:        One major concern is a lack of research into horizontal transfer and regulation$\color{red}{\huge{. }}$(Loreto & Wallau$\color{red}{\huge{, }}$ 2016)
+
+> Correct:         One major concern is a lack of research into horizontal transfer and regulation (Loreto & Wallau 2016).
+
+EXCEPTIONS
+
+Most in-text references will be as simple as those listed above. There are, however, exceptions. Below is a list of the most common exceptions that you need to know about and how to properly format your in-text reference.
+
+TWO AUTHORS: list both with publication date.
+
+        Example: The smell was never properly located (Gapp and Askew 2019).
+        
+More than two authors: List the first author with “et al.” (et al. is short for et alia meaning “and others”).
+
+> Example: Few were left unaffected by the toxins (Askew et al. 2019). *Note: the period appearing between “et al.” and “2019” is because et al. is an abbreviation. It is not meant as a separation between the author and year.*
+
+NO AUTHOR: Use the title. For longer titles, use as much of the title as needed to make it uniquely identifiable on the reference page. Add ellipsis to the end.
+
+> Example: Evidence shows a positive correlation (Olfactory Stereotypes… 2018).
+        
+NO DATE: If the date of publication is not known, whether it is an online source where it cannot be determined or a print source where it is unknown, there are different way to handle it.
+
+> Example Online source (use the year of access): Mosquitos (Wesner 2021).
+        
+> Example Print source (use [date unknown]): Mosquitos (Wesner [date unknown]).
+
+AUTHORS NAME IS USED IN A SIGNAL PHRASE BEFORE THE IN-TEXT REFERENCE: if immediately before the in-text reference, the author’s name is used, it is not used in the in-text reference itself
+
+> Example: According to the Mosquito study by Wesner (2018). 
+
+COMMON KNOWLEDGE
+
+The focus on crediting sources has very few exceptions. In fact, it is better to err on the side of caution and reference a work rather than to leave it off and risk being accused of plagiarism. One exception to this is called “common knowledge.” Common knowledge is often difficult to determine, especially for students just beginning their academic careers. However, writing that *monosaccharides are the basic units of carbohydrates*, even if you had to look it up in your textbook, does not require an in-text reference or entry on the reference page. If you are not sure, ask someone more established in the field. If you do not know anyone like that, reference it and have someone tell you it is unnecessary.
+
+REFERENCES PAGE
+The CSE Manual for Authors, Editors, and Publishers is well over 800 pages. It contains more than you will ever want to know about scientific writing style and reference citing format. To try and include every possible reference situation you might come across would require about…800 or so pages.
+
+In addition, many journals, organizations, and professors will expect variations of certain styles or a wholly different style based on personal aesthetics. If that sounds frustrating, it can be. 
+
+Because of this, it is easier to discuss the basics of a reference page, show a template for an individual reference, and then give examples of common references. However, it is always recommended that you check for style expectations when composing both your in-text references and your references section.
+
+First, title your references section “References” or “Literature Cited.” This can often depend on the journal, organization, or professor. Make sure to check, but both should be acceptable. Each reference also needs to use a “hanging indent.” This means that only the first line of each reference will be in the margin. The rest will be indented. 
+
+Next, the order in which you place your references, again, can vary based on who or what you are writing for. Generally, the order will be alphabetical by the first letter of the reference. The reason it does not say alphabetical by last name is because of the possibility of having a reference without an author’s name. This reference still needs to be placed on the reference page in the proper position. 
+
+Next, be thorough in your references. Many journals will have guidelines “for authors” to help guide you on what is expected style wise. However, many of those journals are also vague with those guidelines using language like, “the completeness is more important that the style” adding that a “generic” reference is desirable versus one that attempts to replicate the publication’s own style. Learn the information that is generally expected in a “generic” reference and make adjustments as needed. Above all else, be consistent. 
+
+Next, make sure the style of all your references is consistent. This is important to check while composing the list and when revising your work. It is very easy when using literature from different sources to simply copy the bibliographic information from the source and place it on your reference page. The problem is that the copied bibliographic information might be a subtly, or significantly, different style.
+
+Finally, check and recheck each reference. Check for consistency in information and punctuation from one reference to the next. This will take a high level of organization. In addition to the individual references, make sure that each of the references is in the report itself by way of in-text reference. You should not have one without the other. 
+
+GENERIC REFERENCE
+
+Not all information is equal. There is a hierarchy that is made evident by the order information is given in a reference. What follows is a generic reference template that should help writers understand the basics of a good reference. After, examples will be examined.
+
+\begin{center}
+References
+\end{center}
+
+1. Last Name 2. First name initials [period] 3. Year [period] 4. Article title [period] 5. Journal title* [period] 6. Volume 7. (issue) [colon] 8. Inclusive pages [period]
+
+* abbreviate journal title if lengthy
+
+There is plenty of other information that can be included in a citation. Depending on the number of authors, how and when the article was accessed, if the article is a chapter in a larger work, and other identifiers like a doi or ISSN.
+
+The most important thing you can do is ask for the requirements, follow them, remain consistent through your reference page while giving the above information at a minimum.
+
+Let’s look at an example of why this can be confusing. Below you will see two citations for the same article that are in different styles. Both styles are accepted by different major scientific publications. First is Harvard Style; the second is Vancouver style.
+
+HARVARD STYLE
+
+Duplouy, A. et al. (2020) ‘Towards unravelling Wolbachia global exchange: a contribution from the Bicyclus and Mylothris butterflies in the
+|   Afrotropics’, BMC Microbiology, 20(1), pp. 1–9. doi: 10.1186/s12866-020-02011-2.
+
+VANCOUVER STYLE
+
+Duplouy A, Pranter R, Warren-Gash H, Tropek R, Wahlberg N. Towards unravelling Wolbachia global exchange: a contribution from the Bicyclus and
+|   Mylothris butterflies in the Afrotropics. BMC Microbiology [Internet]. 2020 Oct 20 [cited 2021 Jan 31];20(1):1–9. Available from:
+|   http://search.ebscohost.com.usd.idm.oclc.org/login.aspx?direct=true&db=aph&AN=146530282&site=ehost-live&scope=site
+
+Both references are “correct.”  They are just correct for different journals, organizations, or professors. Although they appear quite different at first glance, look back at the eight elements outlined in the “generic” reference to see if they are all there.
+
+The first example, the Harvard style example, contains all eight elements (with the addition of the doi). It however does not list all the authors (which is a standard expectation in Harvard style). This, however, is due to guidelines presented to the author.
+
+The second example, the Vancouver style example, contains much more than the eight elements listed in the “generic” reference. It includes all authors, access type and date, and a URL instead of the doi. Again, these decisions are made because of guidelines presented by the journal, organization, or professor.
+
+Be consistent, be thorough, be organized.
+
+Below are two more examples to look at.
+
+EXAMPLE 1:
+
+Dobson SL, Bordenstein SR, Rose RI (2016) Wolbachia mosquito control: Regulated.
+|   Science, 352, 526–527.
+
+Duron O, Bouchon D, Boutin S et al. (2008) The diversity of reproductive parasites
+|   among arthropods: Wolbachia do not walk alone. BMC Biology, 6, 27.
+
+EXAMPLE 2:
+
+Bartram, J., Chorus, I. (1999). Toxic Cyanobacteria in Water: A guide to their
+|   public health consequences, monitoring and management. CRC Press.
+
+Biggs, T.W, Dunne, T., Martinelli, L.A. Natural controls and human impacts on
+|   stream nutrient concentrations in a deforested region of the Brazilian Amazon 
+|   basin. Biogeochemistry. 2004;68, 227-257.
+
+Both examples correctly order their references alphabetically. Both begin with the author’s surname. Both contain much of the information expected in a reference. However, only one of the examples remains consistent.
+
+Example 1 remains consistent from one reference to the next. The same information is given, in the same order, using the same formatting.
+
+Example 2 does not include the same information; it does not give the information in the same order; and it changes formatting making it look disorganized.
+
+The most important thing is to ask what is expected of you. Make sure you understand the style the journal, organization, or professor expects. Then:
+
+BE CONSISTENT, BE THOROUGH, BE ORGANIZED

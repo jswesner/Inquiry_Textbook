@@ -1,6 +1,6 @@
 # The Structure of Scientific Writing
 
-## Learning Objectives
+**Learning Objectives**
 
 1.  Understand the basic sections of scientific papers.
 
@@ -179,7 +179,7 @@ This method - *Figures First* - is helpful in two ways. 1) It helps us to organi
 
 The same features that help you write a scientific paper can also help to read one. Here are some tips that no one ever told us as undergraduates:
 
-### You don't need to start at the beginning
+**You don't need to start at the beginning**
 
 Just because a scientific paper starts with an Introduction doesn't mean you need to read that part first. In our own reading, we often do this:
 
@@ -195,10 +195,10 @@ Just because a scientific paper starts with an Introduction doesn't mean you nee
 
 6)  If all of the above boxes check out, then we can decide to use that paper in our own work and cite it.
 
-### It doesn't need to take forever to read a paper
+**It doesn't need to take forever to read a paper**
 
 Once you get a feel for parsing papers, then you can usually proceed through the steps above pretty quickly. Often we might skim 4-5 papers before finally finding one that reports on a topic we're interested in. Of those, we might fully read only a handful of the most relevant papers. The whole process of deciding on a paper can take just a few minutes. In fact, you can probably tell within 30-seconds whether you want to commit more time to the paper or move on.
 
-### You don't need to understand every word
+**You don't need to understand every word**
 
 You will rarely read a scientific paper in which you understand everything right off the bat. For one of us (Wesner), our field of study is insect and fish ecology. When reading papers in our expertise, we can usually understand them pretty easily, but only after doing it repeatedly over 15 years. But every other paper in a new discipline has new terminology. It's slower for us. That's OK. **Don't get caught up in the jargon**. You can learn that later. If it seems important to know right away, then just look it up. Otherwise, get comfortable with not knowing everything. When reading a paper, focus on the broad picture. Look at the discussion to see what the authors thought was important. If it isn't clear from the discussion, then maybe the authors themselves don't actually know what was important. Move on to a different paper and come back again later.

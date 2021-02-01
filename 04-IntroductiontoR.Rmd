@@ -5,7 +5,7 @@ library(tidyverse)
 library(RefManageR)
 ```
 
-## Learning Objectives
+**Learning Objectives**
 
 1)  Be able to download and open R and RStudio.
 
@@ -17,7 +17,7 @@ library(RefManageR)
 
 ## R and RStudio
 
-So far we've discussed the nature of science and the structure of scientific papers. Now we're going to introduce a central method that is required of most modern science: scientific computing. It is almost impossible to conduct science without a computer, especially since we need to analyze data. We also need to store the data, organize it, plot it, summarize, and report it. Lots of tools do that. In this book, we use the computing software R []. It is among the most popular programs for analyzing scientific data and it is designed specifically for the workflow we use in this book. It is also free. Here's how you get it.
+So far we've discussed the nature of science and the structure of scientific papers. Now we're going to introduce a central method that is required of most modern science: scientific computing. It is almost impossible to conduct science without a computer, especially since we need to analyze data. We also need to store the data, organize it, plot it, summarize, and report it. Lots of tools do that. In this book, we use the statistical software R [@r_core_team_r_2020]. It is among the most popular programs for analyzing scientific data and it is designed specifically for the workflow we use in this book. It is also free. Here's how you get it.
 
 1.  Download R: (<https://mirror.las.iastate.edu/CRAN/>). Follow the link above and choose your operating system - Linux, Mac OS, or Windows
 
@@ -33,7 +33,7 @@ Once you've downloaded both programs, you'll only need to open RStudio. It autom
 
 [^introductiontor-1]: Except for JR, an English professor who doesn't understand any of this. We assume he is currently pontificating about the literary importance of using *salve* versus *halve* in the writings of Chaucer (who uses neither word). JR has a large collection of feathered pens and prefers to write on low gloss paper sourced from the Pacific Northeast.
 
-## How to Use This Chapter
+**How to Use This Chapter**
 
 This book is not meant as a stand-alone R reference. It is meant as a companion to university-level labs and lectures, in which students can work through examples with an instructor or TA nearby to fill in the gaps and troubleshoot.
 
@@ -67,15 +67,15 @@ In this book, we focus on learning a few fundamental tasks that are common to th
 
 Before the fun stuff happens, we need to determine where things will be saved on our computer. If you'd prefer to skip this step, that is OK. Just be prepared for certain doom.
 
-### Create a folder on your computer for your analyses
+**Create a folder on your computer for your analyses**
 
 For example, if this is for a class called Biology 280, you might create a folder called `BIO280_R`. If you have data to analyze (like an Excel file or a .csv), save it in this folder as well.
 
-### Open RStudio
+**Open RStudio**
 
 Click the RStudio icon ![](images/rstudio_icon.png){width="5%"}
 
-### Create a project
+**Create a project**
 
 *File -\> New Project... -\> Existing Directory -\> Browse -\>* [NAME OF YOUR FOLDER]
 
@@ -83,7 +83,7 @@ You only need to do this once. After you create a project, all of the work you d
 
 ![](images/new_project_done.png){width="100%"}
 
-### Open a script
+**Open a script**
 
 *File -\> New File -\> R Script* or *ctrl+shift+N*
 
@@ -103,7 +103,7 @@ The window on the bottom left is the **Console**. It keeps a running list of all
 
 Click anywhere on the script window so that you see the flashing prompt. Type the code below and then type *ctrl+enter*. (NOTE: If you just hit enter without adding ctrl, it won't work. It will just move you to the next line. Get in the habit of typing *ctrl+enter* to run your code).
 
-```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r echo=TRUE, eval = FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 #type this and then hit ctrl+enter
 install.packages("tidyverse") # ctrl+enter
 ```
@@ -292,7 +292,7 @@ ggplot(data = d, aes(x = cyl,y = mpg)) +
   geom_point(shape = 21) 
 ```
 
-**What it does** This code uses the powerful plotting package called **ggplot2** [@wickham_ggplot2_2016]. It included when you installed the tidyverse. The "gg" stands for "The Grammar of Graphics" [[@wilkinson])\_2012-\_grammar], a fundamental set of principles for producing just about any plot you can think of (and rules for why some types of plots are better than others).
+**What it does** This code uses the powerful plotting package called **ggplot2** [@wickham_ggplot2_2016]. It included when you installed the tidyverse. The "gg" stands for "The Grammar of Graphics" [@wilkinson_grammar_2012], a fundamental set of principles for producing just about any plot you can think of (and rules for why some types of plots are better than others).
 
 Making anything with ggplot2 usually requires at least two things: 1) a call to `ggplot(...)` where we specify the data along with the x and y axes or other aesthetics, and 2) a call to `geom_…`, where we tell ggplot2 how to plot the data. There are lots of geoms, as you can see in this cheatsheet (<https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>). For most practices in this book, we will use `geom_point()`, which simply adds a dot for each x-y coordinate that we specified in the `aes()` function.
 
@@ -462,7 +462,7 @@ Then paste it at the beginning of your script and run it. Our data set is called
 
 Do you see the name of your data set in the upper right panel? If so, success! If not, re-try the steps above or ask your instructor. You are now ready to practice the coding you've learned on your own data set.
 
-## Why to Code Instead of Click
+**Why to Code Instead of Click**
 
 R is a programming language, which means that it can only do what you tell it to do by typing. RStudio has a few clickable shortcuts, but it still requires nearly everything to be typed into a script.
 

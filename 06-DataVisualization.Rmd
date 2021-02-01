@@ -1,6 +1,6 @@
 # Data Visualization
 
-## Learning Objectives
+**Learning Objectives**
 
 1)  Understand the components of a graph
 
@@ -65,9 +65,11 @@ Nearly all graphs share some basic features.
 
 These basic components form an enormous array of visualizations. Here's an example using the *iris* data set, which gives measures of flowers for three different species. It is included with R.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width = 12, fig.height = 4, fig.cap = "a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species."}
+```{r petal-one, echo=FALSE, message=FALSE, warning=FALSE, fig.width = 12, fig.height = 4, fig.cap = "a) First six rows of the iris data set, b) Scatterplot of the iris data, c) The same plot, but with a linear regression line for context. The blue line is the mean and the shading is the standard error of the mean. Color is also added to show a third variable for species."}
 
 library(ggthemes)
+library(gridExtra)
+
 
 iris_data <- iris %>% select(Petal.Length, Petal.Width, Species)
 iris_grob <- tableGrob(head(iris_data))
@@ -91,7 +93,7 @@ plot_grid(iris_grob, iris_plot1, iris_plot2, labels = "auto", nrow = 1, rel_widt
 
 ```
 
-The table and figures above follow the same sequence as the map before. We start with a table of data, where each row is an individual observation with information on petal length, petal width, and flower species. We then make an initial scatter plot, showing patterns that are hard or impossible to see just by looking at the table. Finally, we add a regression line and some colors for context.
+The table and figures above (Figure \@ref(fig:petal-one) follow the same sequence as the map before. We start with a table of data, where each row is an individual observation with information on petal length, petal width, and flower species. We then make an initial scatter plot, showing patterns that are hard or impossible to see just by looking at the table. Finally, we add a regression line and some colors for context.
 
 Even though these graphs are for flowers and the previous graphs were for states, they share the same simple components, derived from data. We tell the graphing software where to find the data (*iris*), where to find the column for the **y-axis** (*Petal.Length*), the **x-axis** (*Petal.Width*), and where to find the column for **color** (*Species*). If we wanted to add another layer, like size of the individual, we would need to collect that data and simply add it as a fourth column in the data set.
 
@@ -127,7 +129,7 @@ These simple steps will not ensure a good graph, but they will ensure that your 
 
 **Bad Graph**
 
-```{r, fig.cap = "Bad graph. Corners are stretched. Everything is blurry. Text is too small.", echo=FALSE, out.width = "70%", message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r bad-graph, fig.cap = "Bad graph. Corners are stretched. Everything is blurry. Text is too small.", echo=FALSE, out.width = "70%", message=FALSE, warning=FALSE, paged.print=FALSE}
 
 knitr::include_graphics("images/bad_plot.jpg")
 
@@ -135,7 +137,7 @@ knitr::include_graphics("images/bad_plot.jpg")
 
 **Better Graph**
 
-```{r echo=FALSE, fig.cap = "Better graph. Text is readable. Axis units are defined. Nothing is blurred. Colors are colorblind friendly.", out.width = "70%", message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r better-graph, echo=FALSE, fig.cap = "Better graph. Text is readable. Axis units are defined. Nothing is blurred. Colors are colorblind friendly.", out.width = "70%", message=FALSE, warning=FALSE, paged.print=FALSE}
 
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
   geom_point(size = 3) +
@@ -148,7 +150,7 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
 
 ```
 
-These are the same data sets in two different graphs. The first one violates most of the rules for a bad graph (or follows most of the rules, I guess). The second one is better. It isn't pixelated and the text isn't stretched. The colors are visible even to a colorblind person (using `scale_color_colorblind()` from the *ggthemes* package). The axis labels are a bit more informative, giving the units for the sepal widths and lengths.
+These are the same data sets in two different graphs. The first one violates most of the rules for a bad graph (or follows most of the rules, I guess) (Figure \@ref(fig:bad-graph)). The second one is better (Figure \@ref(fig:better-graph)). It isn't pixelated and the text isn't stretched. The colors are visible even to a colorblind person (using `scale_color_colorblind()` from the *ggthemes* package). The axis labels are a bit more informative, giving the units for the sepal widths and lengths.
 
 While this may seem like a trivial and obvious comparison, the first version is one we see all the time in student papers, and even in manuscripts submitted by PhDs. The easiest way to avoid this problem is to take the following steps:
 
@@ -177,7 +179,7 @@ my_graph
 ggsave(my_graph, file = "my_graph.jpg", dpi = 500, width = 6, height = 6, units = "in")
 ```
 
-The code above makes a graph called "my\_graph", calls the graph in R to view it, and then saves it as a .jpg with the `ggsave()` function. The `ggsave()` function has several options
+The code above makes a graph called "my_graph", calls the graph in R to view it, and then saves it as a .jpg with the `ggsave()` function. The `ggsave()` function has several options
 
 **image type** - By adding ".jpg" to the end of our graph name in the `file = …` statement, we are creating a .jpg. To create a .png, just add ".png" instead. `ggsave()` can create 10 different file types - .png, .eps, .ps, .tex, .pdf, .jpg, .tiff, .bmp, .svg, or .wmf. Choose the one that works best for you.
 

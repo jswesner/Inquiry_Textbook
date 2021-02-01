@@ -1,4 +1,4 @@
-# Methods
+# Methods Sections
 
 If you have never seen or even heard of *Law and Order*, you have achieved something few people have. There have been nearly 1300 episodes combined in the five different series, and in most of those episodes, someone must testify about something they did or saw. However familiar the oath they take is before testifying, most people never examine it closely enough to sus out why it is said in such a specific, and seemingly redundant, way.
 
@@ -26,15 +26,15 @@ What does this have to do with the methods section of your research essay? The e
 
 "I affirm that the information I am about to give are the methods, the whole methods, and nothing but the methods."
 
-Your methods section will help contextualize the position from which you did your experiment. It is important that others know this position so they may better understand the way you ultimately interpret and discuss your findings. 
+Your methods section will help contextualize the position from which you did your experiment. It is important that others know this position so they may better understand the way you ultimately interpret and discuss your findings. 
 
 Important elements to the methods section are as follows:
 
-a.  Description of data sets acquired and used. 
+a.  Description of data sets acquired and used. 
 
-b.  Description of experiment/methods is clear and complete. 
+b.  Description of experiment/methods is clear and complete. 
 
-c.  Which response variables analyzed? Which statistical analyses/program used?
+c.  Which response variables analyzed? Which statistical analyses/program used?
 
 d.  Methods presented in past tense.
 
@@ -66,7 +66,7 @@ Let us look at part of a successful methods section. Remember, this section can 
 
 Analysis:
 
-It is easy to how this is successful. It is clear and concise giving all the information needed so that others could repeat the process. It explains *how* and *why* things are being done.
+It is easy to see how this is successful. It is clear and concise giving all the information needed so that others could repeat the process. It explains *how* and *why* things are being done.
 
 > Different habitats (e.g. debris, rip-rap, shoreline) were sampled when available to increase taxonomic representation.
 

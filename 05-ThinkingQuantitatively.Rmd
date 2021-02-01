@@ -1,6 +1,6 @@
 # Thinking Quantitatively
 
-## Learning Objectives
+**Learning Objectives**
 
 1.  Understand why we use statistics
 
@@ -25,13 +25,13 @@ library(grid)
 library(knitr)
 ```
 
-## Why Statistics
+**Why Statistics**
 
 **Statistics** is a process of analyzing data to learn about a question of interest. We find that statistics can be daunting for undergraduate students. It was daunting for us as well. The goal of this book is not to teach you how to be a statistician. It is to teach you how to begin working with and understanding data as it pertains to scientific inquiry. The skills you learn here should allow you to read a scientific paper and not have to look up what a standard error is or what a confidence interval is or what the difference is between a median and a mean.
 
 A poorly kept secret in science is that you need a working understanding of statistics whether you use it formally or not. Consider a doctor who needs to prescribe a drug for disease X. There are three drugs on the market for this disease. The drugmakers have provided you with the following graphs showing how good their drugs are at treating this disease.
 
-```{r echo=F, fig.show = "hold", fig.cap='Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\\label{fig1:plot}', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
+```{r drug-data1, echo=F, fig.show = "hold", fig.cap='Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).\\label{fig1:plot}', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
 
 set.seed(222)
 drug_data <- tibble(drug_a = rbeta(20, 2,.25),
@@ -52,13 +52,13 @@ ggplot(drug_data, aes(x = drug, y = y)) +
 
 ```
 
-Figure \ref{fig1:plot} above shows the result of twenty trials of each drug. For each trial, the drug makers calculated the percentage of patients that recovered from the disease after taking the drug.
+Figure \@ref(fig:drug-data1) above shows the result of twenty trials of each drug. For each trial, the drug makers calculated the percentage of patients that recovered from the disease after taking the drug.
 
 Which one should the doctor prescribe?
 
 For drugs A and B, several trials showed that 100% of patients that took the drug recovered. Those seem like good choices. For drug C, recoveries were all over the place. In some trials, less than half of the patients recovered after taking the drug. That doesn't seem good. However, since the doctor took Inquiry and Analysis in Biology as an undergrad, they notice something odd about these data. The drug makers only report recoveries of people who *took* the drug. What about people who had the same disease but didn't take a drug? In other words, what about the *controls*? The doctor asks for this information. Let's look at the same graph, but now with the data for controls added.
 
-```{r, fig.show = "hold", fig.cap = 'Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE} 
+```{r drug-data2, fig.show = "hold", fig.cap = 'Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
 
 set.seed(222) 
 drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25), 
@@ -92,14 +92,13 @@ knitr::include_graphics(here("figures/p2.png"))
 
 ```
 
+In figure \@ref(fig:drug-data2) above, the black dots are the same as before. The gray dots show the percent of people who recovered without taking the drug. Does this information change your perception of the benefits of taking either drug? In the first graph, it seemed obvious that drugs A and B were better than drug C, because most people recovered with those drugs.
 
-In the figure above, the black dots are the same as before. The gray dots show the percent of people who recovered without taking the drug. Does this information change your perception of the benefits of taking either drug? In the first graph, it seemed obvious that drugs A and B were better than drug C, because most people recovered with those drugs.
-
-Adding the control data tells a different story. While it is true that most people recovered when taking drugs A and B, they also recovered without taking those drugs. For drug C, only ~25 to 75 percent of people recovered when taking it, but that percentage appears much higher than the percentage of people that recovered without taking the drug. In some trials, almost no one recovered without the drug. This complicates the decision of which drug to choose.
+Adding the control data tells a different story. While it is true that most people recovered when taking drugs A and B, they also recovered without taking those drugs. For drug C, only \~25 to 75 percent of people recovered when taking it, but that percentage appears much higher than the percentage of people that recovered without taking the drug. In some trials, almost no one recovered without the drug. This complicates the decision of which drug to choose.
 
 Because our doctor took Inquiry and Analysis in Biology *and* later took biostatistics, they ask for further information. Instead of just looking at the data for each group, they want something more informative. For each trial, they subtract the percent that recovered when taking the drug from the percent that recovered when not taking the drug. Then they plot it. It looks like this.
 
-```{r, fig.show = "hold", fig.cap = 'Difference in the proportion of patients that recovered from a disease after taking one of three drugs relative to controls. Each dot represents the outcome of a single experiment (i.e. trial).', echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE} 
+```{r drug-data, fig.show = "hold", fig.cap = 'Difference in the proportion of patients that recovered from a disease after taking one of three drugs relative to controls. Each dot represents the outcome of a single experiment (i.e. trial).', echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
 
 set.seed(222) 
 drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25), 
@@ -131,11 +130,11 @@ ggplot(drug_data, aes(x = drug, y = diff)) +
   scale_color_grey(start = .6, end = 0)
 ```
 
-Now we see a different story than the figure we started with. By displaying the differences in recovery, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn't.
+Now we see a different story than the figure we started with (Figure \@ref(fig:drug-data1)). By displaying the differences in recovery, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn't.
 
 So far, we have only plotted the data. We haven't quantified anything yet, but by plotting the data and being self-critical of the ways in which we might be fooling ourselves, we have practiced **quantitative reasoning**. This process also illustrates a broader principle: statistics can not automate scientific decisions. Each of the plots above used statistical software and could be analyzed with a wide array of statistical models. But none of those models *know* about the experiment. They will all give a result, but it is up to you to interpret its importance.
 
-Plotting data is among the most important steps in any project. Plotting (aka *making graphs*, *data visualization*) does several things. 1) It reveals any obvious problems in data entry. 2) It shows trends in the data. 3) It revealss the experimental design. This last step is crucial. Deciding what to put on the x-axis versus the y-axis, how to label those axes, what range to put on the y-axis, what groups to label in the figure legend...these are just some of the choices you'll make when plotting data. Students often do this step last, hoping to add a graph at the end to complete an assignment. Don't do that. Plot early and often, even before you have data. If you know what the axes should be, and which groups will go side-by-side (like the gray and black dots in Figure X), then you have already crystalized nearly everything that you will later write about in the rest of your paper (see *Figures First* in the previous chapter).
+Plotting data is among the most important steps in any project. Plotting (aka *making graphs*, *data visualization*) does several things. 1) It reveals any obvious problems in data entry. 2) It shows trends in the data. 3) It reveals the experimental design. This last step is crucial. Deciding what to put on the x-axis versus the y-axis, how to label those axes, what range to put on the y-axis, what groups to label in the figure legend...these are just some of the choices you'll make when plotting data. Students often do this step last, hoping to add a graph at the end to complete an assignment. Don't do that. Plot early and often, even before you have data. If you know what the axes should be, and which groups will go side-by-side (like the gray and black dots in Figure \@ref(fig:drug-data2)), then you have already crystallized nearly everything that you will later write about in the rest of your paper (see *Figures First* in the previous chapter).
 
 ## Summary Statistics
 
@@ -151,9 +150,9 @@ You should aim to provide at least the following summary statistics for every im
 
 **Maximum** The largest value.
 
-The code below will generate the data set used in Figure 3 above called *drug_data* - just copy it and run it. Don't worry about interpreting it for now.
+The code below will generate the data set shown in Figure \@ref(fig:drug-data) called *drug_data* - just copy it and run it. Don't worry about interpreting it for now.
 
-```{r}
+```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
 library(tidyverse)
 set.seed(222)
 drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
@@ -221,7 +220,7 @@ This looks pretty close to a finished product now. It has lots of information in
 
 A statistical model alone will not answer your scientific question. The work flow presented above is not a formula for success in every case. Each problem you attempt to solve as a scientist is unique and will require you to make judgment calls. Statistics can help us to justify those judgments, making our decisions less susceptible to personal bias, but they cannot eliminate subjectivity. The point of *Quantitative Thinking* is not to replace critical thought with computer generated outputs. It is to use the tools of statistics and experimental design to prevent us from fooling ourselves. As Richard Feynman said: "The first principal [of science] is to not fool yourself, and you are the easiest person to fool."
 
-## Common Pitfalls in Statistical Inference
+**Common Pitfalls in Statistical Inference**
 
 Here are some easy ways to fool yourself in science and quantitative thinking.
 
@@ -231,7 +230,7 @@ Here are some easy ways to fool yourself in science and quantitative thinking.
 
 The plot below is from real data. How do you interpret this result?
 
-```{r, fig.show = "hold", fig.cap = "Proportion of patients that recovered from a disease after taking one of three drugs. Each dot represents the outcome of a single experiment (i.e. trial).", echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
+```{r divorce-waffle, fig.show = "hold", fig.cap = "Divorce rate as a function of the number of Waffle House restaurants per million people in the United States. Each dot is a US state. Blue labeled dots represent states in the US South.", echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
 library(rethinking)
 library(tidyverse)
 
@@ -250,11 +249,11 @@ d %>%
 
 ```
 
-The figure shows a clear positive correlation between the divorce rate and the number of Waffle Houses (McElreath 2015). In this case, it is obvious (hopefully) that Waffle Houses are probably not causing divorces. What's going on? The states that are labeled are all in the South, where Waffle Houses are common. People also happen to get married earlier in the South, which helps to explain the higher than average divorce rates there.
+Figure \@ref(fig:divorce-waffle)shows a clear positive correlation between the divorce rate and the number of Waffle Houses (McElreath 2015). In this case, it is obvious (hopefully) that Waffle Houses are probably not causing divorces. What's going on? The states that are labeled are all in the South, where Waffle Houses are common. People also happen to get married earlier in the South, which helps to explain the higher than average divorce rates there.
 
 Here's another less obvious example.
 
-```{r, fig.show = "hold", fig.cap = "Correlation between life expectancy and gross domestic product (GDP in 2007 US Dollars) across countries. Each dot represents life expectancy and GDP for a single country in 2007 (n = 142 countries). Data are compiled by www.gapminder.org.", echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
+```{r life-gdp, fig.show = "hold", fig.cap = "Correlation between life expectancy and gross domestic product (GDP in 2007 US Dollars) across countries. Each dot represents life expectancy and GDP for a single country in 2007 (n = 142 countries). Data are compiled by www.gapminder.org.", echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
 library(gapminder)
 data(gapminder)
 
@@ -269,7 +268,7 @@ gapminder %>%
 
 ```
 
-The figure shows a positive relationship between a country's gross domestic product (GDP) and its life expectancy in 2007. Each dot is a country. In our experience, this correlation is a common one for students to study. They often interpret the result as confirming a benefit of economic activity with how long people live, and conclude that countries can improve life-expectancy simply by improving economic activity.
+Figure \@ref(fig:life-gdp) shows a positive relationship between a country's gross domestic product (GDP) and its life expectancy in 2007. Each dot is a country. In our experience, this correlation is a common one for students to study. They often interpret the result as confirming a benefit of economic activity with how long people live, and conclude that countries can improve life-expectancy simply by improving economic activity.
 
 But this represents a similar fallacy as the Waffle House-Divorce example. An easy way to see this is to check death certificates. If we did that (we didn't, but we think we're safe here), we would probably not find a cause of death that says "Died due to low GDP". Just like Waffle Houses are associated with "Southerness" and "Southerness" is associated with early age at marriage and early age at marriage leads to higher divorce rates, GDP is associated with its own confounding variable of health care infrastructure. That is itself a large and difficult-to-define metric, but it is closer to explaining the positive correlation between GDP and life expectancy.
 
@@ -299,7 +298,7 @@ This was embarrassing, but it also lead to a different line of research. We read
 
 Without this initial "failure", we never would have discovered the actual links between metal contamination in streams and risks to riparian birds.
 
-#### Preventing mistakes with negative results
+**Preventing mistakes with negative results**
 
 Treat them as an opportunity to learn more. If your hypothesis was not supported, explore the reasons why. Do you predictor and response variables actually measure the quantities of your hypothesis or are they a proxy? If they're a proxy, maybe they don't measure what you think they do. Maybe the negative results is robust and it challenges conventional wisdom. That's exciting! What are the implications of a hypothesis that didn't pan out? Explore those and suggest how future scientists should proceed now that we know that a given hypothesis isn't always supported.
 
@@ -307,7 +306,7 @@ Treat them as an opportunity to learn more. If your hypothesis was not supported
 
 *Using aggregate data to infer something about individuals*
 
-Extreme obesity is a global public health concern that is defined as a body mass index of 40 kg/m^2^ or more. Individuals in this category have increased rates of mortality, often due to increased rates of heart disease, cancer, stroke and other ailments [@kitahara2014association].
+Extreme obesity is a global public health concern defined as a body mass index of 40 kg/m^2^ or more. Individuals in this category have increased rates of mortality, often due to increased rates of heart disease, cancer, stroke and other ailments [@kitahara_association_2014].
 
 Let's visualize the relationship between obesity and life-expectancy across countries. In the plot below, each dot is a different country. The line represents a linear regression between the two variables.
 
@@ -341,7 +340,7 @@ This is an example of the *ecological fallacy*, which states that we cannot use 
 
 As you might expect by now, there are also other reasons to explain these associations, such as hidden variables. For example, look at the plot again, but now with information on GDP per capita.
 
-```{r, fig.show = "hold", fig.cap = "Correlation between life expectancy and the percent of a population that is extremely obese across countries. Each dot represents life expectancy and obesity for a single country in 2014 (n = 128 countries). The size of the dots scales with GDP per capita (in 2007 US Dollars). The regression line is a least-squares linear fit. Data are compiled by www.gapminder.org.", echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
+```{r, fig.show = "hold", fig.cap = "Correlation between life expectancy and the percent of a population that is extremely obese across countries. Each dot represents life expectancy and obesity for a single country in 2016 (n = 128 countries). The size of the dots scales with GDP per capita (in 2007 US Dollars). The regression line is a least-squares linear fit. Data are compiled by www.gapminder.org.", echo = F, align = 'center', message=FALSE, warning=FALSE, out.width="70%", paged.print=FALSE}
 
 obesity_CIA <- read_csv("data/obesity_CIA.csv")
 life_exp <- read_csv("data/life_expectancy_years.csv") %>% 
@@ -367,7 +366,7 @@ obesity_life_exp %>%
 
 This is the same data, but now a third variable is presented, showing GDP per capita (in US 2007 Dollars). The scatter of the dots is non-random in the sense that countries with large GDP tend to be clustered in areas of both high life-expectancy and higher obesity rates.
 
-#### Preventing the ecological fallacy mistake
+**Preventing the ecological fallacy mistake**
 
 Relate your hypotheses and explanations to the level of your data. For example:
 

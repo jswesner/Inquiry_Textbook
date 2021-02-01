@@ -1,0 +1,165 @@
+# Discussion
+
+In the classic 1998 film *The Big Lebowski*, the character of Donnie, played by Steve Buscemi, repeatedly attempts to enter into discussions that other characters are having only to cause irritation. His interruptions elicit a response that becomes one of the more memorable lines in the film: "Donny, you're out of your element."
+
+Many biology students can have a similar reaction to the discussion section of their reports. Whereas earlier sections are not easy, there is a significant difference between recording information and interpreting information. As you begin your discussion section, if you feel that you are, "out of your element," you wouldn't be the first. If you feel like you are entering into a discussion after it has started, most likely you are. However, unlike Donny, those who are were already having the discussion welcome new voices and are interested in what you have to say. So, let us figure out what to say and how to say it.
+
+Instead of giving you list of things to do, it might be easier if you learn by knowing what not to do. What follows is a list of things NOT to do in your discussion section.
+
+**DO NOT...**
+
+|               ...simply repeat the details of the results section.
+|                       *Not only can it make the discussion section redundant, it can*
+|                       *signal to the reader that you do not fully understand the topic*
+|                       *enough to interpret the information.*
+
+|               ...forget to weave the results of the current work to past work.
+|                       *Context is important. Omitting the foundation of your work can*
+|                       *derail even the best research. That foundation consists of a*
+|                       *reexamination of the original purpose of the study, literature*
+|                       *consulted and read during the study, the body of work done by*
+|                       *other scientists that often acts as the inspiration for new work.*
+
+|               ...connect your work to past work in a tangential manner.
+|                       *It is important to connect your work to previous work.*
+|                       *However, if that connection is flimsy or tangential, it*
+|                       *can again signal to readers that your understanding of*
+|                       *the subject is limited, even your understanding of your*
+|                       *own data. If you feel that you are struggling to find*
+|                       *those connections, the best thing to do is read, then*
+|                       *reread, then reread everything one more time. The better*
+|                       *you know the topic, the easier it will be to see and*
+|                       *express the connections.*
+
+|               ...apologize, qualify, or use vague language.
+|                       *Common tactics for people who do not feel confident in*
+|                       *their abilities to discuss a topic are to apologize (although*
+|                       *this is just a student paper...),qualify (these findings appear*
+|                       *to imply the possibility of...) and use vague language (we could*
+|                       *analyze data relating to the subject to discover a trend...).*
+
+|               ...conclude with, "This topic needs more research."[^discussion-1]
+
+[^discussion-1]: The period at the end of this sentence is important. The statement as written is bad form simply because it is *always* true. A topic always needs more research. The important lesson is that your discussion section should not simply say what is obvious (we need more research on topic X), but tell us how that research could proceed *given the results of your current findings.*
+
+|                       *Confidence is important when composing your report. Similar to*
+|                       *the section before this one, a lack of confidence will turn many*
+|                       *other potential readers away from your work. If a discussions*
+|                       *section is peppered with apologies, qualifiers, and an admission*
+|                       *that the topic simply needs more research, credibility will be almost*
+|                       *completely lost.*
+
+
+In addition to avoiding these common mistakes, it is important to know what you *should* do in a discussion section.
+
+**DO...**
+
+|               ...Interpret your results
+|                       *The results section reported the data. Now you need to explain*
+|                       *to the reader what those results mean in relation to your study*
+|                       *and the larger subject area.*
+
+|               ...Be organized
+|                       *The discussion section should begin with what you see as the*
+|                       *most important result to come out of your study. Whereas there*
+|                       *is no absolute "right" way to organize your discussion section,*
+|                       *there is very much an expected way. That expectation is that you*
+|                       *begin with what you see as your most important finding. This can*
+|                       *be written as straight forward as,* "The most important result of
+|                       this study was..."
+
+|               ...Consider how your findings support/conflict with earlier predictions/hypothesis.
+|                       *Your findings do not "prove" your predictions, and you should*
+|                       *be careful to avoid using language that states as much. "X does*
+|                       *not prove Y," "X suggests Y." This does not mean that you*
+|                       *should avoid discussing how your findings support your*
+|                       *predictions.*
+
+|                       *Be objective, however, and make sure that you not only discuss*
+|                       *where the findings support predictions, but also examine where*
+|                       *they do not or are inconclusive and why that may be. There is*
+|                       *nothing wrong with unexpected findings being examined. They can*
+|                       *lead to important insights.*
+
+|               ...Place your research in the context of established work in the field.
+|                       *This may require reading, reading, reading, and then maybe*
+|                       *some more reading. We won't dwell too much on this as it is*
+|                       *discussed in the "don'ts" list. Read. Connect. Read. Connect*
+|                       *some more. Read some more.*
+
+|               ...Understand the scope of your report.
+|                       *Although it is encouraged to examine different explanations for*
+|                       *your results, it is also encouraged to understand that every*
+|                       *possible explanation doesn't need to be addressed in your report.*
+|                       *The more potential explanations, varying in degrees of*
+|                       *plausibility, can make you lose credibility with the reader.*
+
+|               ...Know how to end the discussion section.
+|                       *Describe hypothetical future work that your current findings*
+|                       *could potentially lead to or could add to what you have done.*
+|                       *This will be far more general than the beginning of the discussion*
+|                       *section and will be more speculative in nature.*
+
+
+**EXAMPLE OF A SUCCESSFUL DISCUSSION SECTION:** *instead of trying and pick out every element of the section as you go, it is best read it through in its entirety. Then, see if you can identify all the elements presented in the "Do" section while avoiding the "Don'ts" of this chapter.*
+
+> Wolbachia are common intracellular bacteria in aquatic insects with an estimated incidence among species of 52% compared to 60% for terrestrial insects. Taken together, these results are similar to the previous estimates of incidence within all arthropods of 40%, 52%, and 66% (Hilgenboecker et al. 2008; Zug & Hammerstein 2012; Weinert et al. 2015). Despite clear evolutionary and ecological separation between aquatic and terrestrial insects, it is now clear from these data that Wolbachia infection is potentially common in aquatic ecosystems.
+
+> Our results represent the first estimates of incidence in common aquatic insect orders (Ephemeroptera, Trichoptera, Plecoptera). Most studies investigating aquatic insects have primarily focused on mosquitoes, including a recent study where 67% of samples were mosquitoes (Wiwatanaratanabutr & Zhang 2016). This focus is likely due to the role that mosquitoes play as important vectors for disease, making them an important target for sampling. Estimates from other surveys appear to mostly include aquatic insects only haphazardly during sampling of terrestrial insects (but see Sontowski et al. 2015). Of the aquatic insects tested in previous studies, most belonged to Odonata, Coleoptera, or Diptera (Hilgenboecker et al. 2008; Zug & Hammerstein 2012; Weinert et al. 2015). As a result of this targeted collection, our estimates of incidence in Odonata, Coleoptera, and Diptera have less uncertainty than estimates from Ephemeroptera, Trichoptera, and Plecoptera. There is clearly an opportunity to increase sample size among these orders, particularly given their importance as indicators of ecosystem health. For example, EPT indices are used worldwide as a proxy for stream water quality (Carter et al. 2006). Understanding the incidence and effects of symbionts on these taxa, and their potential interaction with contaminants, may reveal important, but understudied, impacts of symbionts on water quality indicators.
+
+> Knowing the distribution of Wolbachia in all insect taxa is important to understand the risks of using Wolbachia as a biocontrol. Since mosquitoes spend a portion of their life in an aquatic environment and return to the water to lay eggs, the insects most likely to be affected by an introduction of infected mosquitoes would be those that either eat mosquitoes or live in the same environment as them. One major concern is a lack of research into horizontal transfer and regulation (Loreto & Wallau 2016). Given the complexities and risks of biocontrol, it is important to weigh the costs and benefits of introducing Wolbachia into novel populations (Ahmed et al. 2015). Our results shed light on this risk by revealing that Wolbachia infection is common among aquatic insects. As a result, introducing an infection within one species, especially an invasive species, may not pose a serious risk (Dobson et al. 2016). However, different strains of Wolbachia will pose different risks to the hosts (Ritchie et al. 2015; Hoffmann et al. 2015). Releasing a virulent strain into the environment that can interfere with reproduction with the intended consequence of reducing abundance of one insect species may carry unintended consequences for non-target taxa. Moreover, it is unclear how consistent incidence is among sites. While our estimate represent a global mean incidence, it seems clear that incidence and prevalence within populations is certain to vary widely. That in turn would cause spatial variation in the risk of Wolbcahia spreding to non-target populations.
+
+> Wolbachia can affect insects at the population scale by altering sex ratios and population sizes (Werren et al. 1998, Mains et al. 2013). However, to our knowledge, the effects of Wolbachia at the community or ecosystem level have not been addressed. Given that Wolbachia is common in aquatic insect species and its potential to alter population sizes (e.g. Mains et al. 2013), there is a strong need to understand how its effects scale up to potentially alter ecosystem functions provided by aquatic insects. These include secondary production in freshwater ecosystems and the subsequent flux of insect biomass from aquatic to terrestrial ecosystems (Nakano & Murakami 2001).
+
+> We estimate that approximately 52% (CrIs: 44-60%) of aquatic insect species have at least one individual infected with Wolbachia. These results show that Wolbachia is present in aquatic insects at a similar incidence seen in terrestrial insects. Sources of bias could exist within the current Wolbachia aquatic insect literature due to the high number of tests with mosquitoes. These mosquitoes may have been sampled with the intent of finding infection frequencies within a species previously known to be infected with Wolbachia. This could bias these estimates towards a higher frequency than expected for other aquatic taxa. With the push towards using Wolbachia as a biocontrol (Yakob & Walker 2016), future work will focus on understanding how these bacteria influence their hosts and the ecosystem services that aquatic insects provide. Future research will also focus on narrowing the uncertainty of the numbers attained in this report by more comprehensive sampling of the infected areas, including sampling terrestrial insects from the same areas. Genotyping of Wolbachia strains using methodology from Baldo et al. (2006) will also provide clues of how Wolbachia is spatially distributed. `r tufte::quote_footer('---Sazama et al. 2017')`
+
+GRAMMAR-
+
+**TENSE** (Cont. from [Chapter 9][09-Methods])
+
+In both the results and discussion sections, it is important to pay attention to the tense that you use. In Chapter 9, you read about the difference between past, present, and future tense. Similar to the methods section, you want to report your own actions and results stemming from them in the **past tense**. Example from results section of paper posted above:
+
+> *To estimate incidence within aquatic orders, we **ran** separate models for each order*
+
+> *Megaloptera **was included** in our database as just a single sample*
+
+Conversely, when using a statement of established fact in your discussion section, it should be written in the **present tense**. Example from discussion section form paper posted above:
+
+> *Wolbachia **are** common intracellular bacteria in aquatic insects*   
+
+> This focus **is** likely **due** to the role that mosquitoes play as important vectors for disease
+
+**HOMONYMS and HOMOPHONES**
+
+Homonyms (words that share the same spelling and pronunciation but have different meanings) and Homophones (words that have the same pronunciation but have different meanings) are plentiful in the English language because the English language hates you.
+
+Homonyms- do not often cause people too much confusion. Whereas they can be hilarious, (A hard boiled egg is hard to beat) they can often be understood through context (The current carried the small boat in the cave where the bat lives). The first example exemplifies high-brow humor. The second example will not confuse many people even though both "current" and "bat" are homonyms. It also does not matter because the spelling is the same and no error is made regardless of the intention.
+
+Homophones- on the other hand can cause confusion. There are the obvious there, their, they're homophones that require due diligence to eradicate mistakes, but there are others that are for trickier. So, how to keep them straight? Most of it comes down to the basics: part of speech.
+
+Already vs. all ready? "Already" is an adverb; "all ready" is an adjective with a modifier. If the word is meant to describe something, you use the adjective, "we were all ready for the test. If the word is meant to modify another word, use the adverb, "we already failed the test."
+
+But what about the more nefarious words that crop up all the time and it just feels impossible to remember which is the right one to use? Some just take practice; others can use shortcuts. Take for example one of the toughest:
+
+affect vs. effect
+
+We have seen it in published works used incorrectly. Once you know a trick, it is a lot easier. Just remember the word R-A-V-E-N.
+
+A-ffect is a V-erb; E-ffect is a N-oun. Instead of trying to figure things out based on context, you simply have to figure out if it is a noun or a verb.
+
+|           1.  The large quantities of odor-masking chemicals did not have the desired (affect/effect) |               on the smell, and Amy was asked to leave.
+
+|           2.  The (affect/effect) of her leaving was palpable.
+
+|           3.  Although her foul acrid presence (affected/effected) the spirits of many of the party |                 goers.
+
+|           4.  It was not enough to (affect/effect) them the rest of the night.
+
+Which is it? Well does it need to be a noun or a verb? Hopefully, determining that will be easier than the original quandary.
+
+Then think R-A-V-E-N.
+
+|           1.  Effect
+|           2.  Effect
+|           3.  Affect
+|           4.  Affect
