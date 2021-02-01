@@ -1,4 +1,4 @@
-# Methods Sections
+# Methods
 
 If you have never seen or even heard of *Law and Order*, you have achieved something few people have. There have been nearly 1300 episodes combined in the five different series, and in most of those episodes, someone must testify about something they did or saw. However familiar the oath they take is before testifying, most people never examine it closely enough to sus out why it is said in such a specific, and seemingly redundant, way.
 
@@ -61,7 +61,7 @@ Let us look at part of a successful methods section. Remember, this section can 
 **EXAMPLE B**
 
 > *Specimen Collection*
->
+
 > Insects were collected in the summer (May -- August) of 2014 and 2015 from eight nearby rivers and streams connected to the Missouri National Recreational River as well as the Missouri River itself (Supplementary Information, Table S1). Larval insects sampled from the substrate were taken using a D-frame dip net at each site. Adults were captured using three floating emergence traps with an area of 0.36 m^2^ each, set for three days per sampling trip. Different habitats (e.g. debris, rip-rap, shoreline) were sampled when available to increase taxonomic representation. Traps were set once per week during the sampling period. Benthic samples were taken once when emergence traps were set and again when traps were retrieved. Adults were aspirated from the emergence traps at the end of the sampling period. Upon collection, samples were preserved in 95% ethanol on site and stored at -20°C at the University of South Dakota. Specimens were sorted and identified to the lowest possible taxonomic level or by morphological characteristics (species and morphospecies) and stored until DNA extraction.
 
 Analysis:

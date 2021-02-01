@@ -216,7 +216,7 @@ This looks pretty close to a finished product now. It has lots of information in
 
 *Across 20 trials, recovery rates were 0.43 +/- 0.3 points higher for groups that took drug C versus that took a placebo. Recovery ranged from -0.2 to 0.9. In comparison, recovery rates for drug A were only 0.03 +/- 0.3 points higher than placebo controls, and recovery rates for drug B were 0.01 +/- 0.1 points worse than placebo controls. However, direct comparison of these drugs is complicated by the fact that raw rates of recovery were highest for drugs A and B, in which nearly all patients recovered in both treatment and control groups. In contrast, recovery rates for drug C were \~50% in the treatment group, but only \~10% in the control. This suggest the potential that the trials were conducted on groups with different underlying probabilities of recovery.*
 
-## Don't forget that Quantitative Thinking includes "thinking"
+**Don't forget that Quantitative Thinking includes "thinking"**
 
 A statistical model alone will not answer your scientific question. The work flow presented above is not a formula for success in every case. Each problem you attempt to solve as a scientist is unique and will require you to make judgment calls. Statistics can help us to justify those judgments, making our decisions less susceptible to personal bias, but they cannot eliminate subjectivity. The point of *Quantitative Thinking* is not to replace critical thought with computer generated outputs. It is to use the tools of statistics and experimental design to prevent us from fooling ourselves. As Richard Feynman said: "The first principal [of science] is to not fool yourself, and you are the easiest person to fool."
 
