@@ -48,7 +48,8 @@ ggplot(drug_data, aes(x = drug, y = y)) +
   geom_point(position = position_jitter(width = 0.065)) +
   labs(y = "Percent of patients that recovered",
        x = "Type of Drug") +
-  ylim(0,1)
+  ylim(0,1) +
+  theme(text = element_text(size = 15))
 
 ```
 
@@ -84,7 +85,8 @@ drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
 p2 <- ggplot(drug_data, aes(x = drug, y = y, color = treatment)) + 
   geom_point(position = position_jitterdodge(jitter.width = 0.065, dodge.width = 0.2)) + 
   labs(y = "Percent of patients that recovered", x = "Type of Drug") + 
-  scale_color_grey(start = .6, end = 0) + ylim(0,1)
+  scale_color_grey(start = .6, end = 0) + ylim(0,1) +
+  theme(text = element_text(size = 15))
 
 ggsave(p2, file = here("figures/p2.png"), dpi = 500)
 
@@ -125,9 +127,10 @@ drug_data <- tibble(drug_a_treatment = rbeta(20, 2,.25),
 
 ggplot(drug_data, aes(x = drug, y = diff)) + 
   geom_point(position = position_jitter(width = 0.05)) + 
-  labs(y = "Difference in recovery between treatment and control",
+  labs(y = "Difference in recovery (trt - ctrl)",
        x = "Type of Drug") + 
-  scale_color_grey(start = .6, end = 0)
+  scale_color_grey(start = .6, end = 0) + 
+  theme(text = element_text(size = 15))
 ```
 
 Now we see a different story than the figure we started with (Figure \@ref(fig:drug-data1)). By displaying the differences in recovery, instead of the raw recovery rates, it now appears that drug C is a clear winner. In all but three trials, recovery rates were higher for people that took the drug compared to those that didn't.
@@ -204,11 +207,12 @@ Now we'll add the mean and sd to the plot. Can you see how it is added in the co
 
 ggplot(drug_data, aes(x = drug, y = difference)) +
   geom_point(position = position_jitter(width = 0.065)) +
-  labs(y = "Percent of patients that recovered",
-       x = "Drug") +
+  labs(y = "Difference in recovery (trt - ctrl)",
+       x = "Type of Drug") +
   ylim(-1,1) +
   geom_hline(yintercept = 0) +
-  geom_pointrange(data = summary_stats, aes(x = drug, y = mean, ymin = mean - sd, ymax = mean + sd), size = 1, color = "orange")
+  geom_pointrange(data = summary_stats, aes(x = drug, y = mean, ymin = mean - sd, ymax = mean + sd), size = 1, color = "orange") +
+  theme(text = element_text(size = 15))
 
 ```
 
